@@ -12,10 +12,13 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <script type="text/javascript" src="Scripts/Custom.js">
+        
+    </script>
 </head>
 <body>
     <form runat="server">
-    <asp:ScriptManager runat="server">
+    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePartialRendering="true"  />
         <Scripts>
             <%--Framework Scripts--%>
             <asp:ScriptReference Name="MsAjaxBundle" />

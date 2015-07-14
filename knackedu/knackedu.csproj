@@ -127,6 +127,8 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="AddStudent.aspx" />
+    <Content Include="OldCategories.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -183,9 +185,32 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Categories.aspx" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap-select.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\carousel.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\owl.video.play.html" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\stroke.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\font-awesome-4.3.0\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome-4.3.0\fonts\fontawesome-webfonte0a5.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.html" />
+    <Content Include="html\admin.html" />
+    <Content Include="html\index.html" />
+    <Content Include="html\new_student_form.html" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\apple-touch-icon-114x114.png" />
+    <Content Include="Images\apple-touch-icon-72x72.png" />
+    <Content Include="Images\apple-touch-icon.png" />
+    <Content Include="Images\bg.jpg" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\dummy.png" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\logo.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -196,7 +221,77 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Images\prettyPhoto\default\loader.gif" />
+    <Content Include="Images\prettyPhoto\default\sprite.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Images\smalllogo.png" />
+    <Content Include="js\bootstrap-select.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\carousel.js" />
+    <Content Include="js\circle.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery.fitvids.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\parallax.js" />
+    <Content Include="js\progress.js" />
+    <Content Include="js\retina.js" />
+    <Content Include="js\Validations.js" />
+    <Content Include="js\wow.js" />
     <Content Include="packages.config" />
+    <Content Include="Sample.aspx" />
+    <Content Include="Scripts\Custom.js" />
+    <Content Include="C:\Users\Hidayathulla\Desktop\WebForm1.aspx">
+      <Link>WebForm1.aspx</Link>
+    </Content>
+    <Content Include="afterlogin.Master" />
+    <None Include="Common\StudentInfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="fonts\font-awesome-4.3.0\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="fonts\font-awesome-4.3.0\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="fonts\font-awesome-4.3.0\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="fonts\font-awesome-4.3.0\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="fonts\font-awesome-4.3.0\fonts\fontawesome-webfonte0a5.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="fonts\Stroke-Gap-Icons.eot" />
+    <Content Include="fonts\Stroke-Gap-Icons.svg" />
+    <Content Include="fonts\Stroke-Gap-Icons.ttf" />
+    <Content Include="fonts\Stroke-Gap-Icons.woff" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -228,10 +323,105 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="upload\about_01.png" />
+    <Content Include="upload\about_parallax_01.jpg" />
+    <Content Include="upload\about_parallax_02.jpg" />
+    <Content Include="upload\banner.png" />
+    <Content Include="upload\big_01.jpg" />
+    <Content Include="upload\blog_parallax.jpg" />
+    <Content Include="upload\blog_single_01.jpg" />
+    <Content Include="upload\blog_single_02.jpg" />
+    <Content Include="upload\blog_single_03.jpg" />
+    <Content Include="upload\client_01.png" />
+    <Content Include="upload\client_02.png" />
+    <Content Include="upload\client_03.png" />
+    <Content Include="upload\client_04.png" />
+    <Content Include="upload\client_05.png" />
+    <Content Include="upload\client_06.png" />
+    <Content Include="upload\contact_parallax.png" />
+    <Content Include="upload\course_01.png" />
+    <Content Include="upload\course_02.png" />
+    <Content Include="upload\course_03.png" />
+    <Content Include="upload\course_04.png" />
+    <Content Include="upload\course_05.png" />
+    <Content Include="upload\course_06.png" />
+    <Content Include="upload\course_07.png" />
+    <Content Include="upload\course_08.png" />
+    <Content Include="upload\course_09.png" />
+    <Content Include="upload\course_10.png" />
+    <Content Include="upload\course_11.png" />
+    <Content Include="upload\course_12.png" />
+    <Content Include="upload\course_mini_01.png" />
+    <Content Include="upload\course_mini_02.png" />
+    <Content Include="upload\course_parallax.jpg" />
+    <Content Include="upload\course_parallax_01.jpg" />
+    <Content Include="upload\course_parallax_02.jpg" />
+    <Content Include="upload\device_01.png" />
+    <Content Include="upload\device_02.png" />
+    <Content Include="upload\faqs_parallax.jpg" />
+    <Content Include="upload\gallery_01.png" />
+    <Content Include="upload\gallery_02.png" />
+    <Content Include="upload\gallery_03.png" />
+    <Content Include="upload\gallery_04.png" />
+    <Content Include="upload\gallery_05.png" />
+    <Content Include="upload\latest_blog_01.png" />
+    <Content Include="upload\latest_blog_02.png" />
+    <Content Include="upload\login_parallax.jpg" />
+    <Content Include="upload\notfound.jpg" />
+    <Content Include="upload\not_foundparallax.jpg" />
+    <Content Include="upload\parallax_01.jpg" />
+    <Content Include="upload\parallax_02.jpg" />
+    <Content Include="upload\parallax_03.jpg" />
+    <Content Include="upload\parallax_04.jpg" />
+    <Content Include="upload\pricing.jpg" />
+    <Content Include="upload\services_parallax.jpg" />
+    <Content Include="upload\shortcodes.png" />
+    <Content Include="upload\single_course_01.jpg" />
+    <Content Include="upload\slider_01.jpg" />
+    <Content Include="upload\slider_01.png" />
+    <Content Include="upload\slider_02.jpg" />
+    <Content Include="upload\slider_03.jpg" />
+    <Content Include="upload\slider_04.jpg" />
+    <Content Include="upload\slider_05.jpg" />
+    <Content Include="upload\slider_06.jpg" />
+    <Content Include="upload\slider_07.jpg" />
+    <Content Include="upload\slider_08.jpg" />
+    <Content Include="upload\slider_09.jpg" />
+    <Content Include="upload\slider_device_01.png" />
+    <Content Include="upload\slider_device_02.png" />
+    <Content Include="upload\slider_logo_01.png" />
+    <Content Include="upload\team_01.jpg" />
+    <Content Include="upload\team_02.jpg" />
+    <Content Include="upload\team_03.jpg" />
+    <Content Include="upload\team_04.jpg" />
+    <Content Include="upload\team_05.jpg" />
+    <Content Include="upload\team_06.jpg" />
+    <Content Include="upload\team_07.jpg" />
+    <Content Include="upload\team_08.jpg" />
+    <Content Include="upload\team_parallax.jpg" />
+    <Content Include="upload\testi_01.png" />
+    <Content Include="upload\testi_02.png" />
+    <Content Include="upload\testi_03.png" />
+    <Content Include="upload\testi_04.png" />
+    <Content Include="upload\testi_parallax.jpg" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStudent.aspx.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddStudent.aspx.designer.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="afterlogin.Master.cs">
+      <DependentUpon>afterlogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="afterlogin.Master.designer.cs">
+      <DependentUpon>afterlogin.Master</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -276,12 +466,27 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OldCategories.aspx.cs">
+      <DependentUpon>OldCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OldCategories.aspx.designer.cs">
+      <DependentUpon>OldCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\StudentInfoSchema.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -294,12 +499,28 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample.aspx.cs">
+      <DependentUpon>Sample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sample.aspx.designer.cs">
+      <DependentUpon>Sample.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="C:\Users\Hidayathulla\Desktop\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <Link>WebForm1.aspx.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Hidayathulla\Desktop\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <Link>WebForm1.aspx.designer.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +537,20 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLogic.csproj">
+      <Project>{005785ad-c967-4323-a39e-f560d253d790}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonObject\BusinessObject.csproj">
+      <Project>{4e9433f7-feec-49fe-9b9e-81d04ffae787}</Project>
+      <Name>BusinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccess.csproj">
+      <Project>{a3ce2100-4c5a-4083-9d4f-7b3a5ee4984f}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

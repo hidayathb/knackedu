@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="studentinfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="studentinfo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AdmissionId" type="xs:string" />
+							<xs:element name="AdmissionYear" type="xs:string" />
+							<xs:element name="StudentClass" type="xs:string" />
+							<xs:element name="StudentSection" type="xs:int" />
+							<xs:element name="FirstName" type="xs:string" />
+							<xs:element name="LastName" type="xs:string" />
+							<xs:element name="Gender" type="xs:string" />
+							<xs:element name="DateOfAdmission" type="xs:string" />
+							<xs:element name="PoB" type="xs:string" />
+							<xs:element name="DOB" type="xs:string" />
+							<xs:element name="Age" type="xs:int" />
+							<xs:element name="MotherTongue" type="xs:string" />
+							<xs:element name="IdentityMark1" type="xs:string" />
+							<xs:element name="IdentityMark2" type="xs:string" />
+							<xs:element name="Caste" type="xs:string" />
+							<xs:element name="PhysicallyChallenged" type="xs:string" />
+							<xs:element name="PreviousClasasYear" type="xs:string" />
+							<xs:element name="Photo" type="xs:int" />
+							<xs:element name="BusFacility" type="xs:int" />
+							<xs:element name="PreviousSchool" type="xs:string" />
+							<xs:element name="PrevSchoolAddr" type="xs:string" />
+							<xs:element name="FatherName" type="xs:string" />
+							<xs:element name="MotherName" type="xs:string" />
+							<xs:element name="Email" type="xs:string" />
+							<xs:element name="FatherOccupation" type="xs:string" />
+							<xs:element name="MotherOccupation" type="xs:string" />
+							<xs:element name="Nationality" type="xs:string" />
+							<xs:element name="Religion" type="xs:string" />
+							<xs:element name="FatherIncome" type="xs:string" />
+							<xs:element name="Address" type="xs:string" />
+							<xs:element name="State" type="xs:string" />
+							<xs:element name="City" type="xs:string" />
+							<xs:element name="Distict" type="xs:string" />
+							<xs:element name="PinCode" type="xs:string" />
+							<xs:element name="ContactNo" type="xs:string" />
+							<xs:element name="HostCode" type="xs:string" />
+							<xs:element name="Status" type="xs:string" />
+							<xs:element name="SortSeq" type="xs:int" />
+							<xs:element name="CreatedDate" type="xs:string" />
+							<xs:element name="CreatedBy" type="xs:int" />
+							<xs:element name="ModifiedDate" type="xs:string" />
+							<xs:element name="ModifiedBy" type="xs:int" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

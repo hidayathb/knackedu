@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "knackedu", "knackedu\knackedu.csproj", "{3F247254-3F34-495D-B8B5-EA021AD219FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{A3CE2100-4C5A-4083-9D4F-7B3A5EE4984F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccessLayer\DataAccess.csproj", "{A3CE2100-4C5A-4083-9D4F-7B3A5EE4984F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{005785AD-C967-4323-A39E-F560D253D790}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLayer\BusinessLogic.csproj", "{005785AD-C967-4323-A39E-F560D253D790}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonObject", "CommonObject\CommonObject.csproj", "{4E9433F7-FEEC-49FE-9B9E-81D04FFAE787}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "CommonObject\BusinessObject.csproj", "{4E9433F7-FEEC-49FE-9B9E-81D04FFAE787}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
