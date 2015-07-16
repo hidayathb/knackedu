@@ -275,6 +275,7 @@
       <Link>WebForm1.aspx</Link>
     </Content>
     <Content Include="afterlogin.Master" />
+    <Content Include="Sidebar.ascx" />
     <None Include="Common\StudentInfo.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -521,6 +522,13 @@
     <Compile Include="C:\Users\Hidayathulla\Desktop\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <Link>WebForm1.aspx.designer.cs</Link>
+    </Compile>
+    <Compile Include="Sidebar.ascx.cs">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sidebar.ascx.designer.cs">
+      <DependentUpon>Sidebar.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

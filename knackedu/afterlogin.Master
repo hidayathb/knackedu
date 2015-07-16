@@ -315,7 +315,6 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-
     
     <script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery.min.js"></script>
@@ -344,6 +343,29 @@
                     this.style.border = "1px solid gray";
                 }, false);
             }
+
+
+            var navListItems = $('div.setup-panel div a'),
+					allWells = $('.setup-content');
+
+            allWells.hide();
+
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+						$item = $(this);
+
+                if (!$item.hasClass('disabled')) {
+                    //navListItems.removeClass('btn-primary').addClass('btn-default');
+                    //$item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    //$target.find('input:eq(0)').focus();
+                }
+            });
+
+            
+            $('div.setup-panel div a.btn-primary').trigger('click');
         });
 
         function ValidateSubCategories()

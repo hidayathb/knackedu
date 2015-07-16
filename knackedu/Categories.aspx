@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Categories.aspx.cs" Inherits="knackedu.Categories"
     MasterPageFile="~/afterlogin.Master" Title="MasterInfo - Categories" %>
 
+<%@ Register TagPrefix="uc" Src="~/Sidebar.ascx" TagName="ucSidebar"  %>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="CPContent" runat="server">
     <asp:Label runat="server" ID="lblErrorMsg" ForeColor="Red"></asp:Label>
     <section class="section-white">
@@ -22,7 +24,7 @@
                                     <asp:TextBox runat="server" ID="txtCategoryName" class="form-control mandCat"></asp:TextBox>
                                 </div>
 
-                                <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"
+                                <asp:Button class="btn btn-lg pull-right" runat="server"
                                     ID="btnCategory" Text="Add Category" OnClick="btnCategory_Click" OnClientClick="javascript:return ValidateCategories();" />
                             </div>
                         </div>
@@ -168,26 +170,7 @@
                 </asp:UpdatePanel>
             </div>
             <div id="sidebar" class="col-md-3 col-sm-12 pull-right">
-                <div class="widget">
-                    <div class="widget-title">
-                        <h4>Master Info</h4>
-                        <hr>
-                    </div>
-                    <!-- end widget-title -->
-
-
-                    <div class="cat-widget">
-                        <ul>
-                            <li class="dropdown active megamenu"><a href="#">New Student Form</a>
-                            <li><a href="#">Create New User</a>
-                            <li><a href="#">Create Grading System</a>
-                            <li><a href="#">Generate Timetable</a>
-                            <li><a href="#">Term Plan</a>
-                            <li><a href="#">Generate Student Id</a>
-                        </ul>
-                    </div>
-                    <!-- end latest-course -->
-                </div>
+                <uc:ucSidebar ID="uctlSidebar" runat="server" />
                 <!-- end widget -->
             </div>
         </div>

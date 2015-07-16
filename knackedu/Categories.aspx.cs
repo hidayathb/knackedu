@@ -293,6 +293,7 @@ namespace knackedu
 
         protected void gvCategory_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+
             gvCategory.DataSource = ((List<BOCategories>)(ViewState["Categories"])).ToList();
             gvCategory.PageIndex = e.NewPageIndex;
             gvCategory.DataBind();
