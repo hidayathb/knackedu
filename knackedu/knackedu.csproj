@@ -127,7 +127,11 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="addbook.aspx" />
     <Content Include="AddStudent.aspx" />
+    <Content Include="adduser.aspx" />
+    <Content Include="GenarateStudentId.aspx" />
+    <Content Include="gradesystem.aspx" />
     <Content Include="OldCategories.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -324,6 +328,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="studentmarks.aspx" />
+    <Content Include="termplan.aspx" />
     <Content Include="upload\about_01.png" />
     <Content Include="upload\about_parallax_01.jpg" />
     <Content Include="upload\about_parallax_02.jpg" />
@@ -405,10 +411,19 @@
     <Content Include="upload\testi_03.png" />
     <Content Include="upload\testi_04.png" />
     <Content Include="upload\testi_parallax.jpg" />
+    <Content Include="usercontrrols\rightbar.ascx" />
+    <Content Include="vanfee.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addbook.aspx.cs">
+      <DependentUpon>addbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addbook.aspx.designer.cs">
+      <DependentUpon>addbook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddStudent.aspx.cs">
       <DependentUpon>AddStudent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -467,6 +482,28 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="adduser.aspx.cs">
+      <DependentUpon>adduser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adduser.aspx.designer.cs">
+      <DependentUpon>adduser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="genaratestudentid.aspx.cs">
+      <DependentUpon>GenarateStudentId.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="genaratestudentid.aspx.designer.cs">
+      <DependentUpon>GenarateStudentId.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gradesystem.aspx.cs">
+      <DependentUpon>gradesystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gradesystem.aspx.designer.cs">
+      <DependentUpon>gradesystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuNames.cs" />
     <Compile Include="OldCategories.aspx.cs">
       <DependentUpon>OldCategories.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -529,6 +566,34 @@
     </Compile>
     <Compile Include="Sidebar.ascx.designer.cs">
       <DependentUpon>Sidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="studentmarks.aspx.cs">
+      <DependentUpon>studentmarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="studentmarks.aspx.designer.cs">
+      <DependentUpon>studentmarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="termplan.aspx.cs">
+      <DependentUpon>termplan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="termplan.aspx.designer.cs">
+      <DependentUpon>termplan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrrols\rightbar.ascx.cs">
+      <DependentUpon>rightbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrrols\rightbar.ascx.designer.cs">
+      <DependentUpon>rightbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="vanfee.aspx.cs">
+      <DependentUpon>vanfee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vanfee.aspx.designer.cs">
+      <DependentUpon>vanfee.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

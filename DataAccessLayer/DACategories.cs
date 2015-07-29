@@ -14,6 +14,15 @@ namespace DataAccessLayer
     {
         commonDA cmnDA = new commonDA();
 
+        public DataTable LoadStudents(int userid, string hostCode)
+        {
+            SqlParameter[] sqlParams = new SqlParameter[2];
+            sqlParams[0] = new SqlParameter("@HostCode", hostCode);
+            sqlParams[1] = new SqlParameter("@UserId", userid);
+
+            return cmnDA.ExecuteSQLDataTable("pr_Students_GetAll", sqlParams);
+        }
+
         public DataTable LoadCategories(int userid, string hostCode)
         {
             SqlParameter[] sqlParams = new SqlParameter[2];
@@ -44,6 +53,17 @@ namespace DataAccessLayer
             sqlParams[6] = new SqlParameter("@ModifiedDate", DateTime.Now);
             sqlParams[7] = new SqlParameter("@CreatedBy", categories.UserId);
             sqlParams[8] = new SqlParameter("@ModifiedBy", categories.UserId);
+
+            return cmnDA.ExecuteNonQuery("pr_Categories_AddOrUpdate", sqlParams);
+        }
+
+        public int InsertStudent(string data, string id, out string admissionId)
+        {
+            admissionId = string.Empty;
+            SqlParameter[] sqlParams = new SqlParameter[3];
+            sqlParams[0] = new SqlParameter("@StudentData", data);
+            sqlParams[1] = new SqlParameter("@RecordId", id);
+            sqlParams[2] = new SqlParameter("@AdmissionId", admissionId);
 
             return cmnDA.ExecuteNonQuery("pr_Categories_AddOrUpdate", sqlParams);
         }

@@ -82,7 +82,7 @@ public partial class studentinfoStudentinfo {
 
     private string photoField;
     
-    private int busFacilityField;
+    private string busFacilityField;
     
     private string previousSchoolField;
     
@@ -106,11 +106,11 @@ public partial class studentinfoStudentinfo {
     
     private string addressField;
     
-    private string stateField;
-    
-    private string cityField;
-    
-    private string distictField;
+    private int stateField;
+
+    private int cityField;
+
+    private int distictField;
     
     private string pinCodeField;
     
@@ -311,7 +311,7 @@ public partial class studentinfoStudentinfo {
     }
     
     /// <remarks/>
-    public int BusFacility {
+    public string BusFacility {
         get {
             return this.busFacilityField;
         }
@@ -431,7 +431,7 @@ public partial class studentinfoStudentinfo {
     }
     
     /// <remarks/>
-    public string State {
+    public int State {
         get {
             return this.stateField;
         }
@@ -441,7 +441,7 @@ public partial class studentinfoStudentinfo {
     }
     
     /// <remarks/>
-    public string City {
+    public int City {
         get {
             return this.cityField;
         }
@@ -451,7 +451,8 @@ public partial class studentinfoStudentinfo {
     }
     
     /// <remarks/>
-    public string Distict {
+    public int Distict
+    {
         get {
             return this.distictField;
         }

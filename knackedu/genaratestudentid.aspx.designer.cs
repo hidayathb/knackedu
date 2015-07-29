@@ -10,69 +10,60 @@
 namespace knackedu {
     
     
-    public partial class Sidebar {
+    public partial class genaratestudentid {
         
         /// <summary>
-        /// divMasterInfo control.
+        /// lblErrorMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMasterInfo;
+        protected global::System.Web.UI.WebControls.Label lblErrorMsg;
         
         /// <summary>
-        /// divAccountant control.
+        /// drpClass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAccountant;
+        protected global::System.Web.UI.WebControls.DropDownList drpClass;
         
         /// <summary>
-        /// divedit control.
+        /// drpSection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divedit;
+        protected global::System.Web.UI.WebControls.DropDownList drpSection;
         
         /// <summary>
-        /// divreport control.
+        /// drpRegNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divreport;
+        protected global::System.Web.UI.WebControls.DropDownList drpRegNo;
         
         /// <summary>
-        /// divteacher control.
+        /// gvGradeSystem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divteacher;
+        protected global::System.Web.UI.WebControls.GridView gvGradeSystem;
         
         /// <summary>
-        /// divlibrarian control.
+        /// uctlSidebar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divlibrarian;
-        
-        /// <summary>
-        /// divmanagement control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divmanagement;
+        protected global::knackedu.Sidebar uctlSidebar;
     }
 }

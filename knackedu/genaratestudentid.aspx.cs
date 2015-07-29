@@ -7,13 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace knackedu
 {
-    public partial class afterlogin : System.Web.UI.MasterPage
+    public partial class genaratestudentid : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (IsPostBack)
             {
-                Session["HostCode"] = "DEMO";
+                Session["menu"] = MenuNames.MasterInfo;
             }
         }
     }

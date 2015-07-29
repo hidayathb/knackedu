@@ -10,197 +10,251 @@
         <div class="container">
             <div class="row">
                 <div id="content" class="col-md-9 col-sm-12">
-                    <div class="widget-title">
-                        <h4>New Student Form</h4>
-                        <hr>
-                    </div>
-                    <div class="stepwizard col-md-offset-3">
-                        <div class="stepwizard-row setup-panel">
-                            <div class="stepwizard-step">
-                                <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-                                <p>Personal Information</p>
-                            </div>
-                            <div class="stepwizard-step">
-                                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                                <p>Other Information</p>
-                            </div>
-                            <div class="stepwizard-step">
-                                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                                <p>Contact Details</p>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="row setup-content" id="step-1">
                         <div class="col-xs-6 col-md-offset-3">
                             <div class="col-md-12">
+                                 <div class="widget-title">
+                        <h4>Student Form</h4>
+                    </div>
                                 <h3>Personal Information</h3>
                                 <div class="form-group">
                                     <label class="control-label">Admission No</label>
-                                    <asp:TextBox runat="server" ID="txtAdmissionNumber" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Category Code</label>
-                                    <asp:TextBox runat="server" ID="txtCategoryCode" class="form-control mandCat"></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="txtAdmissionNumber" class="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Admission To Year</label>
-                                    <select class="form-control">
-                                        <option value="Select">Select</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                    </select>
+                                    <asp:DropDownList runat="server" ID="drpAdmsYear" CssClass="form-control drpmandStep">
+                                        <asp:ListItem Selected="True">Select</asp:ListItem>
+                                        <asp:ListItem Text="2015" Value="2015"></asp:ListItem>
+                                        <asp:ListItem Text="2016" Value="2016"></asp:ListItem>
+                                        <asp:ListItem Text="2017" Value="2017"></asp:ListItem>
+                                        <asp:ListItem Text="2018" Value="2018"></asp:ListItem>
+                                        <asp:ListItem Text="2019" Value="2019"></asp:ListItem>
+                                        <asp:ListItem Text="2020" Value="2020"></asp:ListItem>
+                                        <asp:ListItem Text="2021" Value="2021"></asp:ListItem>
+                                        <asp:ListItem Text="2022" Value="2022"></asp:ListItem>
+                                        <asp:ListItem Text="2023" Value="2023"></asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Admission to Class</label>
-                                    <select class="form-control">
-                                        <option value="Select">Select</option>
-                                        <option value="NURSERY">NURSERY</option>
-                                        <option value="LKG">LKG</option>
-                                        <option value="UKG">UKG</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
+                                    <asp:DropDownList ID="drpAdmissiontoclass" runat="server" CssClass="form-control drpmandStep">
+                                    </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Section</label>
-                                    <select class="form-control">
-                                        <option selected="selected" value="Select">Select</option>
-                                        <option value="A1">A1</option>
-                                        <option value="A2">A2</option>
-                                        <option value="A3">A3</option>
-                                        <option value="A4">A4</option>
-                                    </select>
+                                    <asp:DropDownList runat="server" ID="drpSection" CssClass="form-control drpmandStep">
+                                    </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">First Name</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="First Name" />
+                                    <asp:TextBox ID="txtFirstName" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Surname</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Surname" />
+                                    <asp:TextBox ID="txtSurName" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
-
                                 <div class="form-group">
-                                    <label class="control-label">Section</label>
-                                    <select class="form-control">
-                                        <option selected="selected" value="Select">Select</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
+                                    <label class="control-label">Gender</label>
+                                    <asp:DropDownList runat="server" ID="drpGender" CssClass="form-control drpmandStep">
+                                        <asp:ListItem Selected="True">Select</asp:ListItem>
+                                        <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
+                                        <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Date Of admission</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Date Of admission" />
+                                    <asp:TextBox ID="txtDateOfAdmission" TextMode="Date" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Place Of Birth</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Place Of Birth" />
+                                    <asp:TextBox ID="txtPlaceOfBirth" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Date Of Birth</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Date Of Birth" />
+                                    <asp:TextBox ID="txtDateOfBirth" TextMode="Date" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Section</label>
-                                    <select class="form-control">
-                                        <option value="Select">Select</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                    </select>
+                                    <label class="control-label">Age</label>
+                                    <asp:DropDownList runat="server" ID="drpAge" CssClass="form-control drpmandStep">
+                                        <asp:ListItem Selected="True">Select</asp:ListItem>
+                                        <asp:ListItem Text="3" Value="3"></asp:ListItem>
+                                        <asp:ListItem Text="4" Value="4"></asp:ListItem>
+                                        <asp:ListItem Text="5" Value="5"></asp:ListItem>
+                                        <asp:ListItem Text="6" Value="6"></asp:ListItem>
+                                        <asp:ListItem Text="7" Value="7"></asp:ListItem>
+                                        <asp:ListItem Text="8" Value="8"></asp:ListItem>
+                                        <asp:ListItem Text="9" Value="9"></asp:ListItem>
+                                        <asp:ListItem Text="10" Value="10"></asp:ListItem>
+                                        <asp:ListItem Text="11" Value="11"></asp:ListItem>
+                                        <asp:ListItem Text="12" Value="12"></asp:ListItem>
+                                        <asp:ListItem Text="13" Value="13"></asp:ListItem>
+                                        <asp:ListItem Text="14" Value="14"></asp:ListItem>
+                                        <asp:ListItem Text="15" Value="15"></asp:ListItem>
+                                        <asp:ListItem Text="16" Value="16"></asp:ListItem>
+                                        <asp:ListItem Text="17" Value="17"></asp:ListItem>
+                                        <asp:ListItem Text="18" Value="18"></asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Mother Tongue: </label>
-                                    <input type="radio" checked="checked" class="control-label" />
-                                    <label for="rdot">Telugu</label>&nbsp;&nbsp;&nbsp;
-										
-                                    <input type="radio" checked="checked" class="control-label" />
-                                    <label for="rdot">Hindi</label>&nbsp;&nbsp;&nbsp;
-										
-                                    <input type="radio" checked="checked" class="control-label" />
-                                    <label for="rdot">English</label>
-
+                                    <label class="control-label">Mother Tongue</label>
+                                    <asp:DropDownList ID="drpMothertongue" runat="server" CssClass="form-control drpmandStep">
+                                        <asp:ListItem Selected="True">Select</asp:ListItem>
+                                        <asp:ListItem Text="Telugu" Value="Telugu"></asp:ListItem>
+                                        <asp:ListItem Text="Hindi" Value="Hindi"></asp:ListItem>
+                                        <asp:ListItem Text="English" Value="English"></asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
-
                                 <div class="form-group">
                                     <label class="control-label">Identity Mark1</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Identity Mark1" />
+                                    <asp:TextBox ID="txtIdentity1" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Identity Mark2</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Identity Mark2" />
+                                    <asp:TextBox ID="txtIdentity2" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
-
-                                <asp:Button class="btn btn-lg pull-right" runat="server"
-                                    ID="btnCategory" Text="Next" OnClientClick="javascript:return ValidateCategories();" />
+                                <div class="form-group">
+                                    <label class="control-label">Caste</label>
+                                    <asp:DropDownList ID="drpCaste" runat="server" CssClass="form-control drpmandStep">
+                                        <asp:ListItem Selected="True">Select</asp:ListItem>
+                                        <asp:ListItem Text="OC" Value="OC"></asp:ListItem>
+                                        <asp:ListItem Text="SC" Value="SC"></asp:ListItem>
+                                        <asp:ListItem Text="ST" Value="ST"></asp:ListItem>
+                                        <asp:ListItem Text="BC" Value="BC"></asp:ListItem>
+                                        <asp:ListItem Text="OBC" Value="OBC"></asp:ListItem>
+                                        <asp:ListItem Text="General" Value="General"></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Physically Changellenged</label>
+                                    <asp:RadioButtonList runat="server" ID="rdblPhysicallyChanlenged">
+                                        <asp:ListItem Selected="True">No</asp:ListItem>
+                                        <asp:ListItem>Yes</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Class studied in previous year</label>
+                                    <asp:TextBox ID="txtclassprevyear" TextMode="Number" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Bus Facility</label>
+                                    <asp:RadioButtonList runat="server" ID="rdblstBusFacility">
+                                        <asp:ListItem Selected="True">No</asp:ListItem>
+                                        <asp:ListItem>Yes</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                                <%--<asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
+                                    ID="btnStep1" Text="Next" OnClientClick="javascript:return ValidateStudent()"  />--%>
                             </div>
                         </div>
                     </div>
-
-                    <div class="row setup-content" id="step-2">
+                    <div class="row setup-content" id="step_2" >
                         <div class="col-xs-6 col-md-offset-3">
                             <div class="col-md-12">
                                 <h3>Other Information</h3>
                                 <div class="form-group">
-                                    <label class="control-label">Admission No</label>
-                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="" />
+                                    <label class="control-label">Last School Attended</label>
+                                    <asp:TextBox ID="txtSchoolAttended" runat="server" MaxLength="200"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Admission To Year</label>
-                                    <select>
-                                        <option value="Select">Select</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                    </select>
+                                    <label class="control-label">Address of the school</label>
+                                    <asp:TextBox ID="txtPrevSchoolAddress" runat="server" MaxLength="200" TextMode="MultiLine"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
-                                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                                <div class="form-group">
+                                    <label class="control-label">Father's Name</label>
+                                    <asp:TextBox ID="txtFatherName" runat="server" MaxLength="200"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Mother's Name</label>
+                                    <asp:TextBox ID="txtMotherName" runat="server" MaxLength="200"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Email</label>
+                                    <asp:TextBox ID="txtEmail" runat="server" MaxLength="200" 
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Father's Occupation</label>
+                                    <asp:TextBox ID="txtFathersOccupation" runat="server" MaxLength="200"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Mother's Occupation</label>
+                                    <asp:TextBox ID="txtMothersOccupation" runat="server" MaxLength="200" 
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nationality</label>
+                                    <asp:TextBox ID="txtNationality" runat="server" MaxLength="200" 
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Religion</label>
+                                    <asp:DropDownList ID="drpReligion" runat="server" CssClass="form-control drpmandStep">
+                                        <asp:ListItem Selected="True">Select</asp:ListItem>
+                                        <asp:ListItem Text="Telugu" Value="Hinduism"></asp:ListItem>
+                                        <asp:ListItem Text="Hindi" Value="Islam"></asp:ListItem>
+                                        <asp:ListItem Text="English" Value="Christianity"></asp:ListItem>
+                                        <asp:ListItem Text="English" Value="Sikhism"></asp:ListItem>
+                                        <asp:ListItem Text="English" Value="Jainism"></asp:ListItem>
+                                        <asp:ListItem Text="English" Value="Buddhism"></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Father's Income</label>
+                                    <asp:TextBox ID="txtFathersIncome" runat="server" MaxLength="200"  TextMode="Number"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <%--<button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>--%>
                             </div>
                         </div>
                     </div>
-                    <div class="row setup-content" id="step-3">
+                    <div class="row setup-content" id="step_3">
                         <div class="col-xs-6 col-md-offset-3">
                             <div class="col-md-12">
                                 <h3>Contact Details</h3>
-                                <button class="btn btn-success btn-lg pull-right" type="submit">Submit</button>
+                                <div class="form-group">
+                                    <label class="control-label">Address</label>
+                                    <asp:TextBox ID="txtAddress" runat="server" MaxLength="200" TextMode="MultiLine"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">State</label>
+                                    <asp:DropDownList ID="drpState" runat="server" CssClass="form-control drpmandStep">
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">City</label>
+                                    <asp:DropDownList ID="drpCity" runat="server" CssClass="form-control drpmandStep">
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">District</label>
+                                    <asp:DropDownList ID="drpDistrict" runat="server" CssClass="form-control drpmandStep">
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pin Code</label>
+                                    <asp:TextBox ID="txtpincode" runat="server" MaxLength="6"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Contact No</label>
+                                    <asp:TextBox ID="txtContactNo" runat="server" MaxLength="10"
+                                        CssClass="form-control txtmandStep"></asp:TextBox>
+                                </div>
+                                <asp:Button runat="server" CssClass="btn btn-success btn-lg pull-right" Text="Submit" ID="txtSubmit"
+                                     OnClick="txtSubmit_Click" OnClientClick="javascript:return ValidateStudent();"  />
                             </div>
                         </div>
                     </div>

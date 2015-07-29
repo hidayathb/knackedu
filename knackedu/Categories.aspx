@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Categories.aspx.cs" Inherits="knackedu.Categories"
     MasterPageFile="~/afterlogin.Master" Title="MasterInfo - Categories" %>
 
-<%@ Register TagPrefix="uc" Src="~/Sidebar.ascx" TagName="ucSidebar"  %>
+<%@ Register TagPrefix="uc" Src="~/Sidebar.ascx" TagName="ucSidebar" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="CPContent" runat="server">
     <asp:Label runat="server" ID="lblErrorMsg" ForeColor="Red"></asp:Label>
@@ -24,15 +24,15 @@
                                     <asp:TextBox runat="server" ID="txtCategoryName" class="form-control mandCat"></asp:TextBox>
                                 </div>
 
-                                <asp:Button class="btn btn-lg pull-right" runat="server"
+                                <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"
                                     ID="btnCategory" Text="Add Category" OnClick="btnCategory_Click" OnClientClick="javascript:return ValidateCategories();" />
                             </div>
                         </div>
                         <div class="clearfix"></div>
                         <br />
 
-                        <asp:GridView CssClass="table table-striped" ID="gvCategory" runat="server" 
-                            BackColor="White" BorderColor="#999999" OnPageIndexChanging="gvCategory_PageIndexChanging"  
+                        <asp:GridView CssClass="table table-striped" ID="gvCategory" runat="server"
+                            BackColor="White" BorderColor="#999999" OnPageIndexChanging="gvCategory_PageIndexChanging"
                             PageSize="5" AllowSorting="true" AllowPaging="true"
                             BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false"
                             OnRowCommand="gvCategory_RowCommand">
@@ -75,7 +75,7 @@
                         </asp:GridView>
                     </ContentTemplate>
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="gvCategory"  />
+                        <asp:AsyncPostBackTrigger ControlID="gvCategory" />
                         <asp:AsyncPostBackTrigger ControlID="btnCategory" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
@@ -112,9 +112,9 @@
                         <br />
 
                         <asp:GridView CssClass="table table-striped" ID="gvSubCategory" runat="server" BackColor="White" BorderColor="#999999"
-                            PageSize="5" AllowSorting="true" AllowPaging="true" 
+                            PageSize="5" AllowSorting="true" AllowPaging="true"
                             BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false"
-                            OnRowCommand="gvSubCategory_RowCommand" OnPageIndexChanging="gvSubCategory_PageIndexChanging" >
+                            OnRowCommand="gvSubCategory_RowCommand" OnPageIndexChanging="gvSubCategory_PageIndexChanging">
                             <FooterStyle BackColor="#CCCCCC" ForeColor="Brown" />
                             <PagerStyle BackColor="#999999" ForeColor="Brown" HorizontalAlign="Right" />
                             <Columns>

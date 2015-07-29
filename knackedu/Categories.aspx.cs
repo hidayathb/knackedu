@@ -15,6 +15,7 @@ namespace knackedu
         {
             try
             {
+                Session["menu"] = MenuNames.MasterInfo;
                 lblErrorMsg.Text = string.Empty;
                 if (!IsPostBack)
                 {
@@ -156,6 +157,7 @@ namespace knackedu
                     txtCategoryCode.Text = string.Empty;
                     txtCategoryName.Text = string.Empty;
                     ViewState["CatId"] = null;
+                    lblErrorMsg.Text = "Category inserted successfully.";
                 }
                 else
                 {
@@ -252,21 +254,25 @@ namespace knackedu
                     subCatid = Convert.ToInt16(ViewState["SubCatId"]);
 
                 categories.SubCategoryId = subCatid;
-                categories.SubCategoryCode = txtCategoryCode.Text.Trim();
-                categories.SubCategoryName = txtCategoryName.Text.Trim();
+                categories.SubCategoryCode = txtSubCategoryCode.Text.Trim();
+                categories.SubCategoryName = txtSubCategoryName.Text.Trim();
                 categories.HostCode = Session["HostCode"].ToString();
                 categories.UserId = Convert.ToInt32(Session["UserId"]);
                 categories.Id = Convert.ToInt32(drpcategoryID.SelectedValue);
 
+                var index = drpcategoryID.SelectedIndex;
                 var isInserted = (new BLCategories()).InsertSubCategory(categories);
                 if (isInserted == -1)
-                {
-                    BindSubCategoriesGrid();
-                    this.btnSubCategory.Text = "Add SubCategory";
+                {                    
+                    this.btnSubCategory.Text = "Add SubCategory"; 
                     txtSubCategoryCode.Text = string.Empty;
                     txtSubCategoryName.Text = string.Empty;
                     ViewState["SubCatId"] = null;
-                    drpcategoryID.SelectedIndex = 0;
+                    drpcategoryID.SelectedIndex = index;
+                    BindSubCategoriesGrid();
+                    drpcategoryID_SelectedIndexChanged(null, null);
+                    subcatUpdatePanel.Update();
+                    lblErrorMsg.Text = "Sub Category inserted successfully.";
                 }
                 {
                     lblErrorMsg.Text = "Process failed. Please try again.";
@@ -293,7 +299,6 @@ namespace knackedu
 
         protected void gvCategory_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-
             gvCategory.DataSource = ((List<BOCategories>)(ViewState["Categories"])).ToList();
             gvCategory.PageIndex = e.NewPageIndex;
             gvCategory.DataBind();
