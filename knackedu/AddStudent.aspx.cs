@@ -18,6 +18,32 @@ namespace knackedu
             {
                 Session["menu"] = MenuNames.MasterInfo;
                 LoadDropDowns();
+                BindStudents();
+            }
+        }
+
+        private void BindStudents()
+        {
+            try
+            {
+                var blStudents = new BLCategories();
+                var dtStuidents = blStudents.LoadStudents(1, "DEMO");
+
+                if (dtStuidents != null)
+                {
+                    gvStudents.Visible = true;
+                    gvStudents.DataSource = dtStuidents;
+                    gvStudents.DataBind();
+                    ViewState["students"] = dtStuidents;
+                }
+                else
+                {
+                    gvStudents.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
             }
         }
 
@@ -96,7 +122,7 @@ namespace knackedu
             }
             catch (Exception ex)
             {
-                lblErrorMsg.Text = "Unable to load data.";
+                //lblErrorMsg.Text = "Unable to load data.";
             }
         }
 
@@ -106,10 +132,10 @@ namespace knackedu
             studentsInfo.studentinfo1 = new studentinfoStudentinfo[1];
             studentinfoStudentinfo stuInfo = new studentinfoStudentinfo();
 
-            stuInfo.AdmissionId = txtAdmissionNumber.Text;
+            //stuInfo.AdmissionId = txtAdmissionNumber.Text;
             stuInfo.AdmissionYear = drpAdmsYear.SelectedItem.Text;
-            stuInfo.StudentClass = drpAdmissiontoclass.SelectedItem.Text;
-            stuInfo.StudentSection = drpSection.SelectedItem.Text;
+            stuInfo.StudentClass = drpAdmissiontoclass.SelectedValue;
+            stuInfo.StudentSection = drpSection.SelectedValue;
             stuInfo.FirstName = txtFirstName.Text;
             stuInfo.LastName = txtSurName.Text;
             stuInfo.Gender = drpGender.SelectedItem.Text;
@@ -120,7 +146,7 @@ namespace knackedu
             stuInfo.MotherTongue = drpMothertongue.SelectedItem.Text;
             stuInfo.IdentityMark1 = txtIdentity1.Text;
             stuInfo.IdentityMark2 = txtIdentity2.Text;
-            stuInfo.Caste = drpCity.SelectedItem.Text;
+            stuInfo.Caste = drpCity.SelectedValue;
             stuInfo.PhysicallyChallenged = rdblPhysicallyChanlenged.SelectedItem.Text;
             stuInfo.PreviousClasasYear = txtclassprevyear.Text;
             stuInfo.Photo = string.Empty;
@@ -182,10 +208,12 @@ namespace knackedu
             {
                 var data = BuildStudentInfo();
                 string admissionId = string.Empty;
-                var isInserted = (new BLCategories()).InsertStudent(data, "1", out admissionId);
-                if (isInserted == -1)
+                var studentId = ViewState["studentid"].ToString();
+                var isInserted = (new BLCategories()).InsertStudent(data, studentId, out admissionId);
+                if (isInserted == 1)
                 {
-                    lblErrorMsg.Text = "Student inserted successfully.";
+                    lblErrorMsg.Text = admissionId + " Student inserted successfully.";
+                    BindStudents();
                 }
                 else
                 {
@@ -196,6 +224,16 @@ namespace knackedu
             {
                     lblErrorMsg.Text = "Unable to save data.";
             }
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            ViewState["studentid"] = null;
+            drpAdmissiontoclass.SelectedIndex = 0;
+            drpAdmsYear.SelectedIndex = 0;
+
+
+            upStudent.Update();
         }
     }
 }

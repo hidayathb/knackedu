@@ -49,49 +49,19 @@
                                 <div class="widget-title">
                                     <h2>Subjects</h2>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label">Hindi :</label>
-                                    <asp:TextBox runat="server" ID="txtHindi" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">English :</label>
-                                    <asp:TextBox runat="server" ID="txtEnglish" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Mathematics :</label>
-                                    <asp:TextBox runat="server" ID="txtMathematics" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Science :</label>
-                                    <asp:TextBox runat="server" ID="txtScience" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Social Studies :</label>
-                                    <asp:TextBox runat="server" ID="txtSocialStudies" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Computer :</label>
-                                    <asp:TextBox runat="server" ID="txtComputer" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">G.K :</label>
-                                    <asp:TextBox runat="server" ID="txtGK" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Sanskrit :</label>
-                                    <asp:TextBox runat="server" ID="txtSanskrit" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
+                                <asp:PlaceHolder runat="server" ID="phSubjects"></asp:PlaceHolder>
+                                <%--<div class="form-group">
                                     <label class="control-label">Drawing :</label>
-                                    <asp:TextBox runat="server" ID="txtDrwaing" class="form-control mandCat"></asp:TextBox>
-                                </div>
+                                    <asp:Label runat="server" ID="lblTotalMarks" ForeColor="BlueViolet" ></asp:Label>
+                                </div>--%>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-lg btn-primary pull-right" runat="server"
-                                        ID="btnShow" Text="Show" />
+                                    <asp:Button class="btn btn-lg btn-primary pull-left" runat="server"
+                                        ID="btnShow" Text="Show" OnClientClick="javascript:return ValidateGradeSystem();"
+                                        OnClick="btn_Click" />
                                 </div>
                                 <div class="form-group">
                                     <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"
-                                        ID="btnReset" Text="Reset" />
+                                        ID="btnReset" Text="Reset" OnClick="btnReset_Click" />
                                 </div>
 
                             </div>
@@ -101,12 +71,14 @@
                             <asp:AsyncPostBackTrigger ControlID="drpClass" EventName="SelectedIndexChanged" />
                             <asp:AsyncPostBackTrigger ControlID="drpSection" EventName="SelectedIndexChanged" />
                             <asp:AsyncPostBackTrigger ControlID="drpRegNo" EventName="SelectedIndexChanged" />
+                            <asp:AsyncPostBackTrigger ControlID="btnShow" EventName="Click" />
+                            <asp:AsyncPostBackTrigger ControlID="btnReset" EventName="Click" />
                         </Triggers>
                     </asp:UpdatePanel>
                 </div>
                 <div class="clearfix"></div>
                 <br />
-                <asp:GridView CssClass="table table-striped" ID="gvGradeSystem" runat="server"
+                <asp:GridView CssClass="table table-striped" ID="gvStudentMarks" runat="server"
                     BackColor="White" BorderColor="#999999"
                     PageSize="5" AllowSorting="true" AllowPaging="true"
                     BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false">
@@ -117,14 +89,28 @@
                             HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
                             ItemStyle-VerticalAlign="Middle">
                             <ItemTemplate>
-                                <asp:Label runat="server" ID="lblCategory" Text='<%# Bind("CategoryCode") %>'></asp:Label>
+                                <asp:Label runat="server" ID="lblAdmissionId" Text='<%# Bind("AdmissionId") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Name" HeaderStyle-HorizontalAlign="Center"
                             HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
                             ItemStyle-VerticalAlign="Middle">
                             <ItemTemplate>
-                                <asp:Label runat="server" ID="Label1" Text='<%# Bind("CategoryName") %>'></asp:Label>
+                                <asp:Label runat="server" ID="lblClass" Text='<%# Bind("Class") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Name" HeaderStyle-HorizontalAlign="Center"
+                            HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
+                            ItemStyle-VerticalAlign="Middle">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblSection" Text='<%# Bind("Section") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Name" HeaderStyle-HorizontalAlign="Center"
+                            HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
+                            ItemStyle-VerticalAlign="Middle">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblTotalMarks" Text='<%# Bind("TotalMarks") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Edit" HeaderStyle-HorizontalAlign="Center"

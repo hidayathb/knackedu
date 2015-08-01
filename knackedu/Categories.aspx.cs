@@ -17,6 +17,7 @@ namespace knackedu
             {
                 Session["menu"] = MenuNames.MasterInfo;
                 lblErrorMsg.Text = string.Empty;
+                lblSubCategoryMsg.Text = string.Empty;
                 if (!IsPostBack)
                 {
                     Session["UserId"] = "1";
@@ -63,10 +64,12 @@ namespace knackedu
             try
             {
                 var blCategories = new BLCategories();
-                var dtAllCategories = blCategories.LoadSubCategories(1, "DEMO");
+                var dtAllCategories = blCategories.LoadSubCategories(1, "DEMO");                
 
                 if (dtAllCategories != null)
                 {
+                    //LoadParentSubCategories(dtAllCategories);
+
                     gvSubCategory.Visible = true;
                     gvSubCategory.DataSource = dtAllCategories;
                     gvSubCategory.DataBind();
@@ -75,6 +78,8 @@ namespace knackedu
                 else
                 {
                     gvSubCategory.Visible = false;
+                    gvSubCategory.DataSource =null;
+                    gvSubCategory.DataBind();
                 }
             }
             catch (Exception ex)
@@ -105,14 +110,35 @@ namespace knackedu
             }
         }
 
+        //private void LoadParentSubCategories(List<BOCategories> subCategories)
+        //{
+        //    if (subCategories != null)
+        //    {
+        //        var parentSubs = subCategories.Where(p => p.Id == Convert.ToInt32(drpcategoryID.SelectedValue));
+
+        //        drpParentSubCategory.DataSource = parentSubs;
+        //        drpParentSubCategory.DataValueField = "SubCategoryId";
+        //        drpParentSubCategory.DataTextField = "SubCategoryName";
+        //        drpParentSubCategory.DataBind();
+        //    }
+
+        //    drpParentSubCategory.Items.Insert(0, new ListItem("SELECT", "0"));
+        //}
+
         protected void drpcategoryID_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
+                ViewState["SubCatId"] = null;
+                txtSubCategoryName.Text = string.Empty;
+                txtSubCategoryCode.Text = string.Empty;
+                btnSubCategory.Text = "Add SubCategory";
                 if (ViewState["SubCategories"] != null)
                 {
-                    var filterData = ((List<BOCategories>)(ViewState["SubCategories"]))
-                                        .Where(c => c.Id == Convert.ToInt32(drpcategoryID.SelectedValue));
+                    var data = ((List<BOCategories>)(ViewState["SubCategories"]));
+                    var filterData = data.Where(c => c.Id == Convert.ToInt32(drpcategoryID.SelectedValue));
+
+                    //LoadParentSubCategories(((List<BOCategories>)(ViewState["SubCategories"])));
                     if (filterData != null)
                     {
                         gvSubCategory.DataSource = filterData.ToList();
@@ -254,6 +280,7 @@ namespace knackedu
                     subCatid = Convert.ToInt16(ViewState["SubCatId"]);
 
                 categories.SubCategoryId = subCatid;
+                //categories.ParentSubCategoryId = Convert.ToInt32(drpParentSubCategory.SelectedValue);
                 categories.SubCategoryCode = txtSubCategoryCode.Text.Trim();
                 categories.SubCategoryName = txtSubCategoryName.Text.Trim();
                 categories.HostCode = Session["HostCode"].ToString();
@@ -261,6 +288,7 @@ namespace knackedu
                 categories.Id = Convert.ToInt32(drpcategoryID.SelectedValue);
 
                 var index = drpcategoryID.SelectedIndex;
+                var parentIndex = drpcategoryID.SelectedIndex;
                 var isInserted = (new BLCategories()).InsertSubCategory(categories);
                 if (isInserted == -1)
                 {                    
@@ -269,13 +297,15 @@ namespace knackedu
                     txtSubCategoryName.Text = string.Empty;
                     ViewState["SubCatId"] = null;
                     drpcategoryID.SelectedIndex = index;
+                    //drpParentSubCategory.SelectedIndex = parentIndex;
                     BindSubCategoriesGrid();
                     drpcategoryID_SelectedIndexChanged(null, null);
                     subcatUpdatePanel.Update();
-                    lblErrorMsg.Text = "Sub Category inserted successfully.";
+                    lblSubCategoryMsg.Text = "Sub Category inserted successfully.";
                 }
+                else
                 {
-                    lblErrorMsg.Text = "Process failed. Please try again.";
+                    lblSubCategoryMsg.Text = "Process failed. Please try again.";
                 }
             }
             catch (Exception ex)
@@ -311,6 +341,33 @@ namespace knackedu
             gvSubCategory.PageIndex = e.NewPageIndex;
             gvSubCategory.DataBind();
             subcatUpdatePanel.Update();
+        }
+
+        protected void drpParentSubCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ViewState["SubCategories"] != null)// && drpParentSubCategory.SelectedIndex > 0)
+                {
+                    var filterData = ((List<BOCategories>)(ViewState["SubCategories"]))
+                                        .Where(c => c.Id == Convert.ToInt32(drpcategoryID.SelectedValue));
+                                        //&& c.ParentSubCategoryId == Convert.ToInt32(drpParentSubCategory.SelectedValue));
+                    if (filterData == null)
+                    {
+                        gvSubCategory.DataSource = null;
+                        gvSubCategory.DataBind();
+                    }
+                    else
+                    {
+                        gvSubCategory.DataSource = filterData;
+                        gvSubCategory.DataBind();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lblErrorMsg.Text = ex.Message;
+            }
         }
     }
 }

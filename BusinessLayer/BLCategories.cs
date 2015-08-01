@@ -72,6 +72,8 @@ namespace BusinessLayer
                     std.AdmissionId = item["AdmissionId"].ToString();
                     std.Class = Convert.ToInt32(item["StudentClass"].ToString());
                     std.Section = Convert.ToInt32(item["StudentSection"].ToString());
+                    std.ClassName = item["StudentClassDesc"].ToString();
+                    std.SectionName = item["StudentSectionDesc"].ToString();
                     std.Id = Convert.ToInt32(item["StudentId"]);
                     std.FirstName = item["FirstName"].ToString();
                     std.SurName = item["LastName"].ToString();
@@ -136,6 +138,11 @@ namespace BusinessLayer
                     cat.CategoryCode = item["CategoryCode"].ToString();
                     cat.SubCategoryCode = item["SubCategoryCode"].ToString();
                     cat.SubCategoryName = item["SubCategoryName"].ToString();
+
+                    if (item["ParentSubCategoryId"] != null && item["ParentSubCategoryId"] != DBNull.Value)
+                        cat.ParentSubCategoryId = Convert.ToInt32(item["ParentSubCategoryId"].ToString());
+
+                    cat.ParentSubCategoryName = item["ParentSubCategoryName"].ToString();
                     cat.SubCategoryId = Convert.ToInt32(item["Id"]);
                     cat.Id = Convert.ToInt32(item["CategoryId"]);
                     cat.CategoryName = item["CategoryName"].ToString();
@@ -175,6 +182,7 @@ namespace BusinessLayer
         public int InsertStudent(string data, string id, out string admissionId)
         {
             DACategories pDAL = new DACategories();
+            admissionId = "";
             try
             {
                 return pDAL.InsertStudent(data, id, out admissionId);

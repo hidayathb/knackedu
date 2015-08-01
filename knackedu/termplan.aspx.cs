@@ -90,7 +90,7 @@ namespace knackedu
             }
             catch (Exception ex)
             {
-                lblErrorMsg.Text = "Unable to load data.";
+                //lblErrorMsg.Text = "Unable to load data.";
             }
         }
 
@@ -227,7 +227,7 @@ namespace knackedu
             }
             catch (Exception ex)
             {
-                lblErrorMsg.Text = "Unable to load data.";
+                //lblErrorMsg.Text = "Unable to load data.";
             }
         }
     }

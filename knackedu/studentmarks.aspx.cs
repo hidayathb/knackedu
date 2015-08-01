@@ -3,6 +3,7 @@ using CommonObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -74,14 +75,15 @@ namespace knackedu
                     lstAbsentSubjects.DataValueField = "SubCategoryId";
                     lstAbsentSubjects.DataBind();
                 }
-                lstAbsentSubjects.Items.Insert(0, new ListItem("Select", "0"));
+                ViewState["subjects"] = absentSubjects;
+                lstAbsentSubjects.Items.Insert(0, new ListItem("None", "0"));
 
                 var studentsInfo = blCategories.LoadStudents(1, "DEMO");
                 ViewState["students"] = studentsInfo;
             }
             catch (Exception ex)
             {
-                lblErrorMsg.Text = "Unable to load data.";
+                //lblErrorMsg.Text = "Unable to load data.";
             }
         }
 
@@ -113,6 +115,7 @@ namespace knackedu
                 stdMarks.Id = termPlanId;
                 stdMarks.StudentId = Convert.ToInt16(drpRegNo.SelectedValue);
                 stdMarks.ExamTypeId = Convert.ToInt16(drpExamType.SelectedValue);
+                FillMarks(stdMarks);
                 stdMarks.HostCode = "DEMO";
                 stdMarks.UserId = 1;
                 stdMarks.Status = "A";
@@ -120,7 +123,8 @@ namespace knackedu
                 var isInserted = (new BLStudentMarks()).InsertStudentMarks(stdMarks);
                 if (isInserted == -1)
                 {
-                   //
+                    ResetControls();
+                    lblErrorMsg.Text = "Marks inserted successfully.";
                 }
                 else
                 {
@@ -133,23 +137,57 @@ namespace knackedu
             }
         }
 
+        private void FillMarks(BOStudentMarks stdMarks)
+        {
+            //var items = lstAbsentSubjects.Items.OfType<ListItem>();
+            //var subjects = (List<BOCategories>)ViewState["subjects"];
+
+            //StringBuilder marks = new StringBuilder(); 
+            //if (txtHindi.Text.Trim().Length > 0)
+            //{
+            //    var hindiId = subjects.FirstOrDefault(s => s.SubCategoryCode == "H");
+            //    if (hindiId != null)
+            //    {
+            //        marks.Append(hindiId.ToString() + "|" + txtHindi.Text.Trim() + ",");
+            //    }
+
+            //    var englishId = subjects.FirstOrDefault(s => s.SubCategoryCode == "E");
+            //    if (englishId != null)
+            //    {
+            //        marks.Append(englishId.ToString() + "|" + txtEnglish.Text.Trim());
+            //    }
+            //}
+
+            //stdMarks.Subjects = marks.ToString().TrimEnd(',');
+        }
+
         protected void lstAbsentSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var items = lstAbsentSubjects.Items.OfType<ListItem>();
-            
-            var isHindiAbsent = items.Any(h => h.Text.ToUpper() == "HINDI" && h.Selected);
-            if (isHindiAbsent)
-                txtHindi.ReadOnly = true;
-            else
-                txtHindi.ReadOnly = false;
+            //var items = lstAbsentSubjects.Items.OfType<ListItem>();
 
-            var isEngAbsent = items.Any(h => h.Text.ToUpper() == "ENGLISH" && h.Selected);
-            if (isEngAbsent)
-                txtEnglish.ReadOnly = true;
-            else
-                txtEnglish.ReadOnly = false;
+            //var isHindiAbsent = items.Any(h => h.Text.ToUpper() == "HINDI" && h.Selected);
+            //if (isHindiAbsent)
+            //{
+            //    txtHindi.ReadOnly = true;
+            //    txtHindi.Text = string.Empty;
+            //}
+            //else
+            //{
+            //    txtHindi.ReadOnly = false;
+            //}
 
-            updateSec.Update();
+            //var isEngAbsent = items.Any(h => h.Text.ToUpper() == "ENGLISH" && h.Selected);
+            //if (isEngAbsent)
+            //{
+            //    txtEnglish.ReadOnly = true;
+            //    txtEnglish.Text = string.Empty;
+            //}
+            //else
+            //{
+            //    txtEnglish.ReadOnly = false;
+            //}
+
+            //updateSec.Update();
         }
 
         protected void drpRegNo_SelectedIndexChanged(object sender, EventArgs e)
@@ -180,5 +218,30 @@ namespace knackedu
             LoadStudents();
             updateSec.Update();
         }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ResetControls();
+        }
+
+        private void ResetControls()
+        {
+            drpClass.SelectedIndex = 0;
+            drpSection.SelectedIndex = 0;
+            drpRegNo.SelectedIndex = 0;
+
+            lstAbsentSubjects.SelectedIndex = 0;
+
+            //txtHindi.Text = string.Empty;
+            //txtEnglish.Text = string.Empty;
+            //txtMathematics.Text = string.Empty;
+            //txtScience.Text = string.Empty;
+            //txtSocialStudies.Text = string.Empty;
+            //txtComputer.Text = string.Empty;
+            //txtGK.Text = string.Empty;
+            //txtSanskrit.Text = string.Empty;
+            //txtDrwaing.Text = string.Empty;
+        }
+
     }
 }

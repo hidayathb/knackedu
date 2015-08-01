@@ -126,7 +126,7 @@
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="dropdown active megamenu"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Master Info</a>
                                             <ul class="dropdown-menu normalmenu">
-                                                <li><a href="Categories.aspx">Categories</a></li>
+                                                <li><a href="Categories.aspx">Setup master data</a></li>
                                                 <li><a href="AddStudent.aspx">Create Student</a></li>
                                                 <li><a href="adduser.aspx">Create User</a></li>
                                                 <li><a href="gradesystem.aspx">Create Grading System</a></li>
@@ -376,7 +376,7 @@
         var i;
         var j = 0;
         for (i = 0; i < nodes.length; i++) {
-            if (nodes[i].value.length == 0) {
+            if (nodes[i].readOnly == false && nodes[i].value.length == 0) {
                 isValidated = false;
                 if (j == 0) {
                     nodes[i].focus();
@@ -393,7 +393,7 @@
         var i;
         var j = 0;
         for (i = 0; i < nodes.length; i++) {
-            if (nodes[i].selectedIndex == 0) {
+            if (nodes[i].readOnly == false && nodes[i].selectedIndex == 0) {
                 isValidated = false;
                 if (j == 0) {
                     nodes[i].focus();
@@ -415,7 +415,7 @@
         var i;
         var j = 0;
         for (i = 0; i < nodes.length; i++) {
-            if (nodes[i].value.length == 0) {
+            if (nodes[i].readOnly == false && nodes[i].value.length == 0) {
                 isValidated = false;
                 if (j == 0) {
                     nodes[i].focus();
@@ -437,7 +437,7 @@
         var i;
         var j = 0;
         for (i = 0; i < nodes.length; i++) {
-            if (nodes[i].value.length == 0) {
+            if (nodes[i].readOnly == false && nodes[i].value.length == 0) {
                 isValidated = false;
                 if (j == 0) {
                     nodes[i].focus();
@@ -454,7 +454,7 @@
         var i;
         var j = 0;
         for (i = 0; i < nodes.length; i++) {
-            if (nodes[i].selectedIndex == 0) {
+            if (nodes[i].readOnly == false && nodes[i].selectedIndex == 0) {
                 isValidated = false;
                 if (j == 0) {
                     nodes[i].focus();
@@ -469,6 +469,11 @@
 
         return isValidated;
     }
+
+      function ChangeMarks(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 100) input.value = 100;
+      }
 
     </script>
 

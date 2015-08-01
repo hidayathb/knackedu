@@ -14,6 +14,8 @@ namespace CommonObject
         public string CategoryName { get; set; }
         public string SubCategoryCode { get; set; }
         public string SubCategoryName { get; set; }
+        public int ParentSubCategoryId { get; set; }
+        public string ParentSubCategoryName { get; set; }
         public int SubCategoryId { get; set; }
         public int UserId { get; set; }
         public string HostCode { get; set; }
@@ -58,7 +60,8 @@ namespace CommonObject
         public int StudentId { get; set; }
         public int ExamTypeId { get; set; }
         public int Absent { get; set; }
-        public int Subjects { get; set; }
+        public string Subjects { get; set; }
+        public string TotalMarks { get; set; }
         public int UserId { get; set; }
         public string HostCode { get; set; }
         public string Status { get; set; }
@@ -71,6 +74,8 @@ namespace CommonObject
         public string AdmissionId { get; set; }
         public int Class { get; set; }
         public int Section { get; set; }
+        public string ClassName { get; set; }
+        public string SectionName { get; set; }
         public string FirstName { get; set; }
         public string SurName { get; set; }
     }

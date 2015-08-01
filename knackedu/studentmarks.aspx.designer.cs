@@ -85,85 +85,13 @@ namespace knackedu {
         protected global::System.Web.UI.WebControls.ListBox lstAbsentSubjects;
         
         /// <summary>
-        /// txtHindi control.
+        /// phSubjects control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHindi;
-        
-        /// <summary>
-        /// txtEnglish control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEnglish;
-        
-        /// <summary>
-        /// txtMathematics control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMathematics;
-        
-        /// <summary>
-        /// txtScience control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtScience;
-        
-        /// <summary>
-        /// txtSocialStudies control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSocialStudies;
-        
-        /// <summary>
-        /// txtComputer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComputer;
-        
-        /// <summary>
-        /// txtGK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGK;
-        
-        /// <summary>
-        /// txtSanskrit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSanskrit;
-        
-        /// <summary>
-        /// txtDrwaing control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDrwaing;
+        protected global::System.Web.UI.WebControls.PlaceHolder phSubjects;
         
         /// <summary>
         /// btnShow control.
@@ -184,13 +112,13 @@ namespace knackedu {
         protected global::System.Web.UI.WebControls.Button btnReset;
         
         /// <summary>
-        /// gvGradeSystem control.
+        /// gvStudentMarks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvGradeSystem;
+        protected global::System.Web.UI.WebControls.GridView gvStudentMarks;
         
         /// <summary>
         /// uctlSidebar control.

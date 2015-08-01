@@ -10,18 +10,17 @@
         <div class="container">
             <div class="row">
                 <div id="content" class="col-md-9 col-sm-12">
-                   
                     <div class="row setup-content" id="step-1">
                         <div class="col-xs-6 col-md-offset-3">
                             <div class="col-md-12">
-                                 <div class="widget-title">
-                        <h4>Student Form</h4>
-                    </div>
+                                <div class="widget-title">
+                                    <h4>Student Form</h4>
+                                </div>
                                 <h3>Personal Information</h3>
-                                <div class="form-group">
+                                <%--<div class="form-group">
                                     <label class="control-label">Admission No</label>
                                     <asp:TextBox runat="server" ID="txtAdmissionNumber" class="form-control txtmandStep"></asp:TextBox>
-                                </div>
+                                </div>--%>
                                 <div class="form-group">
                                     <label class="control-label">Admission To Year</label>
                                     <asp:DropDownList runat="server" ID="drpAdmsYear" CssClass="form-control drpmandStep">
@@ -153,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row setup-content" id="step_2" >
+                    <div class="row setup-content" id="step_2">
                         <div class="col-xs-6 col-md-offset-3">
                             <div class="col-md-12">
                                 <h3>Other Information</h3>
@@ -179,7 +178,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Email</label>
-                                    <asp:TextBox ID="txtEmail" runat="server" MaxLength="200" 
+                                    <asp:TextBox ID="txtEmail" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
@@ -189,12 +188,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Mother's Occupation</label>
-                                    <asp:TextBox ID="txtMothersOccupation" runat="server" MaxLength="200" 
+                                    <asp:TextBox ID="txtMothersOccupation" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Nationality</label>
-                                    <asp:TextBox ID="txtNationality" runat="server" MaxLength="200" 
+                                    <asp:TextBox ID="txtNationality" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
 
@@ -212,7 +211,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Father's Income</label>
-                                    <asp:TextBox ID="txtFathersIncome" runat="server" MaxLength="200"  TextMode="Number"
+                                    <asp:TextBox ID="txtFathersIncome" runat="server" MaxLength="200" TextMode="Number"
                                         CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <%--<button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>--%>
@@ -253,11 +252,62 @@
                                     <asp:TextBox ID="txtContactNo" runat="server" MaxLength="10"
                                         CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
-                                <asp:Button runat="server" CssClass="btn btn-success btn-lg pull-right" Text="Submit" ID="txtSubmit"
-                                     OnClick="txtSubmit_Click" OnClientClick="javascript:return ValidateStudent();"  />
+                                <asp:Button runat="server" CssClass="btn btn-success btn-lg pull-left" Text="Submit" ID="btnSubmit"
+                                    OnClick="txtSubmit_Click" OnClientClick="javascript:return ValidateStudent();" />
+                                <asp:Button runat="server" CssClass="btn btn-success btn-lg pull-right" Text="Clear" ID="btnClear"
+                                    OnClick="btnClear_Click" />
                             </div>
                         </div>
                     </div>
+                    <div class="clearfix"></div>
+                    <br />
+                    <br />
+                    <asp:UpdatePanel ID="upStudent" runat="server" UpdateMode="Conditional">
+                        <ContentTemplate>
+                            <asp:GridView CssClass="table table-striped" ID="gvStudents" runat="server"
+                                BackColor="White" BorderColor="#999999"
+                                PageSize="5" AllowSorting="true" AllowPaging="true"
+                                BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false">
+                                <FooterStyle BackColor="#CCCCCC" ForeColor="Brown" />
+                                <PagerStyle BackColor="#999999" ForeColor="Brown" HorizontalAlign="Right" />
+                                <Columns>
+                                    <asp:TemplateField HeaderText="AdmissionId" HeaderStyle-HorizontalAlign="Center"
+                                        HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
+                                        ItemStyle-VerticalAlign="Middle">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblAdmissionId" Text='<%# Bind("AdmissionId") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
+                                    <asp:TemplateField HeaderText="First Name" HeaderStyle-HorizontalAlign="Center"
+                                        HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
+                                        ItemStyle-VerticalAlign="Middle">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblFirstName" Text='<%# Bind("FirstName") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Class" HeaderStyle-HorizontalAlign="Center"
+                                        HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
+                                        ItemStyle-VerticalAlign="Middle">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblClassName" Text='<%# Bind("ClassName") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Section" HeaderStyle-HorizontalAlign="Center"
+                                        HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
+                                        ItemStyle-VerticalAlign="Middle">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblSectionName" Text='<%# Bind("SectionName") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </ContentTemplate>
+                        <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click" />
+                            <asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click" />
+                        </Triggers>
+                    </asp:UpdatePanel>
                 </div>
 
                 <div id="sidebar" class="col-md-3 col-sm-12 pull-right">

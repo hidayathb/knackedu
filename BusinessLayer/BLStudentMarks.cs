@@ -36,9 +36,9 @@ namespace BusinessLayer
                     int.TryParse(item["Absent"].ToString(), out absent);
                     mark.Absent = absent;
 
-                    int subjects;
-                    int.TryParse(item["Subjects"].ToString(), out subjects);
-                    mark.Subjects = subjects;
+                    //int subjects;
+                    //int.TryParse(item["Subjects"].ToString(), out subjects);
+                    //mark.Subjects = subjects;
 
                     marks.Add(mark);
                 }

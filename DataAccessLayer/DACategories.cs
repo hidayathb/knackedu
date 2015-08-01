@@ -65,22 +65,27 @@ namespace DataAccessLayer
             sqlParams[1] = new SqlParameter("@RecordId", id);
             sqlParams[2] = new SqlParameter("@AdmissionId", admissionId);
 
-            return cmnDA.ExecuteNonQuery("pr_Categories_AddOrUpdate", sqlParams);
+            return cmnDA.ExecuteNonQuery("pr_Stundents_AddOrUpdate", sqlParams);
         }
 
         public int InsertSubCategory(BOCategories categories)
         {
-            SqlParameter[] sqlParams = new SqlParameter[10];
+            SqlParameter[] sqlParams = new SqlParameter[11];
             sqlParams[0] = new SqlParameter("@CategoryId", categories.Id);
-            sqlParams[1] = new SqlParameter("@SubCategoryCode", categories.SubCategoryCode);
-            sqlParams[2] = new SqlParameter("@SubCategoryName", categories.SubCategoryName);
-            sqlParams[3] = new SqlParameter("@Status", 'A');
-            sqlParams[4] = new SqlParameter("@HostCode", categories.HostCode);
-            sqlParams[5] = new SqlParameter("@RecordId", categories.SubCategoryId);
-            sqlParams[6] = new SqlParameter("@CreatedDate", DateTime.Now);
-            sqlParams[7] = new SqlParameter("@ModifiedDate", DateTime.Now);
-            sqlParams[8] = new SqlParameter("@CreatedBy", categories.UserId);
-            sqlParams[9] = new SqlParameter("@ModifiedBy", categories.UserId);
+            if (categories.ParentSubCategoryId > 0)
+                sqlParams[1] = new SqlParameter("@SubCategoryId", categories.ParentSubCategoryId);
+            else
+                sqlParams[1] = new SqlParameter("@SubCategoryId", DBNull.Value);
+
+            sqlParams[2] = new SqlParameter("@SubCategoryCode", categories.SubCategoryCode);
+            sqlParams[3] = new SqlParameter("@SubCategoryName", categories.SubCategoryName);
+            sqlParams[4] = new SqlParameter("@Status", 'A');
+            sqlParams[5] = new SqlParameter("@HostCode", categories.HostCode);
+            sqlParams[6] = new SqlParameter("@RecordId", categories.SubCategoryId);
+            sqlParams[7] = new SqlParameter("@CreatedDate", DateTime.Now);
+            sqlParams[8] = new SqlParameter("@ModifiedDate", DateTime.Now);
+            sqlParams[9] = new SqlParameter("@CreatedBy", categories.UserId);
+            sqlParams[10] = new SqlParameter("@ModifiedBy", categories.UserId);
 
             return cmnDA.ExecuteNonQuery("pr_SubCategories_AddOrUpdate", sqlParams);
         }

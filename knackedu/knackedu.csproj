@@ -130,8 +130,11 @@
     <Content Include="addbook.aspx" />
     <Content Include="AddStudent.aspx" />
     <Content Include="adduser.aspx" />
+    <Content Include="Admin.aspx" />
     <Content Include="GenarateStudentId.aspx" />
     <Content Include="gradesystem.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="index.html" />
     <Content Include="OldCategories.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -203,7 +206,7 @@
     <Content Include="fonts\font-awesome-4.3.0\fonts\fontawesome-webfonte0a5.html" />
     <Content Include="fonts\glyphicons-halflings-regular.html" />
     <Content Include="html\admin.html" />
-    <Content Include="html\index.html" />
+    <Content Include="html\copyindex.html" />
     <Content Include="html\new_student_form.html" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\apple-touch-icon-114x114.png" />
@@ -297,6 +300,7 @@
     <Content Include="fonts\Stroke-Gap-Icons.svg" />
     <Content Include="fonts\Stroke-Gap-Icons.ttf" />
     <Content Include="fonts\Stroke-Gap-Icons.woff" />
+    <None Include="Properties\PublishProfiles\knackedu.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -330,6 +334,7 @@
     <Content Include="Global.asax" />
     <Content Include="studentmarks.aspx" />
     <Content Include="termplan.aspx" />
+    <Content Include="ucSubject.ascx" />
     <Content Include="upload\about_01.png" />
     <Content Include="upload\about_parallax_01.jpg" />
     <Content Include="upload\about_parallax_02.jpg" />
@@ -431,6 +436,13 @@
     <Compile Include="AddStudent.aspx.designer.cs">
       <DependentUpon>AddStudent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="afterlogin.Master.cs">
       <DependentUpon>afterlogin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -502,6 +514,13 @@
     </Compile>
     <Compile Include="gradesystem.aspx.designer.cs">
       <DependentUpon>gradesystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="MenuNames.cs" />
     <Compile Include="OldCategories.aspx.cs">
@@ -581,6 +600,13 @@
     <Compile Include="termplan.aspx.designer.cs">
       <DependentUpon>termplan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ucSubject.ascx.cs">
+      <DependentUpon>ucSubject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucSubject.ascx.designer.cs">
+      <DependentUpon>ucSubject.ascx</DependentUpon>
+    </Compile>
     <Compile Include="usercontrrols\rightbar.ascx.cs">
       <DependentUpon>rightbar.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -638,7 +664,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>33230</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1659/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

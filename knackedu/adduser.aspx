@@ -132,7 +132,7 @@
                             <asp:TextBox runat="server" TextMode="Date" ID="txtDateOfJoin" class="form-control mandCat"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                         <asp:Button runat="server" ID="btnSubmit" Text="Submit" />
+                         <asp:Button runat="server" ID="btnSubmit" Text="Submit" CssClass="btn btn-success btn-lg pull-right" />
                          </div>
                         
                     </div>
