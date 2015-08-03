@@ -37,6 +37,9 @@ namespace knackedu
                     case MenuNames.Management:
                         divmanagement.Visible = true;
                         break;
+                    case MenuNames.Parent:
+                        divParent.Visible = true;
+                        break;
                     default:
                         break;
                 }

@@ -121,7 +121,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="about.aspx" />
+    <Content Include="about.html" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -131,10 +132,28 @@
     <Content Include="AddStudent.aspx" />
     <Content Include="adduser.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="createstudent.aspx" />
+    <Content Include="css\lightbox.css" />
+    <Content Include="css\parent.css" />
     <Content Include="GenarateStudentId.aspx" />
     <Content Include="gradesystem.aspx" />
+    <Content Include="html\about.html" />
+    <Content Include="html\index.html" />
+    <Content Include="html\my_grade_books.html" />
+    <Content Include="html\my_school_sms.html" />
+    <Content Include="html\school_fee_counter.html" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\slider_02.jpg" />
     <Content Include="index.aspx" />
     <Content Include="index.html" />
+    <Content Include="js\effects.js" />
+    <Content Include="js\lightbox.js" />
+    <Content Include="js\prototype.js" />
+    <Content Include="js\scriptaculous.js" />
+    <Content Include="mygradebook.aspx" />
+    <Content Include="myschoolsms.aspx" />
+    <Content Include="my_grade_books.html" />
+    <Content Include="my_school_sms.html" />
     <Content Include="OldCategories.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -217,7 +236,6 @@
     <Content Include="Images\dummy.png" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\logo.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -276,13 +294,56 @@
     <Content Include="js\Validations.js" />
     <Content Include="js\wow.js" />
     <Content Include="packages.config" />
+    <Content Include="parentannouncements.aspx" />
+    <Content Include="parentdetails.aspx" />
+    <Content Include="parentevents.aspx" />
+    <Content Include="parentlogin.aspx" />
+    <Content Include="parentreportcards.aspx" />
+    <Content Include="parenttimetable.aspx" />
+    <Content Include="rs-plugin\assets\arrowleft.png" />
+    <Content Include="rs-plugin\assets\arrowright.png" />
+    <Content Include="rs-plugin\assets\arrow_left.png" />
+    <Content Include="rs-plugin\assets\arrow_left2.png" />
+    <Content Include="rs-plugin\assets\arrow_right.png" />
+    <Content Include="rs-plugin\assets\arrow_right2.png" />
+    <Content Include="rs-plugin\assets\boxed_bgtile.png" />
+    <Content Include="rs-plugin\assets\bullet.png" />
+    <Content Include="rs-plugin\assets\bullets.png" />
+    <Content Include="rs-plugin\assets\bullets2.png" />
+    <Content Include="rs-plugin\assets\bullet_boxed.png" />
+    <Content Include="rs-plugin\assets\coloredbg.png" />
+    <Content Include="rs-plugin\assets\gridtile.png" />
+    <Content Include="rs-plugin\assets\gridtile_3x3.png" />
+    <Content Include="rs-plugin\assets\gridtile_3x3_white.png" />
+    <Content Include="rs-plugin\assets\gridtile_white.png" />
+    <Content Include="rs-plugin\assets\large_left.png" />
+    <Content Include="rs-plugin\assets\large_right.png" />
+    <Content Include="rs-plugin\assets\loader.gif" />
+    <Content Include="rs-plugin\assets\navigdots.png" />
+    <Content Include="rs-plugin\assets\navigdots_bgtile.png" />
+    <Content Include="rs-plugin\assets\shadow1.png" />
+    <Content Include="rs-plugin\assets\shadow2.png" />
+    <Content Include="rs-plugin\assets\shadow3.png" />
+    <Content Include="rs-plugin\assets\small_left.png" />
+    <Content Include="rs-plugin\assets\small_left_boxed.png" />
+    <Content Include="rs-plugin\assets\small_right.png" />
+    <Content Include="rs-plugin\assets\small_right_boxed.png" />
+    <Content Include="rs-plugin\assets\timer.png" />
+    <Content Include="rs-plugin\css\settings.css" />
+    <Content Include="rs-plugin\images\gradient\g30.png" />
+    <Content Include="rs-plugin\images\gradient\g40.png" />
+    <Content Include="rs-plugin\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="rs-plugin\js\jquery.themepunch.tools.min.js" />
     <Content Include="Sample.aspx" />
+    <Content Include="schoolfeecounter.aspx" />
+    <Content Include="school_fee_counter.html" />
     <Content Include="Scripts\Custom.js" />
     <Content Include="C:\Users\Hidayathulla\Desktop\WebForm1.aspx">
       <Link>WebForm1.aspx</Link>
     </Content>
     <Content Include="afterlogin.Master" />
     <Content Include="Sidebar.ascx" />
+    <Content Include="beforelogin.Master" />
     <None Include="Common\StudentInfo.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -300,7 +361,12 @@
     <Content Include="fonts\Stroke-Gap-Icons.svg" />
     <Content Include="fonts\Stroke-Gap-Icons.ttf" />
     <Content Include="fonts\Stroke-Gap-Icons.woff" />
+    <Content Include="parentafterlogin.Master" />
     <None Include="Properties\PublishProfiles\knackedu.pubxml" />
+    <Content Include="rs-plugin\font\revicons90c6.eot" />
+    <Content Include="rs-plugin\font\revicons90c6.svg" />
+    <Content Include="rs-plugin\font\revicons90c6.ttf" />
+    <Content Include="rs-plugin\font\revicons90c6.woff" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -452,12 +518,12 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -501,6 +567,20 @@
     <Compile Include="adduser.aspx.designer.cs">
       <DependentUpon>adduser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="beforelogin.Master.cs">
+      <DependentUpon>beforelogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="beforelogin.Master.designer.cs">
+      <DependentUpon>beforelogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="createstudent.aspx.cs">
+      <DependentUpon>createstudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="createstudent.aspx.designer.cs">
+      <DependentUpon>createstudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="genaratestudentid.aspx.cs">
       <DependentUpon>GenarateStudentId.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -523,6 +603,20 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="MenuNames.cs" />
+    <Compile Include="mygradebook.aspx.cs">
+      <DependentUpon>mygradebook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mygradebook.aspx.designer.cs">
+      <DependentUpon>mygradebook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myschoolsms.aspx.cs">
+      <DependentUpon>myschoolsms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myschoolsms.aspx.designer.cs">
+      <DependentUpon>myschoolsms.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OldCategories.aspx.cs">
       <DependentUpon>OldCategories.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -555,6 +649,55 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="parentafterlogin.Master.cs">
+      <DependentUpon>parentafterlogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parentafterlogin.Master.designer.cs">
+      <DependentUpon>parentafterlogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="parentannouncements.aspx.cs">
+      <DependentUpon>parentannouncements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parentannouncements.aspx.designer.cs">
+      <DependentUpon>parentannouncements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="parentdetails.aspx.cs">
+      <DependentUpon>parentdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parentdetails.aspx.designer.cs">
+      <DependentUpon>parentdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="parentevents.aspx.cs">
+      <DependentUpon>parentevents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parentevents.aspx.designer.cs">
+      <DependentUpon>parentevents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="parentlogin.aspx.cs">
+      <DependentUpon>parentlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parentlogin.aspx.designer.cs">
+      <DependentUpon>parentlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="parentreportcards.aspx.cs">
+      <DependentUpon>parentreportcards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parentreportcards.aspx.designer.cs">
+      <DependentUpon>parentreportcards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="parenttimetable.aspx.cs">
+      <DependentUpon>parenttimetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="parenttimetable.aspx.designer.cs">
+      <DependentUpon>parenttimetable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sample.aspx.cs">
       <DependentUpon>Sample.aspx</DependentUpon>
@@ -562,6 +705,13 @@
     </Compile>
     <Compile Include="Sample.aspx.designer.cs">
       <DependentUpon>Sample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="schoolfeecounter.aspx.cs">
+      <DependentUpon>schoolfeecounter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="schoolfeecounter.aspx.designer.cs">
+      <DependentUpon>schoolfeecounter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

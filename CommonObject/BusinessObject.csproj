@@ -42,6 +42,7 @@
     <Compile Include="BOCategories.cs" />
     <Compile Include="BOStudent.cs" />
     <Compile Include="BOTermPlan.cs" />
+    <Compile Include="BOUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -337,15 +337,6 @@ namespace knackedu {
         protected global::System.Web.UI.WebControls.Button btnClear;
         
         /// <summary>
-        /// upStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upStudent;
-        
-        /// <summary>
         /// gvStudents control.
         /// </summary>
         /// <remarks>

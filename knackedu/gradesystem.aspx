@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Exam Type</label>
-                                     <asp:DropDownList ID="drpExamType" runat="server" class="form-control drpgrade">
+                                    <asp:DropDownList ID="drpExamType" runat="server" class="form-control drpgrade">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
@@ -45,11 +45,10 @@
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
+                                    <asp:Button class="btn btn-primary nextBtn btn-lg pull-left" runat="server"
                                         ID="btnClear" Text="Clear" OnClick="btnClear_Click" />
-                                    &nbsp;
-                            <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
-                                ID="btn" Text="Submit" OnClick="btn_Click" OnClientClick="javascript:return ValidateGradeSystem();" />
+                                    <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
+                                        ID="btn" Text="Submit" OnClick="btn_Click" OnClientClick="javascript:return ValidateGradeSystem();" />
 
                                 </div>
 

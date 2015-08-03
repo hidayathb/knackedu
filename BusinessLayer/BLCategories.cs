@@ -77,11 +77,48 @@ namespace BusinessLayer
                     std.Id = Convert.ToInt32(item["StudentId"]);
                     std.FirstName = item["FirstName"].ToString();
                     std.SurName = item["LastName"].ToString();
+                    std.DOB = item["DOB"].ToString();
+                    std.ResAddress = item["Address"].ToString();
+                    std.TeleNumber = item["ContactNo"].ToString();
+                    std.MotherName = item["MotherName"].ToString();
+                    std.FatherName = item["FatherName"].ToString();
 
                     students.Add(std);
                 }
 
                 return students;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                pDAL = null;
+            }
+        }
+
+        public List<BOUser> LoadUsers(int userid, string hostCode)
+        {
+            DACategories pDAL = new DACategories();
+            try
+            {
+                var dtStudents = pDAL.LoadUsers(userid, hostCode);
+                var users = new List<BOUser>();
+
+                BOUser std = null;
+                foreach (DataRow item in dtStudents.Rows)
+                {
+                    std = new BOUser();
+                    std.FirstName = item["FirstName"].ToString();
+                    std.DepartmentName = item["DepartmentName"].ToString();
+                    std.userid = item["UserId"].ToString();
+                    std.Id = item["Id"].ToString();
+
+                    users.Add(std);
+                }
+
+                return users;
             }
             catch
             {
@@ -237,6 +274,24 @@ namespace BusinessLayer
             try
             {
                 return pDAL.DeleteSubCategories(id);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                pDAL = null;
+            }
+        }
+
+        public void InsertUser(BOUser user, out string id)
+        {
+            DACategories pDAL = new DACategories();
+            id = "";
+            try
+            {
+                 pDAL.InsertUser(user, out id);
             }
             catch
             {

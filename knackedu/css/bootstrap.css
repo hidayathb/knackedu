@@ -55,7 +55,8 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: bold;
+  font-weight: 600;
+
 }
 dfn {
   font-style: italic;
@@ -1594,6 +1595,7 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+  margin-top:15px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
@@ -2233,6 +2235,7 @@ pre code {
 }
 table {
   background-color: transparent;
+  
 }
 caption {
   padding-top: 8px;
@@ -2244,9 +2247,10 @@ th {
   text-align: left;
 }
 .table {
-  width: 100%;
+  width: 96%;
   max-width: 100%;
   margin-bottom: 20px;
+  margin: 0px 15px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -2257,7 +2261,7 @@ th {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
@@ -2302,6 +2306,7 @@ th {
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
+  
 }
 .table-hover > tbody > tr:hover {
   background-color: #f5f5f5;
@@ -2606,7 +2611,6 @@ input[type="search"] {
   }
 }
 .form-group {
-  margin-bottom: 15px;
 }
 .radio,
 .checkbox {
@@ -3066,6 +3070,52 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #333;
 }
+.btn-primary_new {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary_new:hover,
+.btn-primary_new:focus,
+.btn-primary_new.focus,
+.btn-primary_new:active,
+.btn-primary_new.active,
+.open > .dropdown-toggle.btn-primary_new {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-primary_new:active,
+.btn-primary_new.active,
+.open > .dropdown-toggle.btn-primary_new {
+  background-image: none;
+}
+.btn-primary_new.disabled,
+.btn-primary_new[disabled],
+fieldset[disabled] .btn-primary_new,
+.btn-primary_new.disabled:hover,
+.btn-primary_new[disabled]:hover,
+fieldset[disabled] .btn-primary_new:hover,
+.btn-primary_new.disabled:focus,
+.btn-primary_new[disabled]:focus,
+fieldset[disabled] .btn-primary_new:focus,
+.btn-primary_new.disabled.focus,
+.btn-primary_new[disabled].focus,
+fieldset[disabled] .btn-primary_new.focus,
+.btn-primary_new.disabled:active,
+.btn-primary_new[disabled]:active,
+fieldset[disabled] .btn-primary_new:active,
+.btn-primary_new.disabled.active,
+.btn-primary_new[disabled].active,
+fieldset[disabled] .btn-primary_new.active {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary_new .badge {
+  color: #337ab7;
+  background-color: #fff;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #337ab7;
@@ -6144,22 +6194,14 @@ button.close {
   opacity: .5;
 }
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
   background-repeat: repeat-x;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
 }
 .carousel-control.right {
   right: 0;
   left: auto;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-  background-repeat: repeat-x;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
 }
 .carousel-control:hover,
 .carousel-control:focus {

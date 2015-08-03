@@ -13,6 +13,7 @@ namespace knackedu
         Teacher,
         Librarian,
         Report,
-        Management
+        Management,
+        Parent
     }
 }

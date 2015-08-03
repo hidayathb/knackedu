@@ -4,44 +4,42 @@
 <%@ Register TagPrefix="uc" Src="~/Sidebar.ascx" TagName="ucSidebar" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="CPContent" runat="server">
-    
+
     <section class="section-white">
         <div class="container">
             <div id="content setup-content" class="col-md-9 col-sm-12">
                 <asp:UpdatePanel ID="CatUpdatePanel" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        
-                        <div class="col-xs-6 col-md-offset-3">
-                            <div class="col-md-12">
-                                <div class="widget-title">
-                                    <h4>Category Information</h4>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label runat="server" ID="lblErrorMsg" ForeColor="Red" CssClass="control-label"></asp:Label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Category Code</label>
-                                    <asp:TextBox runat="server" ID="txtCategoryCode" class="form-control mandCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Category Name</label>
-                                    <asp:TextBox runat="server" ID="txtCategoryName" class="form-control mandCat"></asp:TextBox>
-                                </div>
-
-                                <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"
-                                    ID="btnCategory" Text="Add Category" OnClick="btnCategory_Click" OnClientClick="javascript:return ValidateCategories();" />
+                        <div class="col-md-5">
+                            <div class="widget-title">
+                                <h4>Category Information</h4>
                             </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" ID="lblErrorMsg" ForeColor="Red" CssClass="control-label"></asp:Label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Category Code</label>
+                                <asp:TextBox runat="server" ID="txtCategoryCode" class="form-control mandCat"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Category Name</label>
+                                <asp:TextBox runat="server" ID="txtCategoryName" class="form-control mandCat"></asp:TextBox>
+                            </div>
+
+                            <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"
+                                ID="btnCategory" Text="Add Category" OnClick="btnCategory_Click" OnClientClick="javascript:return ValidateCategories();" />
                         </div>
+
                         <div class="clearfix"></div>
                         <br />
 
                         <asp:GridView CssClass="table table-striped" ID="gvCategory" runat="server"
-                            BackColor="White" BorderColor="#999999" OnPageIndexChanging="gvCategory_PageIndexChanging"
+                            OnPageIndexChanging="gvCategory_PageIndexChanging"
                             PageSize="5" AllowSorting="true" AllowPaging="true"
-                            BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false"
+                            AutoGenerateColumns="false"
                             OnRowCommand="gvCategory_RowCommand">
-                            <FooterStyle BackColor="#CCCCCC" ForeColor="Brown" />
-                            <PagerStyle BackColor="#999999" ForeColor="Brown" HorizontalAlign="Right" />
+                            <FooterStyle BackColor="#CCCCCC" ForeColor="Green" />
+                            <PagerStyle BackColor="#999999" ForeColor="Green" HorizontalAlign="Right" />
                             <Columns>
                                 <asp:TemplateField HeaderText="Code" HeaderStyle-HorizontalAlign="Center"
                                     HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"
@@ -88,37 +86,35 @@
                 <br />
                 <asp:UpdatePanel ID="subcatUpdatePanel" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div class="col-xs-6 col-md-offset-3">
-                            <div class="col-md-12">
-                                <div class="widget-title">
-                                    <h4>SubCategory Information</h4>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label runat="server" ID="lblSubCategoryMsg" ForeColor="Red" CssClass="control-label"></asp:Label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Category</label>
-                                    <asp:DropDownList class="form-control" ID="drpcategoryID" runat="server"
-                                        OnSelectedIndexChanged="drpcategoryID_SelectedIndexChanged" AutoPostBack="true">
-                                    </asp:DropDownList>
-                                </div>
-                                 <%--<div class="form-group">
+                        <div class="col-md-5">
+                            <div class="widget-title">
+                                <h4>SubCategory Information</h4>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" ID="lblSubCategoryMsg" ForeColor="Red" CssClass="control-label"></asp:Label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Category</label>
+                                <asp:DropDownList class="form-control" ID="drpcategoryID" runat="server"
+                                    OnSelectedIndexChanged="drpcategoryID_SelectedIndexChanged" AutoPostBack="true">
+                                </asp:DropDownList>
+                            </div>
+                            <%--<div class="form-group">
                                     <label class="control-label">Parent Sub Category</label>
                                     <asp:DropDownList class="form-control" ID="drpParentSubCategory" runat="server"
                                         AutoPostBack="true" OnSelectedIndexChanged="drpParentSubCategory_SelectedIndexChanged" >
                                     </asp:DropDownList>
                                 </div>--%>
-                                <div class="form-group">
-                                    <label class="control-label">SubCategory Code</label>
-                                    <asp:TextBox runat="server" ID="txtSubCategoryCode" class="form-control mandSubCat"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">SubCategory Name</label>
-                                    <asp:TextBox runat="server" ID="txtSubCategoryName" class="form-control mandSubCat"></asp:TextBox>
-                                </div>
-                                <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"
-                                    ID="btnSubCategory" Text="Add SubCategory" OnClick="btnSubCategory_Click" OnClientClick="javascript:return ValidateSubCategories();" />
+                            <div class="form-group">
+                                <label class="control-label">SubCategory Code</label>
+                                <asp:TextBox runat="server" ID="txtSubCategoryCode" class="form-control mandSubCat"></asp:TextBox>
                             </div>
+                            <div class="form-group">
+                                <label class="control-label">SubCategory Name</label>
+                                <asp:TextBox runat="server" ID="txtSubCategoryName" class="form-control mandSubCat"></asp:TextBox>
+                            </div>
+                            <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"
+                                ID="btnSubCategory" Text="Add SubCategory" OnClick="btnSubCategory_Click" OnClientClick="javascript:return ValidateSubCategories();" />
                         </div>
                         <div class="clearfix"></div>
                         <br />
@@ -127,8 +123,8 @@
                             PageSize="5" AllowSorting="true" AllowPaging="true"
                             BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false"
                             OnRowCommand="gvSubCategory_RowCommand" OnPageIndexChanging="gvSubCategory_PageIndexChanging">
-                            <FooterStyle BackColor="#CCCCCC" ForeColor="Brown" />
-                            <PagerStyle BackColor="#999999" ForeColor="Brown" HorizontalAlign="Right" />
+                            <FooterStyle BackColor="#CCCCCC" ForeColor="Green" />
+                            <PagerStyle BackColor="#999999" ForeColor="Green" HorizontalAlign="Right" />
                             <Columns>
                                 <asp:TemplateField HeaderText="Category" HeaderStyle-HorizontalAlign="Center"
                                     HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Left"

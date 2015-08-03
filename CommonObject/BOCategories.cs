@@ -78,5 +78,11 @@ namespace CommonObject
         public string SectionName { get; set; }
         public string FirstName { get; set; }
         public string SurName { get; set; }
+        public string FatherName { get; set; }
+        public string MotherName { get; set; }
+        public string DOB { get; set; }
+        public string ResAddress { get; set; }
+        public string TeleNumber { get; set; }
+        public string MobNumber { get; set; }
     }
 }

@@ -14,7 +14,14 @@ namespace knackedu
             if (!IsPostBack)
             {
                 Session["HostCode"] = "DEMO";
+                if (Session["username"] != null)
+                    loginUserName.InnerText = Session["username"].ToString();
             }
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
         }
     }
 }

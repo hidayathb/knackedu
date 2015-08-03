@@ -43,6 +43,7 @@
     <Compile Include="commonDA.cs" />
     <Compile Include="DACategories.cs" />
     <Compile Include="DAGradeSystem.cs" />
+    <Compile Include="DAParent.cs" />
     <Compile Include="DAStudentMarks.cs" />
     <Compile Include="DAStudents.cs" />
     <Compile Include="DATermPlan.cs" />

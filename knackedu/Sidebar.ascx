@@ -140,3 +140,25 @@
     </div>
     <!-- end latest-course -->
 </div>
+<div class="widget" runat="server" id="divParent" visible="false">
+    <div class="widget-title">
+        <h4>Accountant</h4>
+        <hr>
+    </div>
+    <!-- end widget-title -->
+
+    <div class="cat-widget">
+        <ul>
+              <li><a href="parenttimetable.aspx">TimTable</a></li>
+              <li><a href="parentannouncements.aspx">Announcements</a></li>
+              <li><a href="#">Reportcards</a></li>
+              <li><a href="parentevents.aspx">Events</a></li>
+              <li><a href="#">CCE Student Marks Subject Wise</a></li>
+              <li><a href="#">CCE Student Marks Evaluation Wise</a></li>
+              <li><a href="#">Achievement Report</a></li>
+              <li><a href="#">Attendence</a></li>
+            <li><a href="#">Photo Gallery</a></li>
+        </ul>
+    </div>
+    <!-- end latest-course -->
+</div>

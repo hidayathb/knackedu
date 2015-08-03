@@ -1,0 +1,72 @@
+﻿
+#wrapperclass {
+	width:1018px;
+	height:auto;
+	margin:auto;
+		padding:0px;
+	background-image:url(../images/backgroundparent.jpg);
+	box-shadow:2px 2px 5px 2px #999;
+}
+#parentheader {
+	width:1000px;
+	height:60px;
+	/*background-color:#0b2e8c;*/
+	background-color:#139BAB
+}
+#parentheadborder
+{
+    border:solid 2px #0069ab;
+    }
+    .brline
+    {
+        color:#0041b9;
+        }
+        .linknames
+        {
+            color:#139BAB;
+             font-size:12px;
+        font-family:Arial,Helvetica,sans-serif;
+        text-decoration:none;
+        
+            font-weight:bold;
+            }
+            . hover
+            {
+                color:red;
+                }
+                 .leftmenulinknames
+        {
+            color:#0a6096;
+             font-size:12px;
+        font-family:Arial,Helvetica,sans-serif;
+        text-decoration:none;
+        
+            font-weight:bold;
+            }
+            .lefttoppadding
+            {padding-top:5px;
+                }
+    .loginname
+    {
+        color:White;
+        font-weight:bold;
+        font-size:13px;
+        font-family:Arial,Helvetica,sans-serif;
+        }
+        .namestyles
+        {
+            color:#139BAB;
+        font-weight:bold;
+        font-size:13px;
+        font-family:Arial,Helvetica,sans-serif;
+            }
+        .pdropdown
+        {
+            width:200px;
+            border-color:#0069ab;
+            height:25px;
+            }
+            #bodyparentdiv
+            {
+                border:#0b2e8c;
+                }

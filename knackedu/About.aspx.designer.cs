@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace knackedu
-{
-
-    public partial class About
-    {
-
+namespace knackedu {
+    
+    
+    public partial class about {
     }
 }

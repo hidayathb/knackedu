@@ -1,777 +1,448 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="knackedu.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="knackedu.index"
+    MasterPageFile="~/beforelogin.Master" %>
 
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
-<!-- Mirrored from trendingtemplates.com/demos/coursat/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Jul 2015 19:55:34 GMT -->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-	<meta name="keywords" content="">
-	<title>:: Knackedu :: Home page</title>
-  <link rel="shortcut icon" href="images/apple-touch-icon.png" >
-  <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
-
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/stroke.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/carousel.css">
-	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<!-- COLORS -->
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
-
-	<!-- RS SLIDER -->
-	<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
-  <body>
-      <form runat="server" >
-    <div id="loader">
-      <div class="loader-container">
-        <div class="wow zoomIn" data-wow-duration="1s" data-wow-offset="100">
-          <div class="wow rubberBand" data-wow-delay="2000ms" data-wow-duration="1s">
-            <div class="wow pulse" data-wow-delay="100ms" data-wow-iteration="infinite" data-wow-duration="1s">
-              <img src="images/smalllogo.png" alt="" class="loader-site">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="wrapper">
-      <div class="topbar clearfix">
-        <div class="container">
-          <div class="clearfix">
-            <div class="pull-left">
-              <div class="contactwrap text-left">
-                <ul class="list-inline">
-                  <li><i class="fa fa-phone"></i> Call Us : +91 9849610015</li>
-                  <li><i class="fa fa-envelope"></i> Email Us : info@knackedu.com</li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-lock"></i> Login</a>
-                    <div class="dropdown-menu">
-                        <div class="form-title"><h4>Login Area</h4></div><hr>
-                        <asp:DropDownList runat="server" ID="drpUserType"></asp:DropDownList>
-                        <select class="form-control drpgrade">
-                          <option selected="selected" value="Select">Select</option>
-                          <option value="TEACHERS">TEACHERS</option>
-                          <option value="LIBRARIAN">LIBRARIAN</option>
-                          <option value="ACCOUNTANT">ACCOUNTANT</option>
-                          <option value="COUNSELLOR">COUNSELLOR</option>
-                          <option value="SECURITY">SECURITY</option>
-                        </select>
-                        <input class="form-control txtgrade" type="text" name="username" placeholder="USER NAME" > 
-                        <div class="formpassword">
-                          <input class="form-control txtgrade" type="password" name="password" placeholder="******"> 
-                          <span class="badge"><a href="Admin.aspx" style="color:#fff">Forget</a></span>
+<asp:Content ContentPlaceHolderID="CPContent" runat="server">
+    <title>:: Knackedu :: My GradeBook</title>
+    <!-- slider --->
+    <section class="slider-section">
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                <ul>
+                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider_01.jpg" data-saveperformance="off" data-title="Slide">
+                        <img src="upload/slider_01.jpg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <div class="tp-caption text-center skewfromleft randomrotateout tp-resizeme"
+                            data-x="center"
+                            data-y="165"
+                            data-speed="1000"
+                            data-start="800"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="1000"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                            <img src="upload/slider_logo_01.png" alt="">
                         </div>
-                        <div class="clearfix"></div>
-                          <asp:Button class="btn btn-block btn-primary" Text="LOGIN" runat="server" ID="btnLogin"
-                               OnClick="btnLogin_Click"/>
-                    </div>
-                  </li>
-                  <li> <i class="fa fa-file-text-o"></i><a href="#">Register</a></li>
+                        <div class="tp-caption slider_01 text-center skewfromright randomrotateout tp-resizeme"
+                            data-x="center"
+                            data-y="240"
+                            data-speed="1000"
+                            data-start="1400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="1000"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                        </div>
+                        <div class="tp-caption slider_02 text-center skewfromright randomrotateout tp-resizeme"
+                            data-x="center"
+                            data-y="330"
+                            data-speed="1000"
+                            data-start="1400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="1000"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                        </div>
+                        <div class="tp-caption slider_03 text-center randomrotateout tp-resizeme"
+                            data-x="center"
+                            data-y="395"
+                            data-speed="1000"
+                            data-start="1400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="1000"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                    </li>
+                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider_02.jpg" data-saveperformance="off" data-title="Slide">
+                        <img src="upload/slider_02.jpg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <div class="tp-caption slider_01 text-left skewfromright randomrotateout tp-resizeme"
+                            data-x="left"
+                            data-y="240"
+                            data-speed="1000"
+                            data-start="1400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="1000"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                        </div>
+                        <div class="tp-caption slider_02 text-center skewfromright randomrotateout tp-resizeme"
+                            data-x="left"
+                            data-y="330"
+                            data-speed="1000"
+                            data-start="1400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="1000"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                        </div>
+                        <div class="tp-caption slider_03 text-left randomrotateout tp-resizeme"
+                            data-x="left"
+                            data-y="395"
+                            data-speed="1000"
+                            data-start="1400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="1000"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                        </div>
+
+                    </li>
+
                 </ul>
-              </div><!-- end contactwrap -->
-            </div><!-- end col -->
-
-            <div class="pull-right">
-              <ul class="social">
-                <li class="facebook" ><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li class="google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-            </div><!-- end col -->
-          </div><!-- end row -->
-        </div><!-- end container -->
-      </div><!-- end topbar -->
-
-      <header class="header clearfix">
-        <div class="container">
-          <nav class="yamm navbar navbar-default">
-            <div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-              <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown active megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <div class="yamm-content">
-                        <div class="row-fluid"> 
-                          <div class="col-md-6 col-sm-6 col-xs-12 nopadding">
-                            <ul class="box">
-                              <li><a href="index.html">Home Default</a></li>
-                              <li><a href="index-1.html">Home Version 1</a></li>
-                              <li><a href="index-2.html">Home Version 2</a></li>
-                              <li><a href="index-3.html">Home Version 3</a></li>
-                              <li><a href="index-4.html">Home Version 4</a></li>
-                              <li><a href="index-5.html">Home Version 5</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-md-6 col-sm-6 col-xs-12 nopadding">
-                            <ul class="box">
-                              <li><a href="index-6.html">Home Version 6</a></li>
-                              <li><a href="index-7.html">Home Version 7</a></li>
-                              <li><a href="index-8.html">Home Version 8</a></li>
-                              <li><a href="index-9.html">Home Version 9</a></li>
-                              <li><a href="index-10.html">Home Version 10</a></li>
-                              <li><a href="coming-soon.html">Home Version 11</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                    <li><a href="about-1.html">About</a></li>
-                <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <div class="yamm-content">
-                        <div class="row-fluid"> 
-                          <div class="col-md-6 col-sm-6 col-xs-12 nopadding">
-                            <ul class="box">
-                              <li><a href="courses-1.html">Courses Grid</a></li>
-                              <li><a href="courses-2.html">Courses Grid Search</a></li>
-                              <li><a href="courses-3.html">Courses Grid RS</a></li>
-                              <li><a href="courses-4.html">Courses Grid LS</a></li>
-                              <li><a href="courses-5.html">Courses List</a></li>
-                              <li><a href="courses-6.html">Courses List RS</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-md-6 col-sm-6 col-xs-12 nopadding">
-                            <ul class="box">
-                              <li><a href="courses-7.html">Courses List LS</a></li>
-                              <li><a href="course-single-1.html">Single Course 1</a></li>
-                              <li><a href="course-single-2.html">Single Course 2</a></li>
-                              <li><a href="course-single-3.html">Single Course 3</a></li>
-                              <li><a href="course-single-4.html">Single Course RS</a></li>
-                              <li><a href="course-single-5.html">Single Course LS</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="instructors-1.html">Instructors</a></li>
-                <li class="dropdown megamenu yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <div class="yamm-content">
-                        <div class="row-fluid"> 
-                          <div class="col-md-3 col-sm-6 col-xs-12 firstcolumn">
-                            <ul class="box">
-                              <li><a href="about-1.html">About us 1</a></li>
-                              <li><a href="about-2.html">About us 2</a></li>
-                              <li><a href="about-3.html">About us 3</a></li>
-                              <li><a href="instructors-1.html">Instructors 1</a></li>
-                              <li><a href="instructors-2.html">Instructors 2</a></li>
-                              <li><a href="services-1.html">Services 1</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-md-3 col-sm-6 col-xs-12 nopadding">
-                            <ul class="box">
-                              <li><a href="services-2.html">Services 2</a></li>
-                              <li><a href="services-3.html">Services 3</a></li>
-                              <li><a href="faqs-1.html">FAQs</a></li>
-                              <li><a href="faqs-2.html">FAQs RS</a></li>
-                              <li><a href="faqs-3.html">FAQs LS</a></li>
-                              <li><a href="page-1.html">Page Fullwidth</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-md-3 col-sm-6 col-xs-12 nopadding">
-                            <ul class="box">
-                              <li><a href="page-2.html">Page RS</a></li>
-                              <li><a href="page-3.html">Page LS</a></li>
-                              <li><a href="pricing.html">Pricing Table</a></li>
-                              <li><a href="testimonials.html">Testimonials</a></li>
-                              <li><a href="404-1.html">Not Found 1</a></li>
-                              <li><a href="404-2.html">Not Found 2</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-md-3 col-sm-6 col-xs-12 nopadding">
-                            <ul class="box">
-                              <li><a href="login.html">Login Box</a></li>
-                              <li><a href="contact-1.html">Contact 1</a></li>
-                              <li><a href="contact-2.html">Contact 2</a></li>
-                              <li><a href="contact-3.html">Contact 3</a></li>
-                              <li><a href="typography.html">Typography</a></li>
-                              <li><a href="shortcodes.html">Shortcodes</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
-                  <ul class="dropdown-menu normalmenu">
-                    <li><a href="blog-1.html">Blog RS</a></li>
-                    <li><a href="blog-2.html">Blog LS</a></li>
-                    <li><a href="blog-single-1.html">Single Blog RS</a></li>
-                    <li><a href="blog-single-2.html">Single Blog LS</a></li>
-                    <li><a href="blog-single-3.html">Single Blog Full</a></li>
-                  </ul>
-                </li>
-                <li><a href="contact-1.html">Contact</a></li>
-                <li class="noborder">
-                            <div id="dmsearch" class="dmsearch">
-                                <form id="searchform" action="#" method="get">
-                                    <div class="dm-search-container">
-                                    <input id="s" class="dmsearch-input" type="text" name="s" value="" placeholder="Search">
-                                    </div>
-                                    <input id="go" class="dmsearch-submit" type="submit" value="">
-                                    <span class="fa fa-search"></span>
-                                </form> <!-- end searchform -->
-                            </div><!-- end search -->
-                </li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </nav><!-- end nav -->
-            </div><!-- end container -->
-          </header><!-- end header -->
+        </div>
+    </section>
 
-  <!-- slider --->
-
-      <section class="section-white">
+    <section class="section-white">
         <div class="container">
-          <div class="relative">
-            <div class="background service-absolute">
-              <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="service-style-1">
-                    <div class="icon-normal wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                      <i class="icon icon-Book"></i>
-                    </div><!-- end icon-wrap -->
-                    <div class="title-wrap">
-                      <h5 class="service-title">My Gradebook</h5>
-                      <hr>
-                      <p>it's simple, powerful and effective School Management Software for Schools.</p>
-                    </div><!-- end title-wrap -->
-                  </div><!-- end title -->
-                </div><!-- end col -->
+            <div class="relative">
+                <div class="background service-absolute">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-style-1">
+                                <div class="icon-normal wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                    <i class="icon icon-Book"></i>
+                                </div>
+                                <!-- end icon-wrap -->
+                                <div class="title-wrap">
+                                    <h5 class="service-title">My Gradebook</h5>
+                                    <hr>
+                                    <p>it's simple, powerful and effective School Management Software for Schools.</p>
+                                </div>
+                                <!-- end title-wrap -->
+                            </div>
+                            <!-- end title -->
+                        </div>
+                        <!-- end col -->
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="service-style-1">
-                    <div class="icon-normal wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                      <i class="icon icon-Users"></i>
-                    </div><!-- end icon-wrap -->
-                    <div class="title-wrap">
-                      <h5 class="service-title">School Fee Counter</h5>
-                      <hr>
-                      <p>Meet SchoolFeecounter it's an easy to use, effective and powerful Fee Management Software for Schools</p>
-                    </div><!-- end title-wrap -->
-                  </div><!-- end title -->
-                </div><!-- end col -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-style-1">
+                                <div class="icon-normal wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                                    <i class="icon icon-Users"></i>
+                                </div>
+                                <!-- end icon-wrap -->
+                                <div class="title-wrap">
+                                    <h5 class="service-title">School Fee Counter</h5>
+                                    <hr>
+                                    <p>Meet SchoolFeecounter it's an easy to use, effective and powerful Fee Management Software for Schools</p>
+                                </div>
+                                <!-- end title-wrap -->
+                            </div>
+                            <!-- end title -->
+                        </div>
+                        <!-- end col -->
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                  <div class="service-style-1">
-                    <div class="icon-normal wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                      <i class="icon icon-MessageLeft"></i>
-                    </div><!-- end icon-wrap -->
-                    <div class="title-wrap">
-                      <h5 class="service-title">My School SMS</h5>
-                      <hr>
-                      <p>MyschoolSMS is the premium product of Myclassboard connect</p>
-                    </div><!-- end title-wrap -->
-                  </div><!-- end title -->
-                </div><!-- end col -->
-              </div><!-- end row -->
-            </div><!-- end background service-absolute -->
-          </div><!-- end relative -->
-        </div><!-- end container -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="service-style-1">
+                                <div class="icon-normal wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                                    <i class="icon icon-MessageLeft"></i>
+                                </div>
+                                <!-- end icon-wrap -->
+                                <div class="title-wrap">
+                                    <h5 class="service-title">My School SMS</h5>
+                                    <hr>
+                                    <p>MyschoolSMS is the premium product of Myclassboard connect</p>
+                                </div>
+                                <!-- end title-wrap -->
+                            </div>
+                            <!-- end title -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end background service-absolute -->
+            </div>
+            <!-- end relative -->
+        </div>
+        <!-- end container -->
 
         <div class="container">
-        
+
             <div class="col-md-12">
-              <div class="section-title text-center">
-              <h4>Our Features</h4>
-              <hr>
-              <p>Why You Should Purchase This Template</p>
-              </div><!-- end title -->
-            </div><!-- end col -->
-          
-
-          <div class="row section-container">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                <div class="icon-wrap">
-                  <i class="fa fa-laptop"></i>
-                </div><!-- end icon-wrap -->
-                <div class="title-wrap">
-                  <h5 class="service-title">Learn Online</h5>
-                  <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
-                </div><!-- end title-wrap -->
-              </div><!-- end title -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                <div class="icon-wrap">
-                  <i class="fa fa-users"></i>
-                </div><!-- end icon-wrap -->
-                <div class="title-wrap">
-                  <h5 class="service-title">Expert Professors</h5>
-                  <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
-                </div><!-- end title-wrap -->
-              </div><!-- end title -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                <div class="icon-wrap">
-                  <i class="fa fa-film"></i>
-                </div><!-- end icon-wrap -->
-                <div class="title-wrap">
-                  <h5 class="service-title">Video & Audio Courses</h5>
-                  <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
-                </div><!-- end title-wrap -->
-              </div><!-- end title -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                <div class="icon-wrap">
-                  <i class="fa fa-wechat"></i>
-                </div><!-- end icon-wrap -->
-                <div class="title-wrap">
-                  <h5 class="service-title">Communicate With People</h5>
-                  <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
-                </div><!-- end title-wrap -->
-              </div><!-- end title -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                <div class="icon-wrap">
-                  <i class="fa fa-flag"></i>
-                </div><!-- end icon-wrap -->
-                <div class="title-wrap">
-                  <h5 class="service-title">Trusted Certifications</h5>
-                  <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
-                </div><!-- end title-wrap -->
-              </div><!-- end title -->
-            </div><!-- end col -->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-                <div class="icon-wrap">
-                  <i class="fa fa-book"></i>
-                </div><!-- end icon-wrap -->
-                <div class="title-wrap">
-                  <h5 class="service-title">Professional Courses</h5>
-                  <hr>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
-                </div><!-- end title-wrap -->
-              </div><!-- end title -->
-            </div><!-- end col -->
-          </div><!-- end row -->		
-        </div><!-- end container -->
-      </section><!-- end section-white -->
+                <div class="section-title text-center">
+                    <br />
+                    <h4>Smart Schools</h4>
+                    <hr>
+                </div>
+                <!-- end title -->
+            </div>
+            <!-- end col -->
 
 
-      
-       
-      <section class="section-white">
+            <div class="row section-container">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="icon-wrap">
+                            <i class="fa fa-book"></i>
+                        </div>
+                        <!-- end icon-wrap -->
+                        <div class="title-wrap">
+                            <h5 class="service-title">Library</h5>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
+                        </div>
+                        <!-- end title-wrap -->
+                    </div>
+                    <!-- end title -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                        <div class="icon-wrap">
+                            <i class="fa fa-bus"></i>
+                        </div>
+                        <!-- end icon-wrap -->
+                        <div class="title-wrap">
+                            <h5 class="service-title">Transport</h5>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
+                        </div>
+                        <!-- end title-wrap -->
+                    </div>
+                    <!-- end title -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="icon-wrap">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <!-- end icon-wrap -->
+                        <div class="title-wrap">
+                            <h5 class="service-title">Inventory</h5>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
+                        </div>
+                        <!-- end title-wrap -->
+                    </div>
+                    <!-- end title -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="icon-wrap">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <!-- end icon-wrap -->
+                        <div class="title-wrap">
+                            <h5 class="service-title">Pre-Admissions</h5>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
+                        </div>
+                        <!-- end title-wrap -->
+                    </div>
+                    <!-- end title -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <div class="icon-wrap">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <!-- end icon-wrap -->
+                        <div class="title-wrap">
+                            <h5 class="service-title">HR Module</h5>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
+                        </div>
+                        <!-- end title-wrap -->
+                    </div>
+                    <!-- end title -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="service-style-1 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                        <div class="icon-wrap">
+                            <i class="fa fa-fax"></i>
+                        </div>
+                        <!-- end icon-wrap -->
+                        <div class="title-wrap">
+                            <h5 class="service-title">Biometric Attendance</h5>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiing elit. Integer lorem quam, adipiscing vel condimentum tristique. <a href="#">Read More</a></p>
+                        </div>
+                        <!-- end title-wrap -->
+                    </div>
+                    <!-- end title -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end section-white -->
+
+    <section class="section-white">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                <div class="widget-title">
-                  <h4>About Us</h4>
-                  <hr>
-                </div><!-- end widget-title -->
-                <img src="upload/about_01.png" alt="" class="img-responsive">
-                <p>Suspendisse non augue tincidunt, ullamcorper odio vel, tempor risus. In cursus lacus at mattis consectetur. Mauris ligula nisi, aliquam id enim accumsan pretium, Suspendisse non augue tincidunt, ullamcorper odio vel, tempor risus. In cursus lacus at mattis consectetur.  <a class="readmore" href="#">Read More</a></p>
-              </div><!-- end widget -->
-            </div><!-- end col -->
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="widget-title">
+                            <h4>Latest News</h4>
+                            <hr>
+                        </div>
+                        <!-- end widget-title -->
 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                <div class="widget-title">
-                  <h4>Why Us</h4>
-                  <hr>
-                </div><!-- end widget-title -->
-                              <div class="accordion-toggle-2">
-                                  <div class="panel-group" id="accordion">
-                                      <div class="panel panel-default">
-                                          <div class="panel-heading">
-                                              <div class="panel-title">
-                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour">
-                                                      <h3><i class="indicator fa fa-plus"></i>Pixel Perfect?</h3>
-                                                  </a>
-                                              </div>
-                                          </div>
-                                          <div id="collapseFour" class="panel-collapse collapse">
-                                              <div class="panel-body">
-                                                  <p>Cras urna felis accumsan at ultrde cesid posuere masa um socis nautoque penat.  Maecenas ultrices. Lorem ipsum dolor sit amet consectetur adipisicing elit sedu do eiusmod tempore incididunt ut labore et dolore magna aliqua. </p>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="panel panel-default">
-                                          <div class="panel-heading">
-                                              <div class="panel-title">
-                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive">
-                                                      <h3> <i class="indicator fa fa-minus"></i> Ultra Responsive</h3>
-                                                  </a>
-                                              </div>
-                                          </div>
-                                          <div id="collapseFive" class="panel-collapse collapse in">
-                                              <div class="panel-body">
-                                                  <p>Cras urna felis accumsan at ultrde cesid posuere masa um socis nautoque penat.  Maecenas ultrices. Lorem ipsum dolor sit amet consectetur adipisicing elit sedu do eiusmod tempore incididunt ut labore et dolore magna aliqua. </p>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="panel panel-default">
-                                          <div class="panel-heading">
-                                              <div class="panel-title">
-                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix">
-                                                      <h3><i class="indicator fa fa-plus"></i> Modern Design</h3>
-                                                  </a>
-                                              </div>
-                                          </div>
-                                          <div id="collapseSix" class="panel-collapse collapse">
-                                              <div class="panel-body">
-                                                  <p>Cras urna felis accumsan at ultrde cesid posuere masa um socis nautoque penat.  Maecenas ultrices. Lorem ipsum dolor sit amet consectetur adipisicing elit sedu do eiusmod tempore incididunt ut labore et dolore magna aliqua. </p>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div><!-- accordion -->
-              </div><!-- end widget -->
-            </div><!-- end col -->
+                        <ul class="latest-news">
+                            <li>
+                                <img src="upload/latest_blog_01.png" alt="" class="img-responsive img-rounded alignleft">
+                                <h4><a href="#" title="">Blog Tiltle Shall Be Here!</a></h4>
+                                <p>Lorem ipsum dolor sit amet, conssectfetufar Integer lorewm quam adipcing condimentum.<a href="#">Read More</a></p>
+                                <span>Posted by <a href="#">Begha</a> / Posted on Oct 14, 2014</span>
+                            </li>
+                            <li>
+                                <img src="upload/latest_blog_02.png" alt="" class="img-responsive img-rounded alignleft">
+                                <h4><a href="#" title="">Blog Tiltle Shall Be Here!</a></h4>
+                                <p>Lorem ipsum dolor sit amet, conssectfetufar Integer lorewm quam adipcing condimentum.<a href="#">Read More</a></p>
+                                <span>Posted by <a href="#">Begha</a> / Posted on Oct 14, 2014</span>
+                            </li>
+                        </ul>
+                        <!-- end latest-course -->
 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                <div class="widget-title">
-                  <h4>Skills</h4>
-                  <hr>
-                </div><!-- end widget-title -->
-                          <div class="skills">
-                              <p>Design</p>
-                              <div class="progress active">
-                                  <div class="progress-bar" role="progressbar" data-transitiongoal="96"><span>96%</span></div>
-                              </div>
-                              <p>Branding</p>
-                              <div class="progress active">
-                                  <div class="progress-bar" role="progressbar" data-transitiongoal="90"><span>90%</span></div>
-                              </div>
-                              <p>WordPress</p>
-                              <div class="progress active">
-                                  <div class="progress-bar" role="progressbar" data-transitiongoal="86"><span>86%</span></div>
-                              </div>
-                              <p>Development</p>
-                              <div class="progress active">
-                                  <div class="progress-bar" role="progressbar" data-transitiongoal="98"><span>98%</span></div>
-                              </div>
-                              <p>Photography</p>
-                              <div class="progress active">
-                                  <div class="progress-bar" role="progressbar" data-transitiongoal="86"><span>86%</span></div>
-                              </div>
-                          </div><!-- end skills -->
-              </div><!-- end widget -->
-            </div><!-- end col -->
-          </div><!-- end row -->
+                    </div>
+                    <!-- end widget -->
+                </div>
+                <!-- end col -->
 
-          <div class="row section-container">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                <div class="widget-title">
-                  <h4>Our Clients</h4>
-                  <hr>
-                </div><!-- end widget-title -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <div class="widget-title">
+                            <h4>Testimonials</h4>
+                            <hr>
+                        </div>
+                        <!-- end widget-title -->
 
-                          <div id="clients" class="clearfix text-center">
+                        <div id="owl-testimonial-2" class="owl-custom">
+                            <div class="testi-style-2">
+                                <img src="upload/testi_02.png" alt="" class="img-responsive img-circle alignleft">
+                                <i class="fa fa-quote-right"></i>
+                                <p class="lead">Lorem ipsum doldor sit amet, consectetur adeipiscing elit, sed do eiusmod temdpor incididuent ut labore et doelore magna aliqua..</p>
+                                <h4>Begha <span>Senior UI Designer, <small>7oroof Agency</small></span></h4>
+                            </div>
+                            <!-- end testi-style-2 -->
+                            <div class="testi-style-2">
+                                <img src="upload/testi_02.png" alt="" class="img-responsive img-circle alignleft">
+                                <i class="fa fa-quote-right"></i>
+                                <p class="lead">Lorem ipsum doldor sit amet, consectetur adeipiscing elit, sed do eiusmod temdpor incididuent ut labore et doelore magna aliqua..</p>
+                                <h4>Begha <span>Senior UI Designer, <small>7oroof Agency</small></span></h4>
+                            </div>
+                            <!-- end testi-style-2 -->
+                        </div>
+                        <!-- end owl -->
+                    </div>
+                    <!-- end widget -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+            <div class="row section-container">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <div class="widget-title">
+                            <h4>Our Clients</h4>
+                            <hr>
+                        </div>
+                        <!-- end widget-title -->
+                        <div id="clients" class="clearfix text-center">
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_01.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_01.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_02.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_02.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_03.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_03.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_04.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_04.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_05.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_05.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_06.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_06.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_01.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_01.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_02.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_02.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_03.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_03.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_04.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_04.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_05.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
+                                <a href="#">
+                                    <img src="upload/client_05.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
                             <div class="client-image">
-                              <a href="#"><img src="upload/client_06.png" alt="" class="img-responsive"></a>
-                            </div><!-- end client-image -->
-                          </div><!-- end clients -->
-              </div><!-- end widget -->
-            </div><!-- end col -->
-          </div><!-- end row -->
+                                <a href="#">
+                                    <img src="upload/client_06.png" alt="" class="img-responsive"></a>
+                            </div>
+                            <!-- end client-image -->
+                        </div>
+                        <!-- end clients -->
+                    </div>
+                    <!-- end widget -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+            <div class="clearfix"></div>
+            <br />
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end section-white -->
+</asp:Content>
 
-        </div><!-- end container -->
-      </section><!-- end section-white -->
-
-          <footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-							<div class="widget-title">
-								<h4>About</h4>
-							</div><!-- end widget-title -->
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-							
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-3 col-sm-6">
-						<div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-							<div class="widget-title">
-								<h4>Latest Courses</h4>
-							</div><!-- end widget-title -->
-							<ul class="latest-course">
-								<li>
-									<img src="upload/course_mini_01.png" alt="" class="img-responsive alignleft">
-									<h4><a href="#" title="">New Cooking Lessons</a></h4>
-									<span>Date : Oct 14, 2014</span>
-									<span>Created By : <a href="#">Begha</a></span>
-								</li>
-								<li>
-									<img src="upload/course_mini_02.png" alt="" class="img-responsive alignleft">
-									<h4><a href="#" title="">Web Develop lessons</a></h4>
-									<span>Date : Oct 14, 2014</span>
-									<span>Created By : <a href="#">Begha</a></span>
-								</li>
-							</ul><!-- end latest-course -->
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-3 col-sm-6">
-						<div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-							<div class="widget-title">
-								<h4>Contact us</h4>
-								<ul class="contact-details">
-								<li><i class="fa fa-map-marker"></i>Hyderabad.</li>
-								<li><i class="fa fa-phone"></i>+91 9849610015</li>
-								<li><i class="fa fa-envelope"></i>info@knackedu.com</li>
-							</ul><!-- end contact-details -->
-							</div><!-- end widget-title -->
-							
-						</div><!-- end widget -->
-
-						<div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-							<div class="widget-title">
-								<h4>Follow Us</h4>
-							</div><!-- end widget-title -->
-							<ul class="social">
-								<li class="facebook" ><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-3 col-sm-6">
-						<div class="widget about-widget wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-							<div class="widget-title">
-								<h4>Latest Tweets</h4>
-							</div><!-- end widget-title -->
-							<ul class="latest-tweets">
-								<li>
-									<h4><a href="#" title="">@Begha</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</h4>
-									<span>2 hours ago</span>
-								</li>
-								<li>
-									<h4><a href="#" title="">@Begha</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</h4>
-									<span>2 hours ago</span>
-								</li>
-							</ul><!-- end latest-course -->
-						</div><!-- end widget -->
-					</div><!-- end col -->
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</footer><!-- end section-white -->
-
-		<section class="copyrights">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						<p>All Rights Reserved © 2015 knackedu.com
-					</div><!-- end col -->
-					<div class="col-md-6 col-sm-12">
-						<ul class="footer-menu list-inline text-right">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">Purchase</a></li>
-						</ul>
-					</div><!-- end col -->
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</section><!-- end copyrights -->
-    </div><!-- end wrapper -->
-          </form>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/retina.js"></script>
-	<script src="js/wow.js"></script>
-	<script src="js/carousel.js"></script>
-	<script src="js/progress.js"></script>
-	<script src="js/parallax.js"></script>
-	<script src="js/jquery.prettyPhoto.js"></script>
-	<script src="js/custom.js"></script>
-
-  	<!-- SLIDER REV -->
-	<script src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-  <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-      <script type="text/javascript">
-          function ValidateGradeSystem() {
-              var isValidated = true;
-              var nodes = document.getElementsByClassName("txtgrade");
-              var i;
-              var j = 0;
-              for (i = 0; i < nodes.length; i++) {
-                  if (nodes[i].readOnly == false && nodes[i].value.length == 0) {
-                      isValidated = false;
-                      if (j == 0) {
-                          nodes[i].focus();
-                      }
-                      nodes[i].style.border = "1px solid red";
-                      j += 1;
-                  }
-                  else {
-                      nodes[i].style.border = "1px solid gray";
-                  }
-              }
-
-              var nodes = document.getElementsByClassName("drpgrade");
-              var i;
-              var j = 0;
-              for (i = 0; i < nodes.length; i++) {
-                  if (nodes[i].readOnly == false && nodes[i].selectedIndex == 0) {
-                      isValidated = false;
-                      if (j == 0) {
-                          nodes[i].focus();
-                      }
-                      nodes[i].style.border = "1px solid red";
-                      j += 1;
-                  }
-                  else {
-                      nodes[i].style.border = "1px solid gray";
-                  }
-              }
-
-              return isValidated;
-          }
-
-      </script>
-  <script>
-      /* ==============================================
-       SLIDER -->
-       =============================================== */
-      jQuery('.tp-banner').show().revolution(
-      {
-          dottedOverlay: "none",
-          delay: 16000,
-          startwidth: 1170,
-          startheight: 665,
-          hideThumbs: 200,
-          thumbWidth: 100,
-          thumbHeight: 50,
-          thumbAmount: 5,
-          navigationType: "none",
-          navigationArrows: "solo",
-          navigationStyle: "preview3",
-          touchenabled: "on",
-          onHoverStop: "on",
-          swipe_velocity: 0.7,
-          swipe_min_touches: 1,
-          swipe_max_touches: 1,
-          drag_block_vertical: false,
-          parallax: "mouse",
-          parallaxBgFreeze: "on",
-          parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
-          keyboardNavigation: "off",
-          navigationHAlign: "center",
-          navigationVAlign: "bottom",
-          navigationHOffset: 0,
-          navigationVOffset: 20,
-          soloArrowLeftHalign: "left",
-          soloArrowLeftValign: "center",
-          soloArrowLeftHOffset: 20,
-          soloArrowLeftVOffset: 0,
-          soloArrowRightHalign: "right",
-          soloArrowRightValign: "center",
-          soloArrowRightHOffset: 20,
-          soloArrowRightVOffset: 0,
-          shadow: 0,
-          fullWidth: "on",
-          fullScreen: "off",
-          spinner: "spinner4",
-          stopLoop: "off",
-          stopAfterLoops: -1,
-          stopAtSlide: -1,
-          shuffle: "off",
-          autoHeight: "off",
-          forceFullWidth: "off",
-          hideThumbsOnMobile: "off",
-          hideNavDelayOnMobile: 1500,
-          hideBulletsOnMobile: "off",
-          hideArrowsOnMobile: "off",
-          hideThumbsUnderResolution: 0,
-          hideSliderAtLimit: 0,
-          hideCaptionAtLimit: 0,
-          hideAllCaptionAtLilmit: 0,
-          startWithSlide: 0
-      });
-	</script>
-
-  </body>
-
-<!-- Mirrored from trendingtemplates.com/demos/coursat/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Jul 2015 19:57:58 GMT -->
-</html>

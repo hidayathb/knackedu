@@ -214,6 +214,7 @@ namespace knackedu
                 {
                     lblErrorMsg.Text = admissionId + " Student inserted successfully.";
                     BindStudents();
+                    //upStudent.Update();
                 }
                 else
                 {
@@ -222,7 +223,7 @@ namespace knackedu
             }
             catch (Exception)
             {
-                    lblErrorMsg.Text = "Unable to save data.";
+                lblErrorMsg.Text = "Unable to save data.";
             }
         }
 
@@ -233,7 +234,7 @@ namespace knackedu
             drpAdmsYear.SelectedIndex = 0;
 
 
-            upStudent.Update();
+            //upStudent.Update();
         }
     }
 }
