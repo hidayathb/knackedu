@@ -112,12 +112,12 @@ namespace knackedu {
         protected global::System.Web.UI.WebControls.Label lblmob;
         
         /// <summary>
-        /// gvTimtable control.
+        /// gvReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvTimtable;
+        protected global::System.Web.UI.WebControls.GridView gvReport;
     }
 }

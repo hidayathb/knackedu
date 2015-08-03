@@ -410,6 +410,8 @@
 
 
     <script type="text/javascript">
+        
+
         function ValidateGradeSystem() {
             var isValidated = true;
             var nodes = document.getElementsByClassName("txtgrade");

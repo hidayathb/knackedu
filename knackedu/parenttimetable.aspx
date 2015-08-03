@@ -11,7 +11,7 @@
             </div>
             <div id="content setup-content" class="col-md-9 col-sm-12">
                 <div class="col-xs-12">
-                    <div class="col-md-10">
+                    <div class="col-md-12">
 
                         <asp:GridView ID="gvTimtable" runat="server" class="table table-striped"
                             AutoGenerateColumns="False"

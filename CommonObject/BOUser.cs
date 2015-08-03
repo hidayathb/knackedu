@@ -39,4 +39,20 @@ namespace CommonObject
         public string DepartmentName { get; set; }
         public string Id { get; set; }
     }
+
+    [Serializable]
+    public class BOAllMarks
+    {
+        public string AdmissionId { get; set; }
+        public string ExamType { get; set; }
+        public string FirstName { get; set; }
+        public string ClassName { get; set; }
+        public string SectionName { get; set; }
+        public string Hindi { get; set; }
+        public string English { get; set; }
+        public string Mathematics { get; set; }
+        public string Science { get; set; }
+        public string Social { get; set; }
+        public string Telugu { get; set; }
+    }
 }

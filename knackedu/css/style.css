@@ -2876,3 +2876,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cab22', end
 .normalfocus {
     border: 2px solid grey;
 }
+.margin0 {
+    margin: 0px;
+}

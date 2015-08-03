@@ -11,7 +11,7 @@
             </div>
             <div id="content setup-content" class="col-md-9 col-sm-12">
                 <div class="col-xs-12">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div>
                             <h4>Student Details</h4>
                             <asp:Label CssClass="control-label" ForeColor="Red" ID="lblMsg" runat="server"></asp:Label>
@@ -89,14 +89,13 @@
                         <br />
                         <div class="clearfix"></div>
                         <div>
-                            <asp:GridView ID="gvTimtable" runat="server" class="table table-striped"
+                            <asp:GridView ID="gvReport" runat="server" class="table table-striped margin0"
                                 AutoGenerateColumns="False"
                                 BorderStyle="None">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Exam">
                                         <ItemStyle HorizontalAlign="Center" />
                                         <ItemTemplate>
-                                            <asp:HiddenField runat="server" Value=' <%# Eval("id") %>' ID="Hfield" />
                                             <asp:Label ID="lblExamType" runat="server" Text='<%# Eval("ExamType")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
@@ -118,6 +117,12 @@
                                             <asp:Label ID="SectionName" runat="server" Text='<%# Eval("SectionName")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Telugu">
+                                        <ItemStyle HorizontalAlign="Center" />
+                                        <ItemTemplate>
+                                            <asp:Label ID="Telugu" runat="server" Text='<%# Eval("Telugu")%>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Hindi">
                                         <ItemStyle HorizontalAlign="Center" />
                                         <ItemTemplate>
@@ -136,10 +141,16 @@
                                             <asp:Label ID="Mathematics" runat="server" Text='<%# Eval("Mathematics")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="Computer">
+                                    <asp:TemplateField HeaderText="Science">
                                         <ItemStyle HorizontalAlign="Center" />
                                         <ItemTemplate>
-                                            <asp:Label ID="Computer" runat="server" Text='<%# Eval("Computer")%>'></asp:Label>
+                                            <asp:Label ID="Science" runat="server" Text='<%# Eval("Science")%>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Social">
+                                        <ItemStyle HorizontalAlign="Center" />
+                                        <ItemTemplate>
+                                            <asp:Label ID="Social" runat="server" Text='<%# Eval("Social")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
