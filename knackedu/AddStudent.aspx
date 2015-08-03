@@ -288,7 +288,7 @@
                     
                             <asp:GridView CssClass="table table-striped" ID="gvStudents" runat="server"
                                 BackColor="White" BorderColor="#999999"
-                                PageSize="5" AllowSorting="true" AllowPaging="true"
+                                PageSize="5" AllowSorting="true" AllowPaging="false"
                                 BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false">
                                 <FooterStyle BackColor="#CCCCCC" ForeColor="Brown" />
                                 <PagerStyle BackColor="#999999" ForeColor="Brown" HorizontalAlign="Right" />

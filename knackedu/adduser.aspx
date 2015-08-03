@@ -176,8 +176,8 @@
                                 </div>
                                 <div class="form-group">
                                     <asp:Button runat="server" ID="btnSubmit" Text="Submit"
-                                        CssClass="btn btn-lg pull-right" OnClick="btnSubmit_Click" />
-                                    <asp:Button runat="server" CssClass="btn pull-left" Text="Clear" ID="btnClear"
+                                        CssClass="btn btn-lg btn-primary_new pull-right" OnClick="btnSubmit_Click" />
+                                    <asp:Button runat="server" CssClass="btn btn-primary_new pull-left" Text="Clear" ID="btnClear"
                                         OnClick="btnClear_Click" />
                                 </div>
 
@@ -191,7 +191,7 @@
 
                     <asp:GridView CssClass="table table-striped" ID="gvGradeSystem" runat="server"
                         BackColor="White" BorderColor="#999999"
-                        PageSize="5" AllowSorting="true" AllowPaging="true"
+                        PageSize="5" AllowSorting="true" AllowPaging="false"
                         BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" AutoGenerateColumns="false">
                         <FooterStyle BackColor="#CCCCCC" ForeColor="Brown" />
                         <PagerStyle BackColor="#999999" ForeColor="Green" HorizontalAlign="Center"

@@ -285,13 +285,13 @@ namespace BusinessLayer
             }
         }
 
-        public void InsertUser(BOUser user, out string id)
+        public int InsertUser(BOUser user, out string id)
         {
             DACategories pDAL = new DACategories();
             id = "";
             try
             {
-                 pDAL.InsertUser(user, out id);
+                return pDAL.InsertUser(user, out id);
             }
             catch
             {

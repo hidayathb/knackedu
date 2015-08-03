@@ -69,45 +69,57 @@ namespace knackedu
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            var user = new BOUser();
+            try
+            {
+                var user = new BOUser();
 
-            user.FirstName = txtFirstName.Text;
-            user.LastName = txtLastName.Text;
-            user.Age = drpAge.SelectedItem.Text;
-            user.Gender = drpGender.SelectedItem.Text;
-            //TODO
-            user.DOB = DateTime.Now.ToString();
+                user.FirstName = txtFirstName.Text;
+                user.LastName = txtLastName.Text;
+                user.Age = drpAge.SelectedItem.Text;
+                user.Gender = drpGender.SelectedItem.Text;
+                //TODO
+                user.DOB = DateTime.Now.ToString();
 
-            user.ContactNo = txtContactNo.Text;
-            user.Qualification = Convert.ToInt32(drpQualification.SelectedValue);
-            user.Address = txtAddress.Text;
-            user.Basic = txtBasic.Text;
-            user.DA = txtDA.Text;
-            user.HRA = txtHRA.Text;
-            user.ProfTax = txtProfTax.Text;
-            user.ConvAllowance = txtConveyanceAllowance.Text;
-            user.CapitalCostAllow = txtCapitalCostAllowance.Text;
-            user.EnterAllowance = txtEntertainmentAllowance.Text;
-            user.NetSalary = txtNetSalary.Text;
-            user.Department = Convert.ToInt32(drpSelectDepartment.SelectedValue);
-            user.empid = txtEmpId.Text;
-            user.userid = txtUserId.Text;
-            user.password = txtCreatePassword.Text;
-            user.SeqQuestion = Convert.ToInt32(drpSecurityQuestion.SelectedValue);
-            user.Answer = txtAnswer.Text;
-            // TODO
-            user.DateOfJoin = DateTime.Now.ToString(); ;
-            user.CreatedBy = 1;
-            user.ModifiedBy = 1;
-            user.CreatedDate = DateTime.Now.ToString();
-            user.ModifiedDate = DateTime.Now.ToString();
+                user.ContactNo = txtContactNo.Text;
+                user.Qualification = Convert.ToInt32(drpQualification.SelectedValue);
+                user.Address = txtAddress.Text;
+                user.Basic = txtBasic.Text;
+                user.DA = txtDA.Text;
+                user.HRA = txtHRA.Text;
+                user.ProfTax = txtProfTax.Text;
+                user.ConvAllowance = txtConveyanceAllowance.Text;
+                user.CapitalCostAllow = txtCapitalCostAllowance.Text;
+                user.EnterAllowance = txtEntertainmentAllowance.Text;
+                user.NetSalary = txtNetSalary.Text;
+                user.Department = Convert.ToInt32(drpSelectDepartment.SelectedValue);
+                user.empid = txtEmpId.Text;
+                user.userid = txtUserId.Text;
+                user.password = txtCreatePassword.Text;
+                user.SeqQuestion = Convert.ToInt32(drpSecurityQuestion.SelectedValue);
+                user.Answer = txtAnswer.Text;
+                // TODO
+                user.DateOfJoin = DateTime.Now.ToString(); ;
+                user.CreatedBy = 1;
+                user.ModifiedBy = 1;
+                user.CreatedDate = DateTime.Now.ToString();
+                user.ModifiedDate = DateTime.Now.ToString();
 
-            var users = new BLCategories();
-            string id = string.Empty;
-            users.InsertUser(user, out id);
-            lblErrorMsg.Text = "user created successfully.";
-            BindUsers();
-            ResetControls();
+                var users = new BLCategories();
+                string id = string.Empty;
+                if (users.InsertUser(user, out id) == -1)
+                {
+                    lblErrorMsg.Text = "user created successfully.";
+                    BindUsers();
+                    ResetControls();
+                }
+                else
+                {
+                    lblErrorMsg.Text = "unable to save user";
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void ResetControls()

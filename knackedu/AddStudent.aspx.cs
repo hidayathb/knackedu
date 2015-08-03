@@ -210,10 +210,11 @@ namespace knackedu
                 string admissionId = string.Empty;
                 var studentId = ViewState["studentid"].ToString();
                 var isInserted = (new BLCategories()).InsertStudent(data, studentId, out admissionId);
-                if (isInserted == 1)
+                if (isInserted == -1)
                 {
-                    lblErrorMsg.Text = admissionId + " Student inserted successfully.";
+                    lblErrorMsg.Text = "Student inserted successfully.";
                     BindStudents();
+                    ResetControls();
                     //upStudent.Update();
                 }
                 else
@@ -229,12 +230,44 @@ namespace knackedu
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
+            ResetControls();
+
+            //upStudent.Update();
+        }
+
+        private void ResetControls()
+        {
             ViewState["studentid"] = null;
             drpAdmissiontoclass.SelectedIndex = 0;
             drpAdmsYear.SelectedIndex = 0;
-
-
-            //upStudent.Update();
+            drpSection.SelectedIndex = 0;
+            txtFirstName.Text = string.Empty;
+            txtSurName.Text = string.Empty;
+            drpAge.SelectedIndex = 0;
+            txtDateOfAdmission.Text = string.Empty;
+            txtPlaceOfBirth.Text = string.Empty;
+            txtDateOfBirth.Text = string.Empty;
+            drpGender.SelectedIndex = 0;
+            txtIdentity1.Text = string.Empty;
+            txtIdentity2.Text = string.Empty;
+            drpCaste.Text = string.Empty;
+            txtclassprevyear.Text = string.Empty;
+            txtSchoolAttended.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtFatherName.Text = string.Empty;
+            txtMotherName.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtFathersOccupation.Text = string.Empty;
+            txtMothersOccupation.Text = string.Empty;
+            txtNationality.Text = string.Empty;
+            drpReligion.Text = string.Empty;
+            txtFathersIncome.Text = string.Empty;
+            txtPrevSchoolAddress.Text = string.Empty;
+            drpState.SelectedIndex = 0;
+            drpCity.SelectedIndex = 0;
+            drpDistrict.SelectedIndex = 0;
+            txtpincode.Text = string.Empty;
+            txtContactNo.Text = string.Empty;
         }
     }
 }
