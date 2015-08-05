@@ -16,23 +16,23 @@
                                     <h4>Add New Book</h4>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Book Code</label>
+                                    <label class="control-label">Book Code<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtBookCode" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Price</label>
+                                    <label class="control-label">Price<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtPrice" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                  <div class="form-group">
-                                    <label class="control-label">Last Bill No</label>
+                                    <label class="control-label">Last Bill No<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtLastBillNo" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                  <div class="form-group">
-                                    <label class="control-label">Total Stock</label>
+                                    <label class="control-label">Total Stock<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtTotalStock" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                  <div class="form-group">
-                                    <label class="control-label">Bill No.</label>
+                                    <label class="control-label">Bill No.<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtBillNo" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                  <div class="form-group">

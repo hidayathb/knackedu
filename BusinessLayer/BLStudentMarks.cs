@@ -72,6 +72,24 @@ namespace BusinessLayer
             }
         }
 
+
+        public int InsertAttendence(BOStudents marks)
+        {
+            DAStudentMarks pDAL = new DAStudentMarks();
+            try
+            {
+                return pDAL.InsertAttendence(marks);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                pDAL = null;
+            }
+        }
+
         public int DeleteStudentMarks(int id)
         {
             DAStudentMarks pDAL = new DAStudentMarks();

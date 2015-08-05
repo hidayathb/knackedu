@@ -106,19 +106,23 @@ namespace knackedu
                 gradeSys.Status = "A";
 
                 var isInserted = (new BLGradeSystem()).InsertGradeSystem(gradeSys);
-                if (isInserted == -1)
+                if (isInserted == 1)
                 {
                     LoadGradeSystem();
                     GradeUpdatePanel.Update();
                     ResetControls();
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Red;
+                    lblErrorMsg.Text = "Grade system inserted successfully.";
                 }
                 else
                 {
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                     lblErrorMsg.Text = "Process failed. Please try again.";
                 }
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = "Unable to save data.";
             }
         }
@@ -176,7 +180,10 @@ namespace knackedu
             }
             catch (Exception ex)
             {
+                lblErrorMsg.Text = "Process failed. Please try again.";
                 lblErrorMsg.Text = ex.Message;
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
+
             }
         }
     }

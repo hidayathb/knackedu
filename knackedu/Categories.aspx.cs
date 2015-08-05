@@ -64,7 +64,7 @@ namespace knackedu
             try
             {
                 var blCategories = new BLCategories();
-                var dtAllCategories = blCategories.LoadSubCategories(1, "DEMO");                
+                var dtAllCategories = blCategories.LoadSubCategories(1, "DEMO");
 
                 if (dtAllCategories != null)
                 {
@@ -78,7 +78,7 @@ namespace knackedu
                 else
                 {
                     gvSubCategory.Visible = false;
-                    gvSubCategory.DataSource =null;
+                    gvSubCategory.DataSource = null;
                     gvSubCategory.DataBind();
                 }
             }
@@ -153,6 +153,7 @@ namespace knackedu
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = ex.Message;
             }
         }
@@ -182,16 +183,26 @@ namespace knackedu
                     this.btnCategory.Text = "Add Category";
                     txtCategoryCode.Text = string.Empty;
                     txtCategoryName.Text = string.Empty;
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Green;
+                    if (catid > 0)
+                    {
+                        lblErrorMsg.Text = "Category updated successfully.";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Category inserted successfully.";
+                    }
                     ViewState["CatId"] = null;
-                    lblErrorMsg.Text = "Category inserted successfully.";
                 }
                 else
                 {
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                     lblErrorMsg.Text = "Process failed. Please try again.";
                 }
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = ex.Message;
             }
         }
@@ -223,6 +234,7 @@ namespace knackedu
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = ex.Message;
             }
         }
@@ -255,16 +267,19 @@ namespace knackedu
                     var isDeleted = (new BLCategories()).DeleteSubCategories(Convert.ToInt32(subCatId));
                     if (isDeleted == -1)
                     {
+                        lblErrorMsg.ForeColor = System.Drawing.Color.Green;
                         lblErrorMsg.Text = "Record deleted successfully.";
                     }
                     else
                     {
+                        lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                         lblErrorMsg.Text = "Process failed. Please try again.";
                     }
                 }
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = ex.Message;
             }
         }
@@ -291,8 +306,8 @@ namespace knackedu
                 var parentIndex = drpcategoryID.SelectedIndex;
                 var isInserted = (new BLCategories()).InsertSubCategory(categories);
                 if (isInserted == -1)
-                {                    
-                    this.btnSubCategory.Text = "Add SubCategory"; 
+                {
+                    this.btnSubCategory.Text = "Add SubCategory";
                     txtSubCategoryCode.Text = string.Empty;
                     txtSubCategoryName.Text = string.Empty;
                     ViewState["SubCatId"] = null;
@@ -301,15 +316,21 @@ namespace knackedu
                     BindSubCategoriesGrid();
                     drpcategoryID_SelectedIndexChanged(null, null);
                     subcatUpdatePanel.Update();
-                    lblSubCategoryMsg.Text = "Sub Category inserted successfully.";
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Green;
+                    if (subCatid > 0)
+                        lblErrorMsg.Text = "Sub Category updated successfully.";
+                    else
+                        lblErrorMsg.Text = "Sub Category inserted successfully.";
                 }
                 else
                 {
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                     lblSubCategoryMsg.Text = "Process failed. Please try again.";
                 }
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = ex.Message;
             }
         }
@@ -351,7 +372,7 @@ namespace knackedu
                 {
                     var filterData = ((List<BOCategories>)(ViewState["SubCategories"]))
                                         .Where(c => c.Id == Convert.ToInt32(drpcategoryID.SelectedValue));
-                                        //&& c.ParentSubCategoryId == Convert.ToInt32(drpParentSubCategory.SelectedValue));
+                    //&& c.ParentSubCategoryId == Convert.ToInt32(drpParentSubCategory.SelectedValue));
                     if (filterData == null)
                     {
                         gvSubCategory.DataSource = null;
@@ -366,6 +387,7 @@ namespace knackedu
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = ex.Message;
             }
         }

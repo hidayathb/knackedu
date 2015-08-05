@@ -10,47 +10,44 @@
             <div id="content setup-content" class="col-md-9 col-sm-12">
                 <asp:UpdatePanel ID="GradeUpdatePanel" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div class="col-xs-6 col-md-offset-3">
-                            <div class="col-md-12">
-                                <div class="widget-title">
-                                    <h4>Create Grading System</h4>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Please Enter First Mark</label>
-                                    <asp:TextBox runat="server" ID="txtFirstMark" MaxLength="2" TextMode="Number" class="form-control txtgrade"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Please Enter Second Mark</label>
-                                    <asp:TextBox runat="server" ID="txtSecondMark" MaxLength="3" TextMode="Number" class="form-control txtgrade"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Exam Type</label>
-                                    <asp:DropDownList ID="drpExamType" runat="server" class="form-control drpgrade">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Enter Grade</label>
-                                    <asp:DropDownList ID="drpGrade" runat="server" class="form-control drpgrade">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Select Marks</label>
-                                    <asp:DropDownList ID="drpMarks" runat="server" class="form-control drpgrade">
-                                        <asp:ListItem Selected="True" Text="Select" Value="Select"></asp:ListItem>
-                                        <asp:ListItem Text="5" Value="5"></asp:ListItem>
-                                        <asp:ListItem Text="10" Value="10"></asp:ListItem>
-                                        <asp:ListItem Text="25" Value="25"></asp:ListItem>
-                                        <asp:ListItem Text="50" Value="50"></asp:ListItem>
-                                        <asp:ListItem Text="100" Value="100"></asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Button class="btn btn-primary nextBtn btn-lg pull-left" runat="server"
-                                        ID="btnClear" Text="Clear" OnClick="btnClear_Click" />
-                                    <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
-                                        ID="btn" Text="Submit" OnClick="btn_Click" OnClientClick="javascript:return ValidateGradeSystem();" />
-
-                                </div>
+                        <div class="col-md-5">
+                            <div class="widget-title">
+                                <h4>Create Grading System</h4>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Please Enter First Mark</label>
+                                <asp:TextBox runat="server" ID="txtFirstMark" MaxLength="2" TextMode="Number" class="form-control txtgrade"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Please Enter Second Mark</label>
+                                <asp:TextBox runat="server" ID="txtSecondMark" MaxLength="3" TextMode="Number" class="form-control txtgrade"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Exam Type</label>
+                                <asp:DropDownList ID="drpExamType" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Enter Grade</label>
+                                <asp:DropDownList ID="drpGrade" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Select Marks</label>
+                                <asp:DropDownList ID="drpMarks" runat="server" class="form-control drpgrade">
+                                    <asp:ListItem Selected="True" Text="Select" Value="Select"></asp:ListItem>
+                                    <asp:ListItem Text="5" Value="5"></asp:ListItem>
+                                    <asp:ListItem Text="10" Value="10"></asp:ListItem>
+                                    <asp:ListItem Text="25" Value="25"></asp:ListItem>
+                                    <asp:ListItem Text="50" Value="50"></asp:ListItem>
+                                    <asp:ListItem Text="100" Value="100"></asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <asp:Button class="btn btn-primary nextBtn btn-lg pull-left" runat="server"
+                                    ID="btnClear" Text="Clear" OnClick="btnClear_Click" />
+                                <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
+                                    ID="btn" Text="Submit" OnClick="btn_Click" OnClientClick="javascript:return ValidateGradeSystem();" />
 
                             </div>
                         </div>

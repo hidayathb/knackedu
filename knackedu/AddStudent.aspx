@@ -41,7 +41,7 @@
                                 </div>--%>
                                 <div class="form-group">
                                     <label class="control-label">Admission To Year</label>
-                                    <asp:DropDownList runat="server" ID="drpAdmsYear" CssClass="form-control drpmandStep">
+                                    <asp:DropDownList runat="server" ID="drpAdmsYear" CssClass="form-control drpgrade">
                                         <asp:ListItem Selected="True">Select</asp:ListItem>
                                         <asp:ListItem Text="2015" Value="2015"></asp:ListItem>
                                         <asp:ListItem Text="2016" Value="2016"></asp:ListItem>
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Surname</label>
-                                    <asp:TextBox ID="txtSurName" runat="server" MaxLength="200" CssClass="form-control txtmandStep" required="required"></asp:TextBox>
+                                    <asp:TextBox ID="txtSurName" runat="server" MaxLength="200" CssClass="form-control txtgrade" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Gender</label>

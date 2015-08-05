@@ -84,5 +84,9 @@ namespace CommonObject
         public string ResAddress { get; set; }
         public string TeleNumber { get; set; }
         public string MobNumber { get; set; }
+        public string Presents { get; set; }
+        public DateTime PresentDate { get; set; }
+        public string HostCode { get; set; }
+        public string UserId { get; set; }
     }
 }

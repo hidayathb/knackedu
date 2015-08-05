@@ -117,19 +117,23 @@ namespace knackedu
                 plans.Status = "A";
 
                 var isInserted = (new BLTermPlan()).InsertTermPlan(plans);
-                if (isInserted == -1)
+                if (isInserted == 1)
                 {
                     LoadTermPlans();
                     GradeUpdatePanel.Update();
                     ResetControls();
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Green;
+                    lblErrorMsg.Text = "Term plan saved successfully.";
                 }
                 else
                 {
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                     lblErrorMsg.Text = "Process failed. Please try again.";
                 }
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = "Unable to save data.";
             }
         }
@@ -202,6 +206,7 @@ namespace knackedu
             }
             catch (Exception ex)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = ex.Message;
             }
         }

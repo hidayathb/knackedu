@@ -10,54 +10,51 @@
             <div id="content setup-content" class="col-md-9 col-sm-12">
                 <asp:UpdatePanel ID="GradeUpdatePanel" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div class="col-xs-6 col-md-offset-3">
-                            <div class="col-md-12">
-                                <div class="widget-title">
-                                    <h4>Create Term Plan</h4>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Select Type Of Term</label>
-                                     <asp:DropDownList ID="drpTerm" runat="server" class="form-control drpgrade">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">From</label>
-                                    <asp:DropDownList ID="drpFrom" runat="server" class="form-control drpgrade">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">To</label>
-                                    <asp:DropDownList ID="drpTo" runat="server" class="form-control drpgrade">
-                                    </asp:DropDownList>
-                                </div>
-                                   <div class="form-group">
-                                        <label class="control-label">Select Class</label>
-                                        <asp:DropDownList ID="drpClass" runat="server" class="form-control drpgrade">
-                                        </asp:DropDownList>
-                                   </div>
-                                <div class="form-group">
-                                    <label class="control-label">Select Month</label>
-                                    <asp:DropDownList ID="drpMonth" runat="server" class="form-control drpgrade">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="form-group">
-                                        <label class="control-label">Select Subject</label>
-                                        <asp:DropDownList ID="drpSubject" runat="server" class="form-control drpgrade">
-                                        </asp:DropDownList>
-                                   </div>
-                                <div class="form-group">
-                                        <label class="control-label">Enter Your Syllabus</label>
-                                        <asp:TextBox runat="server" ID="txtSyllabus" TextMode="MultiLine"
-                                            class="form-control txtgrade"></asp:TextBox>
-                                   </div>
-                                <div class="form-group">
-                                    <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
-                                        ID="btnClear" Text="Clear" OnClick="btnClear_Click" />
-                                    &nbsp;
+                        <div class="col-md-5">
+                            <div class="widget-title">
+                                <h4>Create Term Plan</h4>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Select Type Of Term</label>
+                                <asp:DropDownList ID="drpTerm" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">From</label>
+                                <asp:DropDownList ID="drpFrom" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">To</label>
+                                <asp:DropDownList ID="drpTo" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Select Class</label>
+                                <asp:DropDownList ID="drpClass" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Select Month</label>
+                                <asp:DropDownList ID="drpMonth" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Select Subject</label>
+                                <asp:DropDownList ID="drpSubject" runat="server" class="form-control drpgrade">
+                                </asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Enter Your Syllabus</label>
+                                <asp:TextBox runat="server" ID="txtSyllabus" TextMode="MultiLine"
+                                    class="form-control txtgrade"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
+                                    ID="btnClear" Text="Clear" OnClick="btnClear_Click" />
+                                &nbsp;
                             <asp:Button class="btn btn-primary nextBtn btn-lg pull-right" runat="server"
                                 ID="btn" Text="Submit" OnClick="btn_Click" OnClientClick="javascript:return ValidateGradeSystem();" />
-
-                                </div>
 
                             </div>
                         </div>

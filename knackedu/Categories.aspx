@@ -18,7 +18,7 @@
                                 <asp:Label runat="server" ID="lblErrorMsg" ForeColor="Red" CssClass="control-label"></asp:Label>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Category Code</label>
+                                <label class="control-label">Category Code<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtCategoryCode" class="form-control mandCat"></asp:TextBox>
                             </div>
                             <div class="form-group">

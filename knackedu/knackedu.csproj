@@ -132,6 +132,7 @@
     <Content Include="AddStudent.aspx" />
     <Content Include="adduser.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="attendence.aspx" />
     <Content Include="createstudent.aspx" />
     <Content Include="css\lightbox.css" />
     <Content Include="css\parent.css" />
@@ -566,6 +567,13 @@
     </Compile>
     <Compile Include="adduser.aspx.designer.cs">
       <DependentUpon>adduser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendence.aspx.cs">
+      <DependentUpon>attendence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="attendence.aspx.designer.cs">
+      <DependentUpon>attendence.aspx</DependentUpon>
     </Compile>
     <Compile Include="beforelogin.Master.cs">
       <DependentUpon>beforelogin.Master</DependentUpon>

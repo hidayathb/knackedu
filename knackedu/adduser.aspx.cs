@@ -78,7 +78,13 @@ namespace knackedu
                 user.Age = drpAge.SelectedItem.Text;
                 user.Gender = drpGender.SelectedItem.Text;
                 //TODO
-                user.DOB = DateTime.Now.ToString();
+                if (txtDateOfBirth.Text.Trim().Length > 0)
+                {
+                    DateTime dob;
+                    var isValid = DateTime.TryParse(txtDateOfBirth.Text.Trim(), out dob);
+                    if (isValid)
+                        user.DOB = dob.ToString();
+                }
 
                 user.ContactNo = txtContactNo.Text;
                 user.Qualification = Convert.ToInt32(drpQualification.SelectedValue);
@@ -98,22 +104,30 @@ namespace knackedu
                 user.SeqQuestion = Convert.ToInt32(drpSecurityQuestion.SelectedValue);
                 user.Answer = txtAnswer.Text;
                 // TODO
-                user.DateOfJoin = DateTime.Now.ToString(); ;
+                if (txtDateOfJoin.Text.Trim().Length > 0)
+                {
+                    DateTime doj;
+                    var isValid = DateTime.TryParse(txtDateOfJoin.Text.Trim(), out doj);
+                    if (isValid)
+                        user.DateOfJoin = doj.ToString();
+                }
+
                 user.CreatedBy = 1;
                 user.ModifiedBy = 1;
                 user.CreatedDate = DateTime.Now.ToString();
-                user.ModifiedDate = DateTime.Now.ToString();
 
                 var users = new BLCategories();
                 string id = string.Empty;
                 if (users.InsertUser(user, out id) == -1)
                 {
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Green;
                     lblErrorMsg.Text = "user created successfully.";
                     BindUsers();
                     ResetControls();
                 }
                 else
                 {
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                     lblErrorMsg.Text = "unable to save user";
                 }
             }
@@ -130,21 +144,21 @@ namespace knackedu
             drpGender.SelectedIndex = 0;
             txtDateOfBirth.Text = string.Empty;
             txtContactNo.Text = string.Empty;
-                drpQualification.SelectedIndex =0;
-                txtAddress.Text = string.Empty;
-                txtBasic.Text = string.Empty;
-                txtDA.Text = string.Empty;
-                txtHRA.Text = string.Empty; txtProfTax.Text = string.Empty;
-                txtConveyanceAllowance.Text = string.Empty;
-                txtEntertainmentAllowance.Text = string.Empty;
-                txtCapitalCostAllowance.Text = string.Empty;
-                txtNetSalary.Text = string.Empty;
-                drpSelectDepartment.SelectedIndex = 0;
-                txtEmpId.Text = string.Empty;
-                txtCreatePassword.Text = string.Empty;
-                txtCreateUserId.Text = string.Empty;
-                drpSecurityQuestion.SelectedIndex = 0; txtAnswer.Text = string.Empty;
-                txtDateOfJoin.Text = string.Empty;
+            drpQualification.SelectedIndex = 0;
+            txtAddress.Text = string.Empty;
+            txtBasic.Text = string.Empty;
+            txtDA.Text = string.Empty;
+            txtHRA.Text = string.Empty; txtProfTax.Text = string.Empty;
+            txtConveyanceAllowance.Text = string.Empty;
+            txtEntertainmentAllowance.Text = string.Empty;
+            txtCapitalCostAllowance.Text = string.Empty;
+            txtNetSalary.Text = string.Empty;
+            drpSelectDepartment.SelectedIndex = 0;
+            txtEmpId.Text = string.Empty;
+            txtCreatePassword.Text = string.Empty;
+            txtCreateUserId.Text = string.Empty;
+            drpSecurityQuestion.SelectedIndex = 0; txtAnswer.Text = string.Empty;
+            txtDateOfJoin.Text = string.Empty;
 
         }
 

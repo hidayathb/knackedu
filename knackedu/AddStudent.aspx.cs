@@ -210,20 +210,31 @@ namespace knackedu
                 string admissionId = string.Empty;
                 var studentId = ViewState["studentid"].ToString();
                 var isInserted = (new BLCategories()).InsertStudent(data, studentId, out admissionId);
-                if (isInserted == -1)
+                if (isInserted == 1)
                 {
-                    lblErrorMsg.Text = "Student inserted successfully.";
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Green;
+                    if (studentId.ToString().Length > 0)
+                    {
+                        lblErrorMsg.Text = "Student updated successfully.";
+                    }
+                    else
+                    {
+                        lblErrorMsg.Text = "Student inserted successfully.";
+                    }
+
                     BindStudents();
                     ResetControls();
                     //upStudent.Update();
                 }
                 else
                 {
+                    lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                     lblErrorMsg.Text = "Process failed. Please try again.";
                 }
             }
             catch (Exception)
             {
+                lblErrorMsg.ForeColor = System.Drawing.Color.Red;
                 lblErrorMsg.Text = "Unable to save data.";
             }
         }

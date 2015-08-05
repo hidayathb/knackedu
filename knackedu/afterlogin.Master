@@ -159,7 +159,7 @@
                                         </li>
                                         <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Report</a>
                                             <ul class="dropdown-menu normalmenu">
-                                                <li><a href="#">Attendance</a></li>
+                                                <li><a href="attendence.aspx">Attendance</a></li>
                                                 <li><a href="#">Fee Details</a></li>
                                                 <li><a href="#">Department Details</a></li>
                                                 <li><a href="#">Department Salaries</a></li>
@@ -171,7 +171,7 @@
                                         </li>
                                         <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Teacher</a>
                                             <ul class="dropdown-menu normalmenu">
-                                                <li><a href="#">Attendance</a></li>
+                                                <li><a href="attendence.aspx">Attendance</a></li>
                                                 <li><a href="studentmarks.aspx">Insert Marks</a></li>
                                                 <li><a href="#">Show marks</a></li>
                                                 <li><a href="#">Update marks</a></li>

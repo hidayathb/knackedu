@@ -18,12 +18,14 @@
                                 <div class="form-group">
                                     <label class="control-label">Class :</label>
                                     <asp:DropDownList ID="drpClass" runat="server" class="form-control drpgrade" AutoPostBack="true"
-                                        OnSelectedIndexChanged="drpClass_SelectedIndexChanged"></asp:DropDownList>
+                                        OnSelectedIndexChanged="drpClass_SelectedIndexChanged">
+                                    </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Section :</label>
                                     <asp:DropDownList ID="drpSection" runat="server" class="form-control drpgrade" AutoPostBack="true"
-                                       OnSelectedIndexChanged="drpSection_SelectedIndexChanged" ></asp:DropDownList>
+                                        OnSelectedIndexChanged="drpSection_SelectedIndexChanged">
+                                    </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Exam Type :</label>
@@ -31,8 +33,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Reg No :</label>
-                                    <asp:DropDownList ID="drpRegNo" runat="server" class="form-control drpgrade" 
-                                        OnSelectedIndexChanged="drpRegNo_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                    <asp:DropDownList ID="drpRegNo" runat="server" class="form-control drpgrade"
+                                        OnSelectedIndexChanged="drpRegNo_SelectedIndexChanged" AutoPostBack="true">
+                                    </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Student Name :</label>
@@ -43,13 +46,20 @@
                                     <br />
                                     <asp:ListBox runat="server" ID="lstAbsentSubjects" SelectionMode="Multiple" AutoPostBack="true"
                                         OnSelectedIndexChanged="lstAbsentSubjects_SelectedIndexChanged"
-                                        CssClass="form-control"
-                                        ></asp:ListBox>
+                                        CssClass="form-control"></asp:ListBox>
                                 </div>
-                                <div class="widget-title">
-                                    <h2>Subjects</h2>
+                                <div class="form-group">
+                                    <label class="control-label">Hindi :</label>
+                                    <asp:TextBox runat="server" ID="txtHindi" class="form-control txtgrade"></asp:TextBox>
                                 </div>
-                                <asp:PlaceHolder runat="server" ID="phSubjects"></asp:PlaceHolder>
+                                <div class="form-group">
+                                    <label class="control-label">English :</label>
+                                    <asp:TextBox runat="server" ID="txtEnglish" class="form-control txtgrade"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Mathematics :</label>
+                                    <asp:TextBox runat="server" ID="txtMathematics" class="form-control txtgrade"></asp:TextBox>
+                                </div>
                                 <%--<div class="form-group">
                                     <label class="control-label">Drawing :</label>
                                     <asp:Label runat="server" ID="lblTotalMarks" ForeColor="BlueViolet" ></asp:Label>
