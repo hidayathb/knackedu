@@ -12,9 +12,9 @@
             <li class="dropdown active megamenu"><a href="#">Create Student</a>
             <li><a href="adduser.aspx">Create User</a>
             <li><a href="gradesystem.aspx">Create Grading System</a>
-            <li><a href="#">Generate Timetable</a>
+            <%--<li><a href="#">Generate Timetable</a>--%>
             <li><a href="#">Term Plan</a>
-            <li><a href="GenarateStudentId.aspx">Generate Student Id</a>
+            <%--<li><a href="GenarateStudentId.aspx">Generate Student Id</a>--%>
         </ul>
     </div>
     <!-- end latest-course -->
@@ -30,7 +30,7 @@
     <div class="cat-widget">
         <ul>
               <li><a href="#">Insert Fee</a></li>
-              <li><a href="#">Print Fee receipt</a></li>
+              <%--<li><a href="#">Print Fee receipt</a></li>--%>
               <li><a href="vanfee.aspx">Insert VanFee</a></li>
               <li><a href="#">Student Fee Info</a></li>
               <li><a href="#">Department Attendance</a></li>
@@ -93,11 +93,11 @@
         <ul>
             <li><a href="#">Attendance</a></li>
             <li><a href="studentmarks.aspx">Insert Marks</a></li>
-            <li><a href="#">Show marks</a></li>
-            <li><a href="#">Update marks</a></li>
+            <%--<li><a href="#">Show marks</a></li>
+            <li><a href="#">Update marks</a></li>--%>
             <li><a href="#">Student Grade</a></li>
-            <li><a href="#">Attendance Report</a></li>
-            <li><a href="#">Exit</a></li>
+            <%--<li><a href="#">Attendance Report</a></li>--%>
+            <%--<li><a href="#">Exit</a></li>--%>
             <li><a href="#">Teachers Reference websites</a></li>
         </ul>
     </div>
@@ -114,7 +114,7 @@
     <div class="cat-widget">
         <ul>
                 <li><a href="#">Add New Books</a></li>
-                  <li><a href="#">Add New Books In Existing</a></li>
+                  <%--<li><a href="#">Add New Books In Existing</a></li>--%>
                   <li><a href="#">Book Information</a></li>
                   <li><a href="#">Book Issue</a></li>
                   <li><a href="#">Book Return</a></li>
@@ -133,8 +133,8 @@
     <div class="cat-widget">
         <ul>
                <li><a href="#">Setup Class fee</a></li>
-                  <li><a href="#">Modify Class fee</a></li>
-                  <li><a href="#">Setup Van fee</a></li>
+                  <%--<li><a href="#">Modify Class fee</a></li>
+                  <li><a href="#">Setup Van fee</a></li>--%>
                   <li><a href="#">Admission Enquiries</a></li>
         </ul>
     </div>

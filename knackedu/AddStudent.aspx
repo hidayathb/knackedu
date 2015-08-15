@@ -36,12 +36,12 @@
 
                                 <h3>Personal Information</h3>
                                 <%--<div class="form-group">
-                                    <label class="control-label">Admission No</label>
+                                    <label class="control-label">Admission No<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtAdmissionNumber" class="form-control txtmandStep"></asp:TextBox>
                                 </div>--%>
                                 <div class="form-group">
-                                    <label class="control-label">Admission To Year</label>
-                                    <asp:DropDownList runat="server" ID="drpAdmsYear" CssClass="form-control drpgrade">
+                                    <label class="control-label">Admission To Year<font color="#FF3300">&nbsp;*</font></label>
+                                    <asp:DropDownList runat="server" ID="drpAdmsYear" CssClass="form-control drpmandStep">
                                         <asp:ListItem Selected="True">Select</asp:ListItem>
                                         <asp:ListItem Text="2015" Value="2015"></asp:ListItem>
                                         <asp:ListItem Text="2016" Value="2016"></asp:ListItem>
@@ -55,25 +55,25 @@
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Admission to Class</label>
+                                    <label class="control-label">Admission to Class<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpAdmissiontoclass" runat="server" CssClass="form-control drpmandStep" required="required">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Section</label>
+                                    <label class="control-label">Section<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList runat="server" ID="drpSection" CssClass="form-control drpmandStep" required="required">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">First Name</label>
+                                    <label class="control-label">First Name<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtFirstName" required="required" runat="server" MaxLength="200" CssClass="form-control txtmandStep"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Surname</label>
-                                    <asp:TextBox ID="txtSurName" runat="server" MaxLength="200" CssClass="form-control txtgrade" required="required"></asp:TextBox>
+                                    <label class="control-label">Surname<font color="#FF3300">&nbsp;*</font></label>
+                                    <asp:TextBox ID="txtSurName" runat="server" MaxLength="200" CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Gender</label>
+                                    <label class="control-label">Gender<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList runat="server" ID="drpGender" CssClass="form-control drpmandStep" required="required">
                                         <asp:ListItem Selected="True">Select</asp:ListItem>
                                         <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
@@ -82,23 +82,23 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Date Of admission</label>
+                                    <label class="control-label">Date Of admission<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtDateOfAdmission" TextMode="Date" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Place Of Birth</label>
+                                    <label class="control-label">Place Of Birth<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtPlaceOfBirth" runat="server" MaxLength="200" CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Date Of Birth</label>
+                                    <label class="control-label">Date Of Birth<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtDateOfBirth" TextMode="Date" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Age</label>
+                                    <label class="control-label">Age<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList runat="server" ID="drpAge" CssClass="form-control drpmandStep" required="required">
                                         <asp:ListItem Selected="True">Select</asp:ListItem>
                                         <asp:ListItem Text="3" Value="3"></asp:ListItem>
@@ -120,7 +120,7 @@
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Mother Tongue</label>
+                                    <label class="control-label">Mother Tongue<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpMothertongue" runat="server" CssClass="form-control drpmandStep" required="required">
                                         <asp:ListItem Selected="True">Select</asp:ListItem>
                                         <asp:ListItem Text="Telugu" Value="Telugu"></asp:ListItem>
@@ -129,16 +129,16 @@
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Identity Mark1</label>
+                                    <label class="control-label">Identity Mark1<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtIdentity1" runat="server" MaxLength="200" CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Identity Mark2</label>
+                                    <label class="control-label">Identity Mark2<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtIdentity2" runat="server" MaxLength="200" CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Caste</label>
+                                    <label class="control-label">Caste<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpCaste" runat="server" CssClass="form-control drpmandStep">
                                         <asp:ListItem Selected="True">Select</asp:ListItem>
                                         <asp:ListItem Text="OC" Value="OC"></asp:ListItem>
@@ -150,18 +150,18 @@
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Physically Changellenged</label>
+                                    <label class="control-label">Physically Changellenged<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:RadioButtonList runat="server" ID="rdblPhysicallyChanlenged" required="required">
                                         <asp:ListItem Selected="True">No</asp:ListItem>
                                         <asp:ListItem>Yes</asp:ListItem>
                                     </asp:RadioButtonList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Class studied in previous year</label>
+                                    <label class="control-label">Class studied in previous year<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtclassprevyear" TextMode="Number" runat="server" MaxLength="200" CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Bus Facility</label>
+                                    <label class="control-label">Bus Facility<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:RadioButtonList runat="server" ID="rdblstBusFacility" required="required">
                                         <asp:ListItem Selected="True">No</asp:ListItem>
                                         <asp:ListItem>Yes</asp:ListItem>
@@ -179,48 +179,48 @@
                             <div class="col-md-12">
                                 <h3>Other Information</h3>
                                 <div class="form-group">
-                                    <label class="control-label">Last School Attended</label>
+                                    <label class="control-label">Last School Attended<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtSchoolAttended" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Address of the school</label>
+                                    <label class="control-label">Address of the school<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtPrevSchoolAddress" runat="server" MaxLength="200" TextMode="MultiLine"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Father's Name</label>
+                                    <label class="control-label">Father's Name<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtFatherName" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Mother's Name</label>
+                                    <label class="control-label">Mother's Name<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtMotherName" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Email</label>
+                                    <label class="control-label">Email<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtEmail" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Father's Occupation</label>
+                                    <label class="control-label">Father's Occupation<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtFathersOccupation" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Mother's Occupation</label>
+                                    <label class="control-label">Mother's Occupation<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtMothersOccupation" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Nationality</label>
+                                    <label class="control-label">Nationality<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtNationality" runat="server" MaxLength="200"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Religion</label>
+                                    <label class="control-label">Religion<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpReligion" runat="server" CssClass="form-control drpmandStep" required="required">
                                         <asp:ListItem Selected="True">Select</asp:ListItem>
                                         <asp:ListItem Text="Telugu" Value="Hinduism"></asp:ListItem>
@@ -232,7 +232,7 @@
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Father's Income</label>
+                                    <label class="control-label">Father's Income<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtFathersIncome" runat="server" MaxLength="200" TextMode="Number"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
@@ -246,32 +246,32 @@
                             <div class="col-md-12">
                                 <h3>Contact Details</h3>
                                 <div class="form-group">
-                                    <label class="control-label">Address</label>
+                                    <label class="control-label">Address<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtAddress" runat="server" MaxLength="200" TextMode="MultiLine"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">State</label>
+                                    <label class="control-label">State<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpState" runat="server" CssClass="form-control drpmandStep" required="required">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">City</label>
+                                    <label class="control-label">City<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpCity" runat="server" CssClass="form-control drpmandStep" required="required">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">District</label>
+                                    <label class="control-label">District<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpDistrict" runat="server" CssClass="form-control drpmandStep" required="required">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Pin Code</label>
+                                    <label class="control-label">Pin Code<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtpincode" runat="server" MaxLength="6"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Contact No</label>
+                                    <label class="control-label">Contact No<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox ID="txtContactNo" runat="server" MaxLength="10"
                                         CssClass="form-control txtmandStep" required="required"></asp:TextBox>
                                 </div>

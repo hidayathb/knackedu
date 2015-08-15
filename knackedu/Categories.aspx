@@ -22,7 +22,7 @@
                                 <asp:TextBox runat="server" ID="txtCategoryCode" class="form-control mandCat"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Category Name</label>
+                                <label class="control-label">Category Name<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtCategoryName" class="form-control mandCat"></asp:TextBox>
                             </div>
 
@@ -94,23 +94,23 @@
                                 <asp:Label runat="server" ID="lblSubCategoryMsg" ForeColor="Red" CssClass="control-label"></asp:Label>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Category</label>
+                                <label class="control-label">Category<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList class="form-control" ID="drpcategoryID" runat="server"
                                     OnSelectedIndexChanged="drpcategoryID_SelectedIndexChanged" AutoPostBack="true">
                                 </asp:DropDownList>
                             </div>
                             <%--<div class="form-group">
-                                    <label class="control-label">Parent Sub Category</label>
+                                    <label class="control-label">Parent Sub Category<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList class="form-control" ID="drpParentSubCategory" runat="server"
                                         AutoPostBack="true" OnSelectedIndexChanged="drpParentSubCategory_SelectedIndexChanged" >
                                     </asp:DropDownList>
                                 </div>--%>
                             <div class="form-group">
-                                <label class="control-label">SubCategory Code</label>
+                                <label class="control-label">SubCategory Code<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtSubCategoryCode" class="form-control mandSubCat"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">SubCategory Name</label>
+                                <label class="control-label">SubCategory Name<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtSubCategoryName" class="form-control mandSubCat"></asp:TextBox>
                             </div>
                             <asp:Button class="btn btn-primary btn-lg pull-right" runat="server"

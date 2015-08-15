@@ -133,9 +133,9 @@
                                     <li><a href="mygradebook.aspx"><i class="icon icon-Book"></i>&nbsp;Grade book</a></li>
                                     <li><a href="myschoolsms.aspx"><i class="icon icon-MessageLeft"></i>&nbsp;School SMS</a></li>
                                     <li><a href="schoolfeecounter.aspx"><i class="icon icon-Users"></i>&nbsp;School Fee Counter</a></li>
-                                    <li><a href="cress.html"><i class="fa fa-pencil-square-o"></i>&nbsp;Careers</a></li>
-                                    <li><a href="blog.html"><i class="fa fa-rss"></i>&nbsp;Blog</a></li>
-                                    <li><a href="contact.html"><i class="fa fa-phone-square"></i>&nbsp;Contact</a></li>
+                                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;Careers</a></li>
+                                    <li><a href="#"><i class="fa fa-rss"></i>&nbsp;Blog</a></li>
+                                    <li><a href="#"><i class="fa fa-phone-square"></i>&nbsp;Contact</a></li>
                                     <li class="noborder">
                                         <div id="dmsearch" class="dmsearch">
                                             <form id="searchform" action="#" method="get">

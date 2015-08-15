@@ -15,25 +15,25 @@
                                 <h4>Create Grading System</h4>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Please Enter First Mark</label>
+                                <label class="control-label">Please Enter First Mark<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtFirstMark" MaxLength="2" TextMode="Number" class="form-control txtgrade"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Please Enter Second Mark</label>
+                                <label class="control-label">Please Enter Second Mark<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtSecondMark" MaxLength="3" TextMode="Number" class="form-control txtgrade"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Exam Type</label>
+                                <label class="control-label">Exam Type<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpExamType" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Enter Grade</label>
+                                <label class="control-label">Enter Grade<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpGrade" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Select Marks</label>
+                                <label class="control-label">Select Marks<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpMarks" runat="server" class="form-control drpgrade">
                                     <asp:ListItem Selected="True" Text="Select" Value="Select"></asp:ListItem>
                                     <asp:ListItem Text="5" Value="5"></asp:ListItem>

@@ -36,20 +36,20 @@
                                 <h3 style="margin-left: 0px">Personal Information</h3>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">First Name:</label>
+                                <label class="control-label">First Name:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtFirstName" class="form-control mandCat" required="required"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Last Name:</label>
+                                <label class="control-label">Last Name:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtLastName" class="form-control mandCat" required="required"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Age:</label>
+                                <label class="control-label">Age:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpAge" runat="server" class="form-control mandCat" required="required">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Gender:</label>
+                                <label class="control-label">Gender:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpGender" runat="server" class="form-control mandCat" required="required">
                                     <asp:ListItem Selected="True" Text="Select" Value="0"></asp:ListItem>
                                     <asp:ListItem Text="Male" Value="1"></asp:ListItem>
@@ -57,15 +57,15 @@
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Date Of Bitrh:</label>
+                                <label class="control-label">Date Of Bitrh:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" TextMode="Date" ID="txtDateOfBirth" class="form-control mandCat" required="required"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Contact No:</label>
+                                <label class="control-label">Contact No:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" TextMode="Phone" ID="txtContactNo" class="form-control mandCat" required="required"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Qualification:</label>
+                                <label class="control-label">Qualification:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpQualification" runat="server" class="form-control mandCat" required="required">
                                     <asp:ListItem Selected="True" Text="Select" Value="0"></asp:ListItem>
                                     <asp:ListItem Text="10th" Value="1"></asp:ListItem>
@@ -76,7 +76,7 @@
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Address:</label>
+                                <label class="control-label">Address:<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtAddress" class="form-control mandCat" required="required"></asp:TextBox>
                             </div>
                             <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
@@ -87,47 +87,47 @@
                             <div class="col-md-12">
                                 <h3>Salary Information</h3>
                                 <div class="form-group">
-                                    <label class="control-label">Basic:</label>
+                                    <label class="control-label">Basic:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtBasic" class="form-control mandCat"
                                         required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">DA:</label>
+                                    <label class="control-label">DA:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtDA" class="form-control mandCat"
                                         required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">HRA:</label>
+                                    <label class="control-label">HRA:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtHRA" class="form-control mandCat"
                                         required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Prof Tax:</label>
+                                    <label class="control-label">Prof Tax:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtProfTax" class="form-control mandCat"
                                         required="required"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Conveyance Allowance:</label>
+                                    <label class="control-label">Conveyance Allowance:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtConveyanceAllowance"
                                         required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Capital Cost Allowance:</label>
+                                    <label class="control-label">Capital Cost Allowance:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtCapitalCostAllowance"
                                         required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Entertainment Allowance:</label>
+                                    <label class="control-label">Entertainment Allowance:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtEntertainmentAllowance"
                                         required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Net Salary:</label>
+                                    <label class="control-label">Net Salary:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Number" ID="txtNetSalary"
                                         required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Select Department:</label>
+                                    <label class="control-label">Select Department:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpSelectDepartment" runat="server"
                                         required="required" class="form-control mandCat">
                                     </asp:DropDownList>
@@ -142,36 +142,36 @@
                                 <h3>Other Information</h3>
 
                                 <div class="form-group">
-                                    <label class="control-label">Emp ID:</label>
+                                    <label class="control-label">Emp ID:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtEmpId" required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Create User ID:</label>
+                                    <label class="control-label">Create User ID:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtCreateUserId" required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Create Password:</label>
+                                    <label class="control-label">Create Password:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Password" required="required" ID="txtCreatePassword" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Confirm Password:</label>
+                                    <label class="control-label">Confirm Password:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Password" required="required" ID="txtConfirmPassword" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">User ID:</label>
+                                    <label class="control-label">User ID:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtUserId" required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Security Question:</label>
+                                    <label class="control-label">Security Question:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:DropDownList ID="drpSecurityQuestion" required="required" runat="server" class="form-control mandCat">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Answer:</label>
+                                    <label class="control-label">Answer:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" ID="txtAnswer" required="required" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Date Of Join:</label>
+                                    <label class="control-label">Date Of Join:<font color="#FF3300">&nbsp;*</font></label>
                                     <asp:TextBox runat="server" TextMode="Date" required="required" ID="txtDateOfJoin" class="form-control mandCat"></asp:TextBox>
                                 </div>
                                 <div class="form-group">

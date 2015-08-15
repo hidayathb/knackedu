@@ -7,6 +7,19 @@ using System.Threading.Tasks;
 namespace CommonObject
 {
     [Serializable]
+    public class BOFee
+    {
+        public int Id { get; set; }
+        public string TotalFee { get; set; }
+        public string TermFees { get; set; }
+        public int UserId { get; set; }
+        public string HostCode { get; set; }
+        public int ClassId { get; set; }
+        public int ClassName { get; set; }
+        public string Status { get; set; }
+    }
+
+    [Serializable]
     public class BOCategories
     {
         public int Id { get; set; }

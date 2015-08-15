@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -133,6 +134,7 @@
     <Content Include="adduser.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="attendence.aspx" />
+    <Content Include="classfee.aspx" />
     <Content Include="createstudent.aspx" />
     <Content Include="css\lightbox.css" />
     <Content Include="css\parent.css" />
@@ -581,6 +583,13 @@
     </Compile>
     <Compile Include="beforelogin.Master.designer.cs">
       <DependentUpon>beforelogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="classfee.aspx.cs">
+      <DependentUpon>classfee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classfee.aspx.designer.cs">
+      <DependentUpon>classfee.aspx</DependentUpon>
     </Compile>
     <Compile Include="createstudent.aspx.cs">
       <DependentUpon>createstudent.aspx</DependentUpon>

@@ -15,37 +15,37 @@
                                 <h4>Create Term Plan</h4>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Select Type Of Term</label>
+                                <label class="control-label">Select Type Of Term<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpTerm" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">From</label>
+                                <label class="control-label">From<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpFrom" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">To</label>
+                                <label class="control-label">To<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpTo" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Select Class</label>
+                                <label class="control-label">Select Class<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpClass" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Select Month</label>
+                                <label class="control-label">Select Month<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpMonth" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Select Subject</label>
+                                <label class="control-label">Select Subject<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:DropDownList ID="drpSubject" runat="server" class="form-control drpgrade">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Enter Your Syllabus</label>
+                                <label class="control-label">Enter Your Syllabus<font color="#FF3300">&nbsp;*</font></label>
                                 <asp:TextBox runat="server" ID="txtSyllabus" TextMode="MultiLine"
                                     class="form-control txtgrade"></asp:TextBox>
                             </div>

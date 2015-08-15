@@ -133,10 +133,10 @@
                                                 <li><a href="gradesystem.aspx">Create Grading System</a></li>
                                                 <%--<li><a href="#">Generate Timetable</a></li>--%>
                                                 <li><a href="termplan.aspx">Create Term Plan</a></li>
-                                                <li><a href="GenarateStudentId.aspx">Generate Student Id</a></li>
+                                                <%--<li><a href="GenarateStudentId.aspx">Generate Student Id</a></li>--%>
                                             </ul>
                                         </li>
-                                        <li class="dropdown megamenu"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Edit</a>
+                                        <%--<li class="dropdown megamenu"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Edit</a>
                                             <ul class="dropdown-menu normalmenu">
                                                 <li><a href="#">Student Information</a></li>
                                                 <li><a href="#">Update Student Info</a></li>
@@ -146,18 +146,18 @@
                                                 <li><a href="#">Show User Info</a></li>
                                                 <li><a href="#">SChange Password</a></li>
                                             </ul>
-                                        </li>
+                                        </li>--%>
                                         <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Accountant</a>
                                             <ul class="dropdown-menu normalmenu">
                                                 <li><a href="#">Insert Fee</a></li>
-                                                <li><a href="#">Print Fee receipt</a></li>
+                                                <%--<li><a href="#">Print Fee receipt</a></li>--%>
                                                 <li><a href="vanfee.aspx">Insert VanFee</a></li>
                                                 <li><a href="#">Student Fee Info</a></li>
                                                 <li><a href="#">Department Attendance</a></li>
                                                 <li><a href="#">Insert Department Salary</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Report</a>
+                                      <%--  <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Report</a>
                                             <ul class="dropdown-menu normalmenu">
                                                 <li><a href="attendence.aspx">Attendance</a></li>
                                                 <li><a href="#">Fee Details</a></li>
@@ -168,23 +168,23 @@
                                                 <li><a href="#">Grading Reports</a></li>
                                                 <li><a href="#">Employee Absent Report</a></li>
                                             </ul>
-                                        </li>
+                                        </li>--%>
                                         <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Teacher</a>
                                             <ul class="dropdown-menu normalmenu">
                                                 <li><a href="attendence.aspx">Attendance</a></li>
                                                 <li><a href="studentmarks.aspx">Insert Marks</a></li>
-                                                <li><a href="#">Show marks</a></li>
-                                                <li><a href="#">Update marks</a></li>
+                                                <%--<li><a href="#">Show marks</a></li>
+                                                <li><a href="#">Update marks</a></li>--%>
                                                 <li><a href="#">Student Grade</a></li>
-                                                <li><a href="#">Attendance Report</a></li>
-                                                <li><a href="#">Exit</a></li>
+                                                <%--<li><a href="#">Attendance Report</a></li>--%>
+                                                <%--<li><a href="#">Exit</a></li>--%>
                                                 <li><a href="#">Teachers Reference websites</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Librarian</a>
                                             <ul class="dropdown-menu normalmenu">
                                                 <li><a href="addbook.aspx">Add New Books</a></li>
-                                                <li><a href="#">Add New Books In Existing</a></li>
+                                                <%--<li><a href="#">Add New Books In Existing</a></li>--%>
                                                 <li><a href="#">Book Information</a></li>
                                                 <li><a href="#">Book Issue</a></li>
                                                 <li><a href="#">Book Return</a></li>
@@ -193,8 +193,8 @@
                                         <li class="dropdown megamenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Management</a>
                                             <ul class="dropdown-menu normalmenu">
                                                 <li><a href="#">Setup Class fee</a></li>
-                                                <li><a href="#">Modify Class fee</a></li>
-                                                <li><a href="#">Setup Van fee</a></li>
+                                                <%--<li><a href="#">Modify Class fee</a></li>
+                                                <li><a href="#">Setup Van fee</a></li>--%>
                                                 <li><a href="#">Admission Enquiries</a></li>
                                             </ul>
                                         </li>

@@ -72,7 +72,6 @@ namespace BusinessLayer
             }
         }
 
-
         public int InsertAttendence(BOStudents marks)
         {
             DAStudentMarks pDAL = new DAStudentMarks();
@@ -106,6 +105,7 @@ namespace BusinessLayer
                 pDAL = null;
             }
         }
+
 
     }
 }

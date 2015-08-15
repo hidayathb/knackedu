@@ -41,6 +41,22 @@ namespace DataAccessLayer
             return cmnDA.ExecuteNonQuery("pr_Gradings_AddOrUpdate", sqlParams);
         }
 
+        public int InsertClassFee(BOFee fee)
+        {
+            SqlParameter[] sqlParams = new SqlParameter[12];
+            sqlParams[0] = new SqlParameter("@ClassId", fee.ClassId);
+            sqlParams[1] = new SqlParameter("@TermFees", fee.TermFees);
+            sqlParams[5] = new SqlParameter("@Status", fee.Status);
+            sqlParams[6] = new SqlParameter("@HostCode", fee.HostCode);
+            sqlParams[7] = new SqlParameter("@RecordId", fee.Id);
+            sqlParams[8] = new SqlParameter("@CreatedDate", DateTime.Now);
+            sqlParams[9] = new SqlParameter("@ModifiedDate", DateTime.Now);
+            sqlParams[10] = new SqlParameter("@CreatedBy", fee.UserId);
+            sqlParams[11] = new SqlParameter("@ModifiedBy", fee.UserId);
+
+            return cmnDA.ExecuteNonQuery("pr_ClassFee_AddOrUpdate", sqlParams);
+        }
+
         public int DeleteGradeSystem(int id)
         {
             SqlParameter[] sqlParams = new SqlParameter[1];

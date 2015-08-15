@@ -59,6 +59,41 @@ namespace BusinessLayer
             }
         }
 
+        public List<BOFee> LoadClassFee(int userid, string hostCode)
+        {
+            DAGradeSystem pDAL = new DAGradeSystem();
+            try
+            {
+                var dtCategories = pDAL.LoadGradeSystem(userid, hostCode);
+                var grades = new List<BOFee>();
+                BOFee grade = null;
+                foreach (DataRow item in dtCategories.Rows)
+                {
+                    grade = new BOFee();
+                    
+                    int classId;
+                    int.TryParse(item["ClassId"].ToString(), out classId);
+                    grade.ClassId  = classId;
+
+                    grade.TermFees = item["TermFees"].ToString();
+                    grade.TotalFee = item["TotalFee"].ToString();
+                    grade.Id = Convert.ToInt32(item["Id"]);
+
+                    grades.Add(grade);
+                }
+
+                return grades;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                pDAL = null;
+            }
+        }
+
         public int InsertGradeSystem(BOGradeSytem grades)
         {
             DAGradeSystem pDAL = new DAGradeSystem();
@@ -82,6 +117,23 @@ namespace BusinessLayer
             try
             {
                 return pDAL.DeleteGradeSystem(id);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                pDAL = null;
+            }
+        }
+
+        public int InsertClassFee(BOFee termFee)
+        {
+            DAGradeSystem pDAL = new DAGradeSystem();
+            try
+            {
+                return pDAL.InsertClassFee(termFee);
             }
             catch
             {
