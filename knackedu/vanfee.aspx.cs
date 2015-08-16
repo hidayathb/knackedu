@@ -11,7 +11,7 @@ namespace knackedu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["menu"] = MenuNames.Accountant;
         }
     }
 }

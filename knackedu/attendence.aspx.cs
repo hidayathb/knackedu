@@ -16,6 +16,7 @@ namespace knackedu
         {
             if (!IsPostBack)
             {
+                Session["menu"] = MenuNames.Teacher;
                 LoadDropDowns();
             }
         }

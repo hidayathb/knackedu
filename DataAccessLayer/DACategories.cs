@@ -150,5 +150,23 @@ namespace DataAccessLayer
 
             return cmnDA.ExecuteNonQuery("pr_SubCategories_Delete", sqlParams);
         }
+
+        public int ValidateUser(string username, string password, out string parentname, out string roleCode)
+        {
+            int userid = 0;
+            parentname = string.Empty;
+            roleCode = string.Empty;
+
+            SqlParameter[] sqlParams = new SqlParameter[1];
+            sqlParams[0] = new SqlParameter("@UserName", username);
+            sqlParams[1] = new SqlParameter("@Password", password);
+            sqlParams[2] = new SqlParameter("@UseerId", userid);
+            sqlParams[3] = new SqlParameter("@ParentName", parentname);
+            sqlParams[4] = new SqlParameter("@ParentName", roleCode);
+
+            cmnDA.ExecuteNonQuery("pr_ValidateUser", sqlParams);
+
+            return userid;
+        }
     }
 }

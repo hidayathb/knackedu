@@ -302,5 +302,22 @@ namespace BusinessLayer
                 pDAL = null;
             }
         }
+
+        public int ValidateUser(string username, string password, out string parentname, out string roleCode)
+        {
+            DACategories pDAL = new DACategories();
+            try
+            {
+                return pDAL.ValidateUser(username, password, out parentname, out roleCode);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                pDAL = null;
+            }
+        }
     }
 }

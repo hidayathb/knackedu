@@ -73,7 +73,7 @@
                                 <div class="pull-left">
                                     <div class="contactwrap text-left">
                                         <ul class="list-inline">
-                                            <li><i class="fa fa-phone"></i>Call Us : +91 9849610015</li>
+                                            <li><i class="fa fa-phone"></i>Call Us : 040 65911777</li>
                                             <li><i class="fa fa-envelope"></i>Email Us : info@knackedu.com</li>
                                             <li class="dropdown">
                                                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-sign-out"></i>Logout</a>
@@ -290,7 +290,7 @@
                                         <h4>Contact us</h4>
                                         <ul class="contact-details">
                                             <li><i class="fa fa-map-marker"></i>Hyderabad.</li>
-                                            <li><i class="fa fa-phone"></i>+91 9849610015</li>
+                                            <li><i class="fa fa-phone"></i>040 65911777</li>
                                             <li><i class="fa fa-envelope"></i>info@knackedu.com</li>
                                         </ul>
                                         <!-- end contact-details -->

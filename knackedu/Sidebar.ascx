@@ -9,7 +9,8 @@
 
     <div class="cat-widget">
         <ul>
-            <li class="dropdown active megamenu"><a href="#">Create Student</a>
+            <li class="dropdown"><a href="Categories.aspx">Setup master data</a>
+            <li class="dropdown"><a href="AddStudent.aspx">Create Student</a>
             <li><a href="adduser.aspx">Create User</a>
             <li><a href="gradesystem.aspx">Create Grading System</a>
             <%--<li><a href="#">Generate Timetable</a>--%>

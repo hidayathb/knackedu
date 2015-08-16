@@ -42,6 +42,7 @@
 </head>
 <body>
     <form id="Form1" runat="server">
+        <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePartialRendering="true" />
         <div id="loader">
             <div class="loader-container">
                 <div class="wow zoomIn" data-wow-duration="1s" data-wow-offset="100">
@@ -61,35 +62,45 @@
                             <div class="pull-left">
                                 <div class="contactwrap text-left">
                                     <ul class="list-inline">
-                                        <li><i class="fa fa-phone"></i>Call Us : +91 9849610015</li>
+                                        <li><i class="fa fa-phone"></i>Call Us : 040 65911777</li>
                                         <li><i class="fa fa-envelope"></i>Email Us : info@knackedu.com</li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-lock"></i>Login</a>
-                                            <div class="dropdown-menu">
-                                                <div class="form-title">
-                                                    <h4>Login Area</h4>
-                                                </div>
-                                                <hr>
-                                                <asp:DropDownList runat="server" ID="drpUserType" CssClass="form-control drpgrade">
-                                                    <asp:ListItem Text="Select" Value="0" Selected="True"></asp:ListItem>
-                                                    <asp:ListItem Text="PARENT" Value="1"></asp:ListItem>
-                                                    <asp:ListItem Text="TEACHERS" Value="2"></asp:ListItem>
-                                                    <asp:ListItem Text="LIBRARIAN" Value="3"></asp:ListItem>
-                                                    <asp:ListItem Text="ACCOUNTANT" Value="4"></asp:ListItem>
-                                                    <asp:ListItem Text="COUNSELLOR" Value="5"></asp:ListItem>
-                                                    <asp:ListItem Text="SECURITY" Value="6"></asp:ListItem>
-                                                </asp:DropDownList>
+                                            <asp:UpdatePanel runat="server" ID="upLogin" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <div class="dropdown-menu">
+                                                        <div class="form-title">
+                                                            <h4>Login Area</h4>
+                                                        </div>
+                                                        <hr>
+                                                        <asp:Label runat="server" ID="lblErrorMsg" ForeColor="Red"></asp:Label>
+                                                        <br />
+                                                        <asp:DropDownList runat="server" ID="drpUserType" CssClass="form-control drpgrade">
+                                                            <asp:ListItem Text="Select" Value="0" Selected="True"></asp:ListItem>
+                                                            <asp:ListItem Text="PARENT" Value="1"></asp:ListItem>
+                                                            <asp:ListItem Text="TEACHERS" Value="2"></asp:ListItem>
+                                                            <asp:ListItem Text="LIBRARIAN" Value="3"></asp:ListItem>
+                                                            <asp:ListItem Text="ACCOUNTANT" Value="4"></asp:ListItem>
+                                                            <asp:ListItem Text="COUNSELLOR" Value="5"></asp:ListItem>
+                                                            <asp:ListItem Text="SECURITY" Value="6"></asp:ListItem>
+                                                        </asp:DropDownList>
 
-                                                <input class="form-control txtgrade" type="text" id="txtusername" runat="server"
-                                                    name="username" placeholder="USER NAME">
-                                                <div class="formpassword">
-                                                    <input class="form-control txtgrade" type="password" id="txtpassword" runat="server" name="password" placeholder="******">
-                                                    <span class="badge"><a href="Admin.aspx" style="color: #fff">Forget</a></span>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                                <asp:Button class="btn btn-block btn-primary" Text="LOGIN" runat="server" ID="btnLogin"
-                                                    OnClick="btnLogin_Click" />
-                                            </div>
+                                                        <input class="form-control txtgrade" type="text" id="txtusername" runat="server"
+                                                            name="username" placeholder="USER NAME">
+                                                        <div class="formpassword">
+                                                            <input class="form-control txtgrade" type="password" id="txtpassword" runat="server" name="password" placeholder="******">
+                                                            <span class="badge"><a href="Admin.aspx" style="color: #fff">Forget</a></span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                        <asp:Button class="btn btn-block btn-primary" Text="LOGIN" runat="server" ID="btnLogin"
+                                                            OnClick="btnLogin_Click" />
+                                                    </div>
+                                                </ContentTemplate>
+                                                <Triggers>
+                                                    <asp:AsyncPostBackTrigger ControlID="btnLogin" EventName="Click" />
+                                                </Triggers>
+                                            </asp:UpdatePanel>
+
                                         </li>
                                         <li><i class="fa fa-file-text-o"></i><a href="#">Register</a></li>
                                     </ul>
@@ -135,7 +146,7 @@
                                     <li><a href="schoolfeecounter.aspx"><i class="icon icon-Users"></i>&nbsp;School Fee Counter</a></li>
                                     <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;Careers</a></li>
                                     <li><a href="#"><i class="fa fa-rss"></i>&nbsp;Blog</a></li>
-                                    <li><a href="#"><i class="fa fa-phone-square"></i>&nbsp;Contact</a></li>
+                                    <li><a href="Contact.aspx"><i class="fa fa-phone-square"></i>&nbsp;Contact</a></li>
                                     <li class="noborder">
                                         <div id="dmsearch" class="dmsearch">
                                             <form id="searchform" action="#" method="get">
@@ -222,7 +233,7 @@
                                     <h4>Contact us</h4>
                                     <ul class="contact-details">
                                         <li><i class="fa fa-map-marker"></i>Hyderabad.</li>
-                                        <li><i class="fa fa-phone"></i>+91 9849610015</li>
+                                        <li><i class="fa fa-phone"></i>040 65911777</li>
                                         <li><i class="fa fa-envelope"></i>info@knackedu.com</li>
                                     </ul>
                                     <!-- end contact-details -->

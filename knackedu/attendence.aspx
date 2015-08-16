@@ -11,7 +11,7 @@
                         <ContentTemplate>
                             <div class="col-md-12">
                                 <div class="widget-title">
-                                    <h4>Student Marks</h4>
+                                    <h4>Attendence</h4>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Class :</label>
